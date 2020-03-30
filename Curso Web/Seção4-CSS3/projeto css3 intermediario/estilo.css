@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Be+Vietnam&display=swap');
+
+#principal{
+	font-family: 'Be Vietnam', sans-serif;
+	background: #d2d2c1 url('imagem/fundo1.png') no-repeat;
+	font:16px;
+	width: 70%;
+}
+
+.conteudo{
+	border:1px solid red;
+	/*padding-top: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	padding-left: 20px;
+
+	ou
+
+	padding: 20px 20px 20px 20px;
+
+	padding 20px 5px;*/
+
+	padding: 20px;
+	margin: 20px;
+
+	width: 150px;
+}
