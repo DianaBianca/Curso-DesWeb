@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Be+Vietnam&display=swap');
+
+body{
+	font-family: 'Be Vietnam', sans-serif;
+	background: #d2d2c1 url('imagem/fundo1.png') no-repeat;
+	font:16px;
+}
+
+.biografia{
+	background-color: #e8e8d9;
+	padding: 10px;
+
+}
+
+.rodape {
+	text-align: center;
+	
+}
+
+a{
+
+	text-decoration: none;
+	color: #4b566a;
+	font-weight: bold;
+	padding: 5px;
+}
+
+#principal{
+	width: 70%;
+}
+
+#info{
+	background:#c5c5b2 ;
+	padding: 5px;
+}
+
+h1{
+	color:#828271;
+	font-size: 1.2em;
+}
+
+.img-campanha{
+	border:10px solid #c3c3ae;
+
+}
