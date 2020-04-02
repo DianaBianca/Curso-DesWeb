@@ -1,0 +1,44 @@
+
+/*
+p{
+	color:blue;
+}
+
+p{
+	color:red;
+}*/
+/*
+#pagina p{
+
+	color: blue !important;
+}
+/**/
+/* Se um seletor for mais especifico que putro
+a regra mais específica será
+apliada (terá precedencia sobre regras
+mais gerais)*/
+
+/*
+#pagina p{
+
+	color: red ;
+}*/
+
+
+*{
+	color: red;
+}
+
+h2{
+	color: blue;
+}/*1*/
+
+
+
+h2.verde{
+	color: green;
+}/*2*/
+
+h2#amarelo{
+	color: green;
+}/*3*/

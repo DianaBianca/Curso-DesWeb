@@ -1,0 +1,53 @@
+/**/
+/*SELETOR UNIVERSAL
+*{
+	border 1px solid red;
+}*/
+
+/*SELETOR DE TEXTOS
+h1{
+	color : blue;
+}
+*/
+/*SELETOR DE CLASSE/
+
+.verde{
+	color: green;
+}
+
+p.verde{
+	color: green;
+}*
+
+/*SELETOR DE ID
+
+#cacecalho{
+	border: 1px blue;
+
+}
+
+/*SELETOR DE FILHO
+li>a{
+	color: red;
+	text-decoration: none;
+}*/
+
+/*SELETOR DE FILHO
+
+p a { 
+	color: green;
+
+}*/
+
+/*SELETOR DE IRMAO ADJACENTE
+
+h1+p{
+
+	color: red;
+}*/
+
+/*SELETOR DE IRMAO GERAL*/
+
+h1~p{
+	color: pink;
+}
