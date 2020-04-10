@@ -23,12 +23,10 @@ ul a{
 
 	/*border: 1px solid red;*/
 	width: 200px;
-	height: 40px;
+	height: 20px;
 	display: block;
 	color: #000;
-	text-decoration: none;
-	text-indent: 40px;
-	line-height:40px; 
+	text-decoration: none; 
 	background: url(../imagens/menu.png)no-repeat left bottom;
 
 }
