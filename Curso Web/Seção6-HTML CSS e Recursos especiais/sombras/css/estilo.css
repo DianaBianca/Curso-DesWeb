@@ -1,0 +1,14 @@
+#caixa{
+	width: 300px;
+	height: 300px;
+	padding: 8px;
+	margin: 20;
+	background: #009670;
+	box-shadow: 20px 20px 20px 2px black;/*spred - o auqrto valor espalha a sombra*/
+}
+
+#caixa h1{
+	color: white;
+	/*text-shadow: 10px 5px black;o segundo paragrafo movimenta a "sombra'' para baixo*/
+	text-shadow: 20px 20px 5px rgba(0,0,0,0.4); /*terceiro valor é um blur*/
+}
