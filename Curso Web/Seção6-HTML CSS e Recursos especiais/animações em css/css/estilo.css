@@ -1,0 +1,76 @@
+/*	ANIMAÇÕES	
+
+@-webkit-keyframes animacao-caixa{
+	from{
+		background: pink;
+	}
+
+	to{
+		background: purple;
+	}
+
+}
+
+@-moz-keyframes animacao-caixa{
+	from{
+		background: pink;
+		border-radius: 0px;
+	}
+
+	to{
+		background: purple;
+		border-radius: 300px;
+	}
+
+}
+
+@-o-keyframes animacao-caixa{
+	from{
+		background: pink;
+	}
+
+	to{
+		background: purple;
+	}
+
+}*/
+
+@keyframes animacao-caixa{
+	from{
+		background: pink;
+		border-radius: 0px;
+		top: 0;
+		left: 0;
+	}
+
+	to{
+		background: purple;
+		border-radius: 300px;
+		top: 200px;
+		left: 200px;
+	}
+
+}
+
+
+
+
+#caixa{
+	width: 300px;
+	height: 300px;
+	background: pink;
+	position: relative;
+
+	/*
+	animation-name: animacao-caixa;
+	animation-duration: 5s;
+	animation-delay: 3s;
+	animation-iteration-count: 4;
+	animation-direction: alternate;*/
+
+	-webkit-animation: animacao-caixa 3s 1s 4 alternate;
+	-moz-animation: animacao-caixa 3s 1s 4 alternate;
+	-o-animation: animacao-caixa 3s 1s 4 alternate;
+	animation: animacao-caixa 3s 1s 4 alternate;	
+}
+
