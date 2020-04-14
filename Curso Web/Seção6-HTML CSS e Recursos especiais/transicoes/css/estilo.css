@@ -9,6 +9,7 @@
 	background: purple;
 	/*-webkit-transition: ;
 	-moz-transition: ;
-	-o-transition: ;*/
-	transition: width 3s, background 3s;
+	-o-transition: ;
+	transition: width 3s, background 3s;*/
+	transition: all 3s;
 }
