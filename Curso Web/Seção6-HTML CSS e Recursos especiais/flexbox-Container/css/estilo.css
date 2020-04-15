@@ -1,0 +1,23 @@
+#conteudo{
+	background: #dcdcdc;
+	height: 600px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+
+	justify-content: space-around;
+
+	align-items: baseline;
+
+
+}
+
+
+.item{
+	width: 100px;
+	height: 100px;
+	margin: 10px;
+	background: white;
+	border:1px solid gray;
+
+}
