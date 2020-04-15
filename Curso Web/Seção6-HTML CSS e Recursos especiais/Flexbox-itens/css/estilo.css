@@ -14,20 +14,35 @@
 
 
 .item{
-	width: 100px;
+	/*width: 2 00px;*/
 	height: 100px;
 	margin: 10px;
 	background: white;
 	border:1px solid gray;
 	flex-grow: 0;
+	flex-shrink: 1;
+	flex-basis: 100px;
 }
 
 .item1{
+	
 	flex-grow: 1;
+	/*flex-shrink: 2;
+	*/
 }
 
 .item2{
-	flex-grow: 2;
+	/*
+	flex-grow: 1;
+	flex-shrink: 2;
+	*/
+}
+
+.item3{
+	/*
+	flex-grow: 1;
+	flex-shrink: 3;
+	*/
 }
 
 /*
