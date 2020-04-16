@@ -1,11 +1,12 @@
 body{
 	background:#f4f2ec url(../img/fundo.png)repeat-x;
 	font:12px "Lucida Grande","Lucida Sans Unicode", "Arial", sans-serif ;
+
 }
 
 #container{
 	width: 1080px;
-	margin: 0 auto.
+	margin: 0 auto;
 }
 
 a:link, a:active, a:visited{
@@ -15,6 +16,10 @@ a:link, a:active, a:visited{
 
 a:hover{
 	color:#227115;
+}
+
+#logo h1{
+	float: left;
 }
 
 #logo a{
@@ -51,4 +56,84 @@ nav ul li a:link{
 nav ul li a:hover{
 	border-bottom: 1px solid #535858;
 
+}
+
+
+#conteudo{
+	width: 710px;
+	float: left;
+	background: green;
+
+}
+
+aside{
+	width: 350px;
+	float: right;
+	background: #ebe7dd;
+	padding-bottom: 30px;
+}
+
+section#visita{
+	background: #cdb8b1;
+	padding: 10px 27px 27px 27px;
+	margin-top: 10px;
+
+}
+
+section#galeria{
+	padding: 0 27px 0 27px;
+}
+
+section#galeria a{
+	display: block;
+	background: url(../img/fundo-foto.png)no-repeat;
+	
+	float: left;
+	padding: 17px 15px 18px 15px;
+	margin: 10px 0 0 20px;
+}
+
+section#galeria img{
+	margin-left: 2px;
+	margin-top: 3px
+}
+
+
+
+h4{
+	color: #86521a;
+	text-transform: uppercase;
+	padding-bottom: 3px;
+	margin-bottom: 0;
+}
+
+
+input{
+	height: 20px;
+	width: 80px;
+	background: #fff;
+	border: none;
+	font-size: 1em;
+
+}
+
+input.campo{
+	border: 1px solid #ada484;
+}
+
+input.botao{
+	background: #9b9271;
+	color: white;
+	width: 100%;
+	height: 40px;
+	font-size: 1.2em;
+}
+
+fieldset{
+	border: none;
+
+}
+
+legend{
+	display: none;
 }
