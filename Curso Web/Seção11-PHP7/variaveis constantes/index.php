@@ -9,8 +9,11 @@
 	 	define('BD_USUARIO', 'usuario_bd_dev');
 	 	define('BD_SENHA', 'senha_bd_dev');
 
-	 	echo 
-
+	 	echo BD_URL;
+	 	echo '<br>';
+	 	echo BD_USUARIO;
+	 	echo '<br>';
+	 	echo BD_SENHA;
 	 ?>
 
 </body>
