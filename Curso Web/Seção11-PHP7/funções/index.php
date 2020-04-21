@@ -22,8 +22,10 @@
 
 		$resultado = calcularAreaTerreno(5,25);
 		echo $resultado;
-		echo calcularAreaTerreno(15,125);
+
 		echo "<br>";
+		echo calcularAreaTerreno(15,125);
+		
 		
 
 	?>
