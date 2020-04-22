@@ -6,8 +6,9 @@
 <body>
 	<?php
 
-		$funcionario1= null;
+		$funcionario1 = null;
 		$funcionario2 = '';
+		$funcionario3 = false;
  	
  	//valores null
 		
@@ -37,6 +38,23 @@
 		echo "<br>";
 
 		if (empty($funcionario2)) {
+			echo "sim a variavel é vazia";
+		}else{
+			echo "nao, a variavel nao é vazia";
+		}
+
+		echo "<hr>";
+		//valores vazios
+
+		if (empty($funcionario3)) {
+			echo "sim a variavel é null";
+		}else{
+			echo "nao, a variavel nao é null";
+		}
+
+		echo "<br>";
+
+		if (empty($funcionario3)) {
 			echo "sim a variavel é vazia";
 		}else{
 			echo "nao, a variavel nao é vazia";
