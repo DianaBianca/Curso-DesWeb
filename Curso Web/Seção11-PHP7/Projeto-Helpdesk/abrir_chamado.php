@@ -14,7 +14,7 @@
         margin: 0 auto;
       }
     </style>
-  </head>
+  </head> 
 
   <body>
 
@@ -61,11 +61,11 @@
 
                     <div class="row mt-5">
                       <div class="col-6">
-                        <button class="btn btn-lg btn-warning btn-block" type="submit">Voltar</button>
+                        <a class="btn btn-lg btn-warning btn-block" href="home.php">Voltar</a>
                       </div>
 
                       <div class="col-6">
-                        <button class="btn btn-lg btn-info btn-block" type="submit">Abrir</button>
+                        <a class="btn btn-lg btn-info btn-block" href="home.php">Abrir</a>
                       </div>
                     </div>
                   </form>

@@ -34,11 +34,17 @@
             </div>
             <div class="card-body">
               <div class="row">
-                <div class="col-6 d-flex justify-content-center">
-                  <img src="imagens/formulario_abrir_chamado.png" width="70" height="70">
+                <div class="col-6 d-flex justify-content-center" style="text-align: center; ">
+                  <a href="abrir_chamado.php" style="text-decoration: none;">
+                    <img src="imagens/formulario_abrir_chamado.png" width="70" height="70">
+                    <h4>Abrir Chamado </h4>
+                  </a>
                 </div>
-                <div class="col-6 d-flex justify-content-center">
-                  <img src="imagens/formulario_consultar_chamado.png" width="70" height="70">
+                <div class="col-6 d-flex justify-content-center" style="text-align: center;">
+                  <a href="consultar_chamado.php" style="text-decoration: none;" >
+                    <img src="imagens/formulario_consultar_chamado.png" width="70" height="70">
+                    <h4>Consultar Chamado </h4>
+                  </a>
                 </div>
               </div>
             </div>
