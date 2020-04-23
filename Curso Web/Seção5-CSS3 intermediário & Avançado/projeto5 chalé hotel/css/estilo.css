@@ -143,6 +143,7 @@ ul#navegacao a:hover{
 	padding: 16px;
 	background: #FFF url(../imagens/bg-rodape.png) repeat-x top;
 	color: #7d7640;
+	align-content:  center;
 }
 
 
