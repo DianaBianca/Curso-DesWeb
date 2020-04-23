@@ -8,6 +8,7 @@
 	$usuarios_app = [
 		['email' => 'adm@teste.com.br','senha' => '123456'],
 		['email' => 'user@teste.com.br','senha' => 'asdf'],
+		['email' => 'diana@teste.com.br','senha' => 'didi'],
 	];
 	
 

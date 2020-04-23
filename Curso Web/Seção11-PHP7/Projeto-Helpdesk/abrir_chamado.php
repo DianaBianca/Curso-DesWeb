@@ -23,6 +23,12 @@
         <img src="imagens/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
         App Help Desk
       </a>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="logoff.php">SAIR</a>
+        </li>
+        
+      </ul>
     </nav>
 
     <div class="container">    
@@ -65,7 +71,7 @@
                       </div>
 
                       <div class="col-6">
-                        <a class="btn btn-lg btn-info btn-block" href="home.php">Abrir</a>
+                        <a class="btn btn-lg btn-info btn-block" type="submit">Abrir</button>
                       </div>
                     </div>
                   </form>
