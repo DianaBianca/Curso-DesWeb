@@ -8,10 +8,11 @@
 	$perfis = [1 => 'Adiministrativo', 2 => 'Usuário'];
 	//usuarios do' sistema
 	$usuarios_app = [
-		['id' => 1,'email' => 'adm@teste.com.br','senha' => '1234', 'perfil_id'=>1],
-		['id' => 2,'email' => 'user@teste.com.br','senha' => '1234','perfil_id'=>2],
-		['id' => 3,'email' => 'jose@teste.com.br','senha' => '1234','perfil_id'=>2],
-		['id' => 4,'email' => 'diana@teste.com.br','senha' => '1234','perfil_id'=>1]];
+		['id' => 1,'email' => 'adm@teste.com.br','senha' => '1234', 'perfil_id'=> 1],
+		['id' => 2,'email' => 'user@teste.com.br','senha' => '1234','perfil_id'=> 2],
+		['id' => 3,'email' => 'jose@teste.com.br','senha' => '1234','perfil_id'=> 2],
+		['id' => 4,'email' => 'diana@teste.com.br','senha' => '1234','perfil_id'=> 1],
+	];
 	
 
 	foreach ($usuarios_app as $user) {
@@ -24,17 +25,16 @@
 		}
 	}
 
-	if ($user_autenticado) {
-		echo 'Usuario autenticado';
-		$_SESSION['autenticado'] = 'SIM'	;
+	if($user_autenticado) {
+		echo 'Usuário autencicado';
+		$_SESSION['autenticado'] = 'SIM';
 		$_SESSION['id'] = $usuario_id;
 		$_SESSION['perfil_id'] = $usuario_perfil_id;
-
 		header('Location: home.php');
-	}else{
-		$_SESSION['autenticado'] = 'NAO'	;
-
+	} else {
+		$_SESSION['autenticado'] = 'NAO';
 		header('Location: index.php?login=erro');
 	}
+
 
 ?>
