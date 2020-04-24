@@ -11,7 +11,7 @@ require_once "validador_acesso.php";
   $chamados = array();
   //http://php.net/manual/pt_BR/function.fopen.php
   //abrir arquivo.hd
-  $arquivo = fopen('arquivo.hd','r');
+  $arquivo = fopen('../../app_hrlp_desk/arquivo.hd','r');
 
   //enquato houverem registros (linhas) a serem recuperados
   while(!feof($arquivo)){ //End Of File//testa pelo fim do arquivo
@@ -71,7 +71,7 @@ require_once "validador_acesso.php";
 
               <?
                 $chamado_dados = explode('#', $chamado);
-                //o perfil identificado é adm ou usuer
+                //o perfil identificado é adm ou us er
                 if ($_SESSION['perfil_id'] == 2) {
                   //so vai exibir o chamado que o usuario criou
                   if ( $chamado_dados[0] != $_SESSION['id']) {

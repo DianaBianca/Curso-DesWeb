@@ -1,0 +1,2 @@
+o projeto AppHelpDesk deve ser colocado dentro do diretorio htdocs, já o diretório app_help_desk, 
+deve ser colocado dentro do diretório xampp
