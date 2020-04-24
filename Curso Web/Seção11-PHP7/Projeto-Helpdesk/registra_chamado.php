@@ -2,17 +2,18 @@
 
 	//trabalhando na montagem do texto
 	$titulo    = str_replace('#', '-', $_POST['titulo']);
-	$categoria =str_replace('#', '-', $_POST['categoria']);
-	$descricao =str_replace('#', '-', $_POST['descricao']);
+	$categoria = str_replace('#', '-', $_POST['categoria']);
+	$descricao = str_replace('#', '-', $_POST['descricao']);
 
 	//implode('#',$_POST);
 
-	$texto = $_POST['titulo'] .'#'. $_POST['categoria'] .'#'. $_POST['descricao'] . PHP_EOL;
+	$texto = $titulo .'#'. $categoria .'#'. $descricao . PHP_EOL;
+	//Abrindo o arquivo
+    $arquivo = fopen('arquivo.hd','a');
 
-	//abrindo o arquivo
-	$arquivo = fopen('arquivo.hd', 'a');
-	//escrevendo o texto
+	//escrevendo no arquivo
 	fwrite($arquivo, $texto);
+
 	//fechando o arquivo
 	fclose($arquivo);
 	//echo $texto;
