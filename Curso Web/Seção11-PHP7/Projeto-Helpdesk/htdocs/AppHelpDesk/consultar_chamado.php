@@ -11,7 +11,7 @@ require_once "validador_acesso.php";
   $chamados = array();
   //http://php.net/manual/pt_BR/function.fopen.php
   //abrir arquivo.hd
-  $arquivo = fopen('../../app_hrlp_desk/arquivo.hd','r');
+  $arquivo = fopen('../../app_help_desk/arquivo.hd','r');
 
   //enquato houverem registros (linhas) a serem recuperados
   while(!feof($arquivo)){ //End Of File//testa pelo fim do arquivo
@@ -30,14 +30,8 @@ require_once "validador_acesso.php";
     <title>App Help Desk</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
 
-    <style>
-      .card-consultar-chamado {
-        padding: 30px 0 0 0;
-        width: 100%;
-        margin: 0 auto;
-      }
-    </style>
   </head>
 
   <body>
@@ -74,7 +68,7 @@ require_once "validador_acesso.php";
                 //o perfil identificado é adm ou us er
                 if ($_SESSION['perfil_id'] == 2) {
                   //so vai exibir o chamado que o usuario criou
-                  if ( $chamado_dados[0] != $_SESSION['id']) {
+                  if ($_SESSION['id']!= $chamado_dados[0]) {
                     continue;
                   }
                 }
@@ -94,8 +88,8 @@ require_once "validador_acesso.php";
 
               <? } ?>
 
-              <div class="row mt-5">
-                <div class="col-6">
+              <div class="row mt-5" id="voltar">
+                <div class="col-6" >
                   <a href="home.php" class="btn btn-lg btn-warning btn-block">Voltar</a>
                 </div>
               </div>
