@@ -1,7 +1,7 @@
 <?php 
 	$id_chamado ;
 	session_start();
-	$id_chamado +=1;
+	
 	//trabalhando na montagem do texto
 	$titulo    = str_replace('#', '-', $_POST['titulo']);
 	$categoria = str_replace('#', '-', $_POST['categoria']);
