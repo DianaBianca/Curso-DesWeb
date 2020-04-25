@@ -56,41 +56,8 @@ require_once "validador_acesso.php";
         <div class="card-consultar-chamado">
           <div class="card">
             <div class="card-header">
-              Consulta de chamado
+              Detalhes do Chamado
             </div>
-            
-            <div class="card-body">
-              
-              <? foreach($chamados as $chamado){ ?>
-
-              <?
-                $chamado_dados = explode('#', $chamado);
-                print_r($chamado_dados);
-                //o perfil identificado é adm ou us er
-                if ($_SESSION['perfil_id'] == 2) {
-                  //so vai exibir o chamado que o usuario criou
-                  if ($_SESSION['id']!= $chamado_dados[0]) {
-                    continue;
-                  }
-                }
-
-                if(count($chamado_dados) < 3){
-                  continue;
-                }
-              ?>
-              <div class="card mb-3 bg-light">
-                <div class="card-body">
-
-                  <h5 class="card-title"><?= $chamado_dados[1]?></h5>
-                  <h6 class="card-subtitle mb-2 text-muted"><?= $chamado_dados[2]?></h6>
-                  <p class="card-text"><?= $chamado_dados[3]?></p>
-                  <div id="botaoConsulta_chamado"> 
-                    <a class="btn btn-lg btn-info " href="descricao_chamado.php"> Ver Mais.. </a> 
-                  </div>
-                </div>
-              </div>
-
-              <? } ?>
 
               <div class="row mt-5" id="voltar">
                 <div class="col-6" >
