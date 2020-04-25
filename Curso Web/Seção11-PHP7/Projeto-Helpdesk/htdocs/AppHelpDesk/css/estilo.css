@@ -27,3 +27,9 @@
 	display: flex;
 	justify-content: center;
 }
+
+#botaoConsulta_chamado{
+        border: 2px solid red;
+        width: 20px;
+
+}
