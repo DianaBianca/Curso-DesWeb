@@ -22,6 +22,12 @@ if (idade >= 18) {
 
 document.write('<br><hr>')
 
+if ((nome != teste)&& idade >18) {
+	document.write('acesso permitido !')
+}
+
+document.write('<br><hr>')
+
 var media = 6
 nota = prompt('digite sua nota')
 
@@ -32,3 +38,15 @@ if (nota > media) {
 }else{
 	document.write('não foi dessa vez hein minha filha')
 }
+
+
+document.write('<br><hr>')
+
+var verdadeiro = true
+var falso = false
+
+if (!falso) {
+	document.write('falso !')
+}
+
+document.write('<br><hr>')
