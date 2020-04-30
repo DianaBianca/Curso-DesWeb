@@ -3,5 +3,5 @@ function acao(){
 }
 
 function acao1(){
-	alert('<h1>CLIQUE CLIQUE CLIQUECLIQUE</h1>')
+	alert('CLIQUE CLIQUE CLIQUECLIQUE')
 }
