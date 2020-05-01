@@ -11,7 +11,8 @@ button{
 }
 
 #caixa{
-	border: 1px solid gray;
+	border: 3px solid gray;
+	border-style: outset;
 	width: 310px;
 	height: 200px;
 }
@@ -21,4 +22,3 @@ div{
 	justify-content: space-between;
 	margin-left: 520px;
 }
-
