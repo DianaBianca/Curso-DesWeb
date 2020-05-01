@@ -24,6 +24,8 @@ function keyup(){
 		case '9':
 			//adicionar o caracter no campo referente a números
 			document.getElementById('numeros').value = caracter
+			//concatena o caracter digitado 
+			//document.getElementById('numeros').value += caracter
 			break;
 		default:
 			//adicionar o caracter no campo referente a letras
