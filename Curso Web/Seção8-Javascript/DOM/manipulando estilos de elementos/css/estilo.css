@@ -1,5 +1,24 @@
+body{
+	font: 16px "Lato", sans-serif;
+	color: #777;
+	height: 100%;
+	text-align: center;
+}
+
+button{
+	height: 50px;
+	width: 100px;
+}
+
 #caixa{
 	border: 1px solid gray;
-	width: 150px;
-	height: 100px;
+	width: 310px;
+	height: 200px;
 }
+
+div{
+	display: flex;
+	justify-content: space-between;
+	margin-left: 520px;
+}
+
