@@ -19,3 +19,15 @@ console.log(junto)
 
 var animais = Array(['gato', 'leao', 'onça'],'elefante', ['cachorro','lobo'],'peixe')
 console.log(animais)
+
+var alunos_escola = Array(['danna', '3 colegial',6],['dinah', '2 colegial',3],['ana', '1 colegial',7],['diana', '3 colegial',10])
+console.log(alunos_escola)
+
+var coisas = Array()
+
+coisas['nomes'] = ['dominik', 'diana', 'joao', 'jose', 'ana']
+coisas['idade'] = [10,22,30,12,18]
+coisas['cidade']['sp'] =['lorena']
+coisas['cidade']['rj'] =['av brasil']
+coisas['cidade']['rs'] =['jd industrias']
+console.log(coisas)
