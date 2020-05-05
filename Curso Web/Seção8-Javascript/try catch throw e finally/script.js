@@ -13,7 +13,7 @@ function getVideo(video){
 		tratarErro(erro)
 		console.log('agora sim podemos tratar esse erro')
 		throw new Error('houve um erro mas houve um erro, mas não se preocupe, estamos trabalhando nisso agora !!')
-			}finally{
+	}finally{
 		console.log('Sempre passa por aqui (try/catch)')
 	}
 	console.log('A aplicação nao morreu')
