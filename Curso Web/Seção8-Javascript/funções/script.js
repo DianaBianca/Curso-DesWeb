@@ -14,7 +14,7 @@ function calcularAreaTerreno(largura, comprimento){
 	return area
 }
 
-*/
+
 
 
 function soma(a,b){
@@ -26,3 +26,15 @@ console.log(soma(7,7))
 console.log(soma(7,7,9,15))//desconsidera os demais
 console.log(soma(7))//dá not a number , mas pode ser arrumado na função
 console.log(soma())//dá not a number , mas pode ser arrumado na função
+*/
+
+function soma(){
+	var resultado = 0
+	for (var i in arguments ) {
+		resultado += arguments[i]
+	}
+
+	return resultado
+}
+
+console.log(soma(7,5,3.2, 'texto'))
