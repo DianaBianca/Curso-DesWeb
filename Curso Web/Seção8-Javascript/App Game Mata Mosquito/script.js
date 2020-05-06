@@ -2,6 +2,17 @@ var altura  = 0
 var largura = 0 
 var vidas   = 1
 var tempo   = 10
+var criaMoscaTempo = 1500
+var nivel = window.location.search//recupera tudo que está a direita do ? 
+nivel = nivel.replace('?','')
+
+if (nivel === 'normal') {
+	criaMoscaTempo = 1500
+}else if (nivel === 'dificil') {
+	criaMoscaTempo = 1000
+}else if (nivel === 'chucknorris') {
+	criaMoscaTempo = 750
+}
 
 function ajustaPalcoJogo(){
 
@@ -102,5 +113,8 @@ function iniciarJogo(){
 		alert('Selecione um nível para iniciar o jogo !')
 		return false
 	}
+
+	window.location.href = 'game.html?'+ nivel // o ? serve para separar a pagina que 
+	//nos queremos requisitar, dos paramentos que estamos passando pra essa pagina
 
 }
