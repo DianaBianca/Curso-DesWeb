@@ -12,3 +12,12 @@
 	width: 95px;
 	height: 95px;
 }
+
+
+.ladoA{
+	transform: scaleX(1);/*posição original*/
+}
+
+.ladoB{
+	transform: scaleX(-1);
+}
