@@ -1,5 +1,6 @@
 var altura  = 0 
 var largura = 0 
+var vidas = 1
 
 function ajustaPalcoJogo(){
 
@@ -14,7 +15,17 @@ function posicaoRandomica(){
 
 	//remomver a mosca anterior, caso exista
 	if (document.getElementById('mosca')) {
+		
 		document.getElementById('mosca').remove()//removendo o elemento selecionado
+		document.getElementById('v'+ vidas).src = "imagens/coracao_vazio.png"
+
+		if (vidas > 3) {
+			alert('interromper o jogo( GAME OVER BB)')
+		}
+
+		vidas++
+
+
 	}
 
 	var posicaoX = Math.floor(Math.random() * largura) - 90
@@ -38,6 +49,10 @@ function posicaoRandomica(){
 	mosca.style.position = 'absolute' // para as coordenadas serem aplicadas, o elemento deve ser absoluto
 	
 	mosca.id = 'mosca'
+
+	mosca.onclick = function(){
+		this.remove()
+	}
 
 	document.body.appendChild(mosca) //add um 'filho' para o body
 	
@@ -64,6 +79,5 @@ function ladoaleatorio(){
 			return 'ladoA'
 		case 1:
 			return 'ladoB'
-		
 	}
 }
