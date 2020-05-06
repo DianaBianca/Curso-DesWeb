@@ -23,11 +23,25 @@ function posicaoRandomica(){
 	//criar o elemento html
 	var mosca = document.createElement('img')
 	mosca.src = 'imagens/mosca.png'
-	mosca.className = 'mosquito1'   //atribuindo o elemento para a classe css
+	mosca.className = tamanhoAleatorio()   //atribuindo o elemento para a classe css
 	
 	mosca.style.left = posicaoX + 'px'//acessa atributos de estilo
 	mosca.style.top = posicaoY + 'px'
 	mosca.style.position = 'absolute' // para as coordenadas serem aplicadas, o elemento deve ser absoluto
 	
 	document.body.appendChild(mosca) //add um 'filho' para o body
+	
+}
+
+function tamanhoAleatorio(){
+	var classe = Math.floor( Math.random() * 3)
+	
+	switch(classe){
+		case 0:
+			return 'mosquito1'
+		case 1:
+			return 'mosquito2'
+		case 2:
+			return 'mosquito3'
+	}
 }
