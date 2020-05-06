@@ -17,14 +17,14 @@ function posicaoRandomica(){
 	if (document.getElementById('mosca')) {
 		
 		document.getElementById('mosca').remove()//removendo o elemento selecionado
-		document.getElementById('v'+ vidas).src = "imagens/coracao_vazio.png"
-
+		
 		if (vidas > 3) {
-			alert('interromper o jogo( GAME OVER BB)')
+			window.location.href = 'Game_over.html'
+		}else{
+
+			document.getElementById('v'+ vidas).src = "imagens/coracao_vazio.png"
+			vidas++
 		}
-
-		vidas++
-
 
 	}
 
