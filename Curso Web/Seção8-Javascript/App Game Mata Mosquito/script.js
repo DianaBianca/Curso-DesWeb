@@ -17,7 +17,8 @@ var cronometro = setInterval(function(){
 	if (tempo < 0) {
 		clearInterval(cronometro)
 		clearInterval(criaMosca)
-		
+		window.location.href = 'win.html'
+
 	}else {
 		document.getElementById('cronometro').innerHTML = tempo //valor será contido entre as tags span
 	}
