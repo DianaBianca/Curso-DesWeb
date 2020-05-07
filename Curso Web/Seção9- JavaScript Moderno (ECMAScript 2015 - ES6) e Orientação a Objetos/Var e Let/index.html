@@ -5,12 +5,34 @@
 	 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 
     <script type="text/babel">
-      const getMessage = () => "Hello World";
-      document.getElementById('output').innerHTML = getMessage();
+      //3 escopos: global, função e bloco
+      //var serie = 'Friends'
+
+      function x(){
+        //var serie = 'ONB'
+        console.log('dentro da função: '+serie)
+        if (true) {
+           var serie = 'ONB'
+          //console.log('bloco dentro da função : ' + serie)
+        }
+
+      }
+
+      x()
+      
+      if (true) {
+        var serie = 'TWD'
+        
+        console.log(serie)
+      }
+
+      console.log(serie)
+
+
     </script>
     
   </head>
   <body>
-    
+
   </body>
 </html>
