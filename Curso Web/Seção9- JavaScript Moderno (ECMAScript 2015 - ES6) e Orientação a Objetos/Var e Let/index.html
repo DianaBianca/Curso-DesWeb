@@ -21,7 +21,8 @@
       }
 
       x()
-
+      // fim
+      //inicio
       if (true) {
         var serie = 'TWD'
         
@@ -29,13 +30,23 @@
       }
 
       console.log(serie)
-      */
+      
 
       if (true) {
         let serie = 'TWD'
       }
 
       console.log(serie)
+  */
+  //sobreposição de valor de var do escopo global com base na declaração de variavel do escopo de bloco
+    var serie = 'TWD'
+
+    {
+      var serie = 'ONB'
+      console.log('dentro do bloco : ' + serie)
+    }
+
+    console.log('fora do bloco : ' + serie)
 
 
     </script>
