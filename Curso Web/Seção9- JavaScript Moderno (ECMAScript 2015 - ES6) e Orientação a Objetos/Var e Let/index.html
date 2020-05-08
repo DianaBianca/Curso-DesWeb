@@ -37,8 +37,9 @@
       }
 
       console.log(serie)
-  */
+  //contexto var
   //sobreposição de valor de var do escopo global com base na declaração de variavel do escopo de bloco
+  //
     var serie = 'TWD'
 
     {
@@ -47,6 +48,18 @@
     }
 
     console.log('fora do bloco : ' + serie)
+  */
+  ///contexto let
+
+    let serie = 'friends'
+
+    {
+      let serie = 'TWD'
+      console.log('dentro do bloco : ' + serie)
+    }
+
+    console.log('fora do bloco : ' + serie)
+
 
 
     </script>
