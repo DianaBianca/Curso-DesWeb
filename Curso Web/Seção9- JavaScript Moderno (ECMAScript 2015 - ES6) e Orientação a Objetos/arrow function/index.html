@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script type="text/babel">
+       /*
+         let quadrado = function(x = 2){
+            return x*x
+         }
+        
+
+         let quadrado = (x) => {
+            return x*x
+         }
+
+         //ou
+
+         let quadrado = x => {
+            return x*x
+         }
+
+         //ou
+
+         let quadrado = x => x*x // retorno implicito
+        */
+
+        /*let parImpar = function(n){
+
+            if (n % 2 === 0) {
+                return console.log('par')
+            }else{
+                return console.log('impar')
+            }
+         }
+
+         let parImpar = n => {
+
+            if (n % 2 === 0) {
+                return console.log('par')
+            }else{
+                return console.log('impar')
+            }
+         }
+         */
+
+         let parImpar = n => n % 2 == 0? 'par' : 'impar'// retorno implicito
+
+         document.write(parImpar(22))
+
+         
+
+    </script>
+      
+</head>
+<body>
+
+</body>
+</html>
