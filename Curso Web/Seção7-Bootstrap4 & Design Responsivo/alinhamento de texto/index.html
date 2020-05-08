@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <!--
+     width=device-width -> tamanho da tela do dispositivo
+     initial-scale=1 -> zoom inicial
+     shrink-to-fit=no -> significa se o a aplicação terá que encolher para caber no dispositivo
+    -->
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <title>Alinhamento de textos</title>
+  </head>
+  <body>
+      
+    <!-- Paragrafo justificado -->
+    <p class="text-justify">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. 
+    </p>
+
+    <br><br>
+
+    <!-- Alinhamento responsivo - 
+      class text-<tela>-<alinhamento>
+      tela: sm, md, lg, xl
+      alinhamento: left center right
+     -->
+
+    <p class="text-sm-center">tela &gt; = 576px</p><!--Small-->
+    <p class="text-md-center">tela &gt; = 768px</p><!--Medium-->
+    <p class="text-lg-center">tela &gt; = 992px</p><!--Large-->
+    <p class="text-xl-center">tela &gt; = 1200px</p><!--Extra Large-->
+
+    <br><br>
+
+    <!--Elemento Block para inline-->
+    <h1 class="bg-success d-inline"> 
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. 
+    </h1>
+
+    <p class="bg-success d-inline"> 
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. 
+    </p>
+
+    <br><br>
+
+    <!--Elemento inline para block-->
+    <span class="d-block">lorem ipsum dolor</span>
+    <span class="d-block">lorem ipsum dolor 2</span>
+
+    <br><br>
+
+    <!--Elemento inline para block-->
+    <div class="bg-warning">
+      <h3 class="bg-success d-inline-block">Lorem Ipsum</h3>
+
+      <h3 class="bg-success d-inline-block" style="margin-top: 50px; width : 400px;">Lorem Ipsum</h3>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+  </body>
+</html>
