@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>O.O.</title>
+
+	<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script type="text/babel">
+    //software de marcenaria
+    //cadeira e sofa
+    /*
+    //paradigma procedural
+    //cadeira
+    let pernas    = 4
+    let giratoria = false
+    let cor       = 'azul'
+
+    //array de cadeiras
+    let cadeiras = Array()
+
+    cadeiras[0] = Array()
+    cadeiras[0]['pernas']     = 4
+    cadeiras[0]['giratoria']  = false
+    cadeiras[0]['cor']        = 'azul'
+
+    cadeiras[1] = Array()
+
+    cadeiras[1]['pernas']     = 1
+    cadeiras[1]['giratoria']  = true
+    cadeiras[1]['cor']        = 'vermelha'
+
+
+    function girarCadeira(indice){
+        if (cadeiras[indice]['giratoria'] === true) {
+            console.log('girou')
+        }else{
+            console.log('não  gira')
+        }
+    }
+
+    function adicionarCadeira(pernas,giratoria,cor){
+        let cadeira = Array()
+
+        cadeiras['pernas']     = pernas
+        cadeiras['giratoria']  = giratoria
+        cadeiras['cor']        = cor
+
+        cadeiras.push(cadeira)
+
+    }
+
+    adicionarCadeira(3,true,'rosa')    
+    console.log(cadeiras)
+    */
+
+    class Cadeira{
+
+        constructor(pernas, giratoria,cor){
+            this.pernas     = pernas
+            this.giratoria  = giratoria
+            this.cor        = cor
+        }
+
+        girarCadeira(){
+            if (this.giratoria){
+                console.log('girou')
+            }else{
+                console.log('não  gira')
+            }
+        }
+    }
+
+    let cadeira = new Cadeira(4,true,'rosa')
+
+    let cadeira2 = new Cadeira(6,false,'pink')
+
+    
+
+    let cadeiras = Array()
+
+    cadeiras.push(new Cadeira(4,true,'rosê'))
+    cadeiras.push(new Cadeira(3,false,'rosê'))
+
+    console.log(cadeiras)
+
+
+    </script>
+      
+</head>
+<body>
+
+</body>
+</html>
