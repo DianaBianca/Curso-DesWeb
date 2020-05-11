@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>O.O.</title>
+
+	<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script type="text/babel">
+    	class Animal{
+    		constructor(){
+    			this.cor     = ''
+    			this.tamanho = null 
+    			this.peso    = null
+    		}
+
+    		dormir(){
+    			console.log('zzzzzzzzzz')
+    		}
+
+
+    	}
+
+
+    	class Cachorro extends Animal{
+    		constructor(){
+    			//this.cor = 'Branco e marrom'
+    			//this.tamanho = 30
+    			super()
+    			this.orelhas = 'grandes e caidas'
+    		}
+
+    		correr(){
+    			console.log('correndo')
+    		}
+/*
+    		dormir(){
+    			console.log('zzz')
+    		}
+*/
+    		
+    		rosnar(){
+    			console.log('auauauauauuaugrrrrr')
+    		}
+    	}
+
+
+    	class Passaro extends Animal{
+    		constructor(){
+    			//this.cor = 'Branco e marrom'
+    			//this.tamanho = 10
+    			super()
+    			this.bico = 'curto'
+    		}
+
+    		voar(){
+    			console.log('voandooo')
+    		}
+/*
+    		dormir(){
+    			console.log('zzz')
+    		}
+*/
+    	}
+
+    	class Papagaio extends Passaro{
+    		constructor(){
+    			//this.cor     = 'verde'
+    			//this.tamanho = 20
+    			//this.bico    = 'Médio'
+    			super()
+    			this.fala    = true
+    		}
+
+    		falar(){
+    			console.log('LOROOO LOROO')
+    		}
+    	}
+
+    	let cachorro = Cachorro()
+    	let passaro  = Passaro()
+    	let papagaio  = Papagaio()
+
+    	cachorro.dormir()
+    	passaro.dormir()
+    	papagaio.falar()
+    	papagaio.dormir()
+    	papagaio.voar()
+
+    </script>
+      
+</head>
+<body>
+
+</body>
+</html>
