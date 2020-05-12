@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>O.O.</title>
+
+	<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script type="text/babel">
+
+    //requisição http
+    //resposta http
+      let Bicicleta1 = {
+        cor: 'rosa',
+        marcha: 'unica',
+        aro:12,
+        pedalar(){console.log('pedalandooooo')}
+      }
+
+      let Bicicleta2 = {
+        cor: 'rosa pink',
+        marcha: '29',
+        aro:12,
+        pedalar(){console.log('pedalandooooo')}
+      }
+
+      console.log(Bicicleta1)
+      console.log(Bicicleta2)
+
+      let BicicletaFactory = function(cor, marcha,aro){
+        return{
+          cor,
+          marcha,
+          aro,
+          pedalar(){console.log('pedalandoo')}
+        }
+      }
+
+      let Bicicleta3 = BicicletaFactory('rosa','21',22)
+
+      let Bicicleta4 = BicicletaFactory('tcholas','12',22)
+
+      console.log(Bicicleta4)
+
+      console.log(Bicicleta3.cor)
+      Bicicleta3.pedalar()
+
+    </script>
+      
+</head>
+<body>
+
+</body>
+</html>
