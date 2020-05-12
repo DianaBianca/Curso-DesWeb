@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>O.O.</title>
+
+	<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script type="text/babel">
+
+        let nome = 'diana'//document.getElementById('nome').value
+        let idade = 22
+        let sexo = 'feminino'
+        let profissao = 'Programadora'
+
+        let objeto ={
+            nome: nome,
+            idade: idade,
+            sexo: sexo,
+            profissao: profissao,
+            exibirResumo:function (){
+                console.log(`${this.nome}, ${this.idade} anos, sexo : ${this.sexo}, ${this.profissao}`)
+            }
+        }
+
+        console.log(objeto)
+        objeto.exibirResumo()
+
+        let objeto2 = {
+            nome,// nome = nome variavel/ valor = valor da variavel
+            idade,
+            sexo,
+            profissao: profissao,
+            exibirResumo:function (){
+                console.log(`${this.nome}, ${this.idade} anos, sexo : ${this.sexo}, ${this.profissao}`)
+            }
+        }
+
+
+    </script>
+      
+</head>
+<body>
+
+</body>
+</html>
