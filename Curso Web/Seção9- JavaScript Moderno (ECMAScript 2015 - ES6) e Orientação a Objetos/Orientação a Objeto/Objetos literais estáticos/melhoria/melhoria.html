@@ -7,15 +7,11 @@
 
     <script type="text/babel">
 
-        function recebeValores(){
+        let nome = 'diana'//document.getElementById('nome').value
+        let idade = 22
+        let sexo = 'feminino'
+        let profissao = 'Programadora'
 
-            var nome = document.getElementById('nome').value
-            var idade = document.getElementById('idade').value
-            var sexo = document.getElementById('sexo').value
-            var profissao = document.getElementById('profissao').value
-
-        }
-/*
         let objeto ={
             nome: nome,
             idade: idade,
@@ -25,7 +21,10 @@
                 console.log(`${this.nome}, ${this.idade} anos, sexo : ${this.sexo}, ${this.profissao}`)
             }
         }
-*/
+
+        console.log(objeto)
+        objeto.exibirResumo()
+
         let objeto2 = {
             nome,// nome = nome variavel/ valor = valor da variavel
             idade,
@@ -35,11 +34,6 @@
                 console.log(`${this.nome}, ${this.idade} anos, sexo : ${this.sexo}, ${this.profissao}`)
             }
         }
-
-
-        console.log(objeto2)
-        objeto2.exibirResumo()
-
 
 
     </script>
@@ -59,7 +53,7 @@
         Profissão :
         <input type="text" name="profissao" id="profissao"><br><br>
 
-        <input type="submit" name="botao" id="botao" onclick="recebeValores()">
+        <input type="submit" name="botao" id="botao">
 
     </form>
 
