@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>O.O.</title>
+
+	<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script type="text/babel">
+        //destructuring
+        let frutas = ['abacaxi','uva','morango','pera']
+/*
+        let a = frutas[0]
+        let b = frutas[1]
+        let c = frutas[2]
+*/
+        //let [ a , , c] = frutas
+        let [a,b,c,d,e = 'banana'] = frutas
+
+        //console.log(a,b,c,d,e)
+
+        let coisas = [['abacaxi','uva','morango','pera'],['maria',  'ana','diana']]
+        let [,[,n2]] = coisas
+
+        console.log(n2)
+    
+    </script>
+      
+</head>
+<body>
+
+</body>
+</html>

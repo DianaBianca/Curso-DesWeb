@@ -5,45 +5,48 @@
 
 	<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 
-    <script type="text/babel">
-    //aviao
-    //atributos cor e modelo; metodo levatarVoo
+      <script type="text/babel">
+        //aviao
+        //atributos cor e modelo; metodo levatarVoo
 
-    let a1 ={
-      cor: 'rosa',
-      modelo:'Airbus a320',
-      voar: function(){console.log('voandooo')}
-    }
+        /*let a1 = {
+          cor: 'rosa',
+          modelo:'Airbus a320',
+          voar: function(){
+            console.log('voandooo')
+          }
+        }*/
 
-    //funcao construtora
-    lat Aviao = function(){
-      this.cor = 'blue',
-      this.modelo:'boing',
-      this.voar: function(){console.log('voandooo')}
-    }
+        //funcao construtora
+        let Aviao = function(){
+          this.cor : 'blue',
+          this.modelo:'boing',
 
-    let a2 = new Aviao()
+          this.voar: function(){
+            console.log('voandooo')
+          }
+        }
 
-    //classe
+        let a2 = new Aviao()
 
-    class AviaoC{
-      constuctor(){
-        this.cor = 'pink',
-        this.cor = 'blue',
-        this.modelo:'boing',
-      
-      }
+        //classe
 
-      voar(){
-        console.log('voandooo')
-      }
-    }
+        class AviaoC{
+          constuctor(){
+            this.cor : 'pink',
+            this.cor : 'blue',
+            this.modelo:'boing',
+          
+          }
 
-    let a3 = new AviaoC()
+          voar(){
+            console.log('voandooo')
+          }
+        }
 
-    console.log(a1)
-    console.log(a2)
-    console.log(a3)
+        let a3 = new AviaoC()
+
+        console.log(a3)
 
     </script>
       
