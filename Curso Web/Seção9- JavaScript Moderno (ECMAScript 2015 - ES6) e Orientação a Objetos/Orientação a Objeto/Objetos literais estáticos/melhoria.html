@@ -5,7 +5,7 @@
         <!-- Required meta tags -->
         <meta charset="utf-8">
 
-        <style rel="stylesheet" type="text/css" href="estilo.css">
+        <style rel="stylesheet" type="text/css">
             fieldset{
                 margin: 1em 0;
                 padding: 1em;
@@ -14,22 +14,28 @@
             }
 
         </style>
-        
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="css/bootstrap.min.css">
+
+
+
     	<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 
         <script type="text/babel">
+            let nome = ''
+            let idade = ''
+            let sexo = ''
+            let profissao = ''
 
             function recebeValores(){
 
-                var nome = document.getElementById('nome').value
-                var idade = document.getElementById('idade').value
-                var sexo = document.getElementById('sexo').value
-                var profissao = document.getElementById('profissao').value
-            
+                nome = document.getElementById('nome').value
+                idade = document.getElementById('idade').value
+                sexo = document.getElementById('sexo').value
+                profissao = document.getElementById('profissao').value
+                alert(nome,idade)
+                objeto2.exibirResumo()
+            }
+
+
     /*
             let objeto ={
                 nome: nome,idade: idade,sexo: sexo,profissao: profissao,
@@ -38,19 +44,18 @@
                 }
             }
     */
-                let objeto2 = {
-                    nome,// nome = nome variavel/ valor = valor da variavel
-                    idade,
-                    sexo,
-                    profissao,
-                    exibirResumo:function (){
-                        console.log(`${this.nome}, ${this.idade} anos, sexo : ${this.sexo}, ${this.profissao}`)
+            let objeto2 = {
+                nome,// nome = nome variavel/ valor = valor da variavel
+                idade,
+                sexo,
+                profissao,
+                exibirResumo:function (){
+                    document.write(`${this.nome}, ${this.idade} anos, sexo : ${this.sexo}, ${this.profissao}`)
                     }
                 }
 
-                Alert(objeto2.exibirResumo())
+            
 
-            }
 
         </script>
           
@@ -74,7 +79,7 @@
 
                     <label>
                         Sexo :
-                        <input type="sex" name="sexo" id="sexo"><br><br>
+                        <input type="text" name="sexo" id="sexo"><br><br>
                     </label>
 
                     <label>
