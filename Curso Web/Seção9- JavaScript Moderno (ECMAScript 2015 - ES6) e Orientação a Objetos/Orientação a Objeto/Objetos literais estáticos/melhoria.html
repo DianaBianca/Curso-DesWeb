@@ -1,74 +1,90 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>O.O.</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-   <!--
-     width=device-width -> tamanho da tela do dispositivo
-     initial-scale=1 -> zoom inicial
-     shrink-to-fit=no -> significa se o a aplicação terá que encolher para caber no dispositivo
-    -->
+    <head>
+    	<title>O.O.</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-	<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-
-    <script type="text/babel">
-
-        function recebeValores(){
-
-            var nome = document.getElementById('nome').value
-            var idade = document.getElementById('idade').value
-            var sexo = document.getElementById('sexo').value
-            var profissao = document.getElementById('profissao').value
-        
-/*
-        let objeto ={
-            nome: nome,idade: idade,sexo: sexo,profissao: profissao,
-            exibirResumo:function (){
-                console.log(`${this.nome}, ${this.idade} anos, sexo : ${this.sexo}, ${this.profissao}`)
+        <style rel="stylesheet" type="text/css" href="estilo.css">
+            fieldset{
+                margin: 1em 0;
+                padding: 1em;
+                border: 1px solid #CCC;
+                background: #f8f8;
             }
-        }
-*/
-            let objeto2 = {
-                nome,// nome = nome variavel/ valor = valor da variavel
-                idade,
-                sexo,
-                profissao,
+
+        </style>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+    	<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+        <script type="text/babel">
+
+            function recebeValores(){
+
+                var nome = document.getElementById('nome').value
+                var idade = document.getElementById('idade').value
+                var sexo = document.getElementById('sexo').value
+                var profissao = document.getElementById('profissao').value
+            
+    /*
+            let objeto ={
+                nome: nome,idade: idade,sexo: sexo,profissao: profissao,
                 exibirResumo:function (){
                     console.log(`${this.nome}, ${this.idade} anos, sexo : ${this.sexo}, ${this.profissao}`)
                 }
             }
+    */
+                let objeto2 = {
+                    nome,// nome = nome variavel/ valor = valor da variavel
+                    idade,
+                    sexo,
+                    profissao,
+                    exibirResumo:function (){
+                        console.log(`${this.nome}, ${this.idade} anos, sexo : ${this.sexo}, ${this.profissao}`)
+                    }
+                }
 
-            Alert(objeto2.exibirResumo())
+                Alert(objeto2.exibirResumo())
 
-        }
+            }
 
-    </script>
-      
-</head>
-<body>
-    <div class="text-primary-50">
-        <h2 class="display-2 text-md-center text-sm-center text-lg-center text-xl-center">Formulário</h2>
-        <br><hr>
+        </script>
+          
+    </head>
+    <body>
+        <div class="text-primary-50">
+            <h2 class="display-2 text-md-center text-sm-center text-lg-center text-xl-center">Formulário</h2>
+            <br><hr>
 
-        <form >
-            Nome :
-            <input type="text" name="nome" id="nome"><br><br>
+            <form >
+                <fieldset>
+                    <label>
+                        Nome :
+                        <input type="text" name="nome" id="nome"><br><br>
+                    </label>
 
-            Idade :
-            <input type="number" name="idade" id="idade"><br><br>
+                    <label>
+                        Idade :
+                        <input type="number" name="idade" id="idade"><br><br>
+                    </label>
 
-            Sexo :
-            <input type="sex" name="sexo" id="sexo"><br><br>
+                    <label>
+                        Sexo :
+                        <input type="sex" name="sexo" id="sexo"><br><br>
+                    </label>
 
-            Profissão :
-            <input type="text" name="profissao" id="profissao"><br><br>
+                    <label>
+                        Profissão :
+                        <input type="text" name="profissao" id="profissao"><br><br>
+                    </label>
 
-            <input type="submit" name="botao" id="botao" onclick="recebeValores()" class="text-success">
-         </form>
-    </div>
-</body>
+                    <input type="submit" name="botao" id="botao" onclick="recebeValores()" class="text-success">
+                </fieldset>
+             </form>
+        </div>
+    </body>
 </html>
