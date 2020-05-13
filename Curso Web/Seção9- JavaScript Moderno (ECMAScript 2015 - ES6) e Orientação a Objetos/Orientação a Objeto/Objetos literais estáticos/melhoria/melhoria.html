@@ -1,62 +1,102 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>O.O.</title>
+    <head>
+        <title>O.O.</title>
+        <!-- Required meta tags -->
+        <<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+   <!--
+     width=device-width -> tamanho da tela do dispositivo
+     initial-scale=1 -> zoom inicial
+     shrink-to-fit=no -> significa se o a aplicação terá que encolher para caber no dispositivo
+    -->
 
-    <script type="text/babel">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 
-        let nome = 'diana'//document.getElementById('nome').value
-        let idade = 22
-        let sexo = 'feminino'
-        let profissao = 'Programadora'
-
-        let objeto ={
-            nome: nome,
-            idade: idade,
-            sexo: sexo,
-            profissao: profissao,
-            exibirResumo:function (){
-                console.log(`${this.nome}, ${this.idade} anos, sexo : ${this.sexo}, ${this.profissao}`)
+        <style rel="stylesheet" type="text/css">
+            fieldset{
+                margin: 1em 0;
+                padding: 1em;
+                border: 1px solid #CCC;
+                background: #f8f8;
             }
-        }
 
-        console.log(objeto)
-        objeto.exibirResumo()
+        </style>
 
-        let objeto2 = {
-            nome,// nome = nome variavel/ valor = valor da variavel
-            idade,
-            sexo,
-            profissao,
-            exibirResumo:function (){
-                console.log(`${this.nome}, ${this.idade} anos, sexo : ${this.sexo}, ${this.profissao}`)
+
+
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+        <script type="text/babel">
+            let nome = ''
+            let idade = ''
+            let sexo = ''
+            let profissao = ''
+
+
+    /*
+            let objeto ={
+                nome: nome,idade: idade,sexo: sexo,profissao: profissao,
+                exibirResumo:function (){
+                    console.log(`${this.nome}, ${this.idade} anos, sexo : ${this.sexo}, ${this.profissao}`)
+                }
             }
-        }
+    */
+            let objeto2 = {
+                nome,// nome = nome variavel/ valor = valor da variavel
+                idade,
+                sexo,
+                profissao,
+                exibirResumo:function (){
+                    document.write(`${this.nome}, ${this.idade} anos, sexo : ${this.sexo}, ${this.profissao}`)
+                    }
+                }
+
+                function recebeValores(){
+
+                nome = document.getElementById('nome').value
+                idade = document.getElementById('idade').value
+                sexo = document.getElementById('sexo').value
+                profissao = document.getElementById('profissao').value
+                
+                objeto2.exibirResumo()
+            }
 
 
-    </script>
-      
-</head>
-<body>
-    <form>
-        Nome :
-        <input type="text" name="nome" id="nome"> <br><br>
+        </script>
+          
+    </head>
+    <body>
+        <div class="text-primary-50">
+            <h2 class="display-2 text-md-center text-sm-center text-lg-center text-xl-center">Formulário</h2>
+            <br><hr>
 
-        Idade :
-        <input type="number" name="idade" id="idade"><br><br>
+            <form >
+                    <label>
+                        Nome :
+                        <input type="text" name="nome" id="nome"><br><br>
+                    </label>
 
-        Sexo :
-        <input type="sex" name="sexo" id="sexo"><br><br>
+                    <label>
+                        Idade :
+                        <input type="text" name="idade" id="idade"><br><br>
+                    </label>
 
-        Profissão :
-        <input type="text" name="profissao" id="profissao"><br><br>
+                    <label>
+                        Sexo :
+                        <input type="text" name="sexo" id="sexo"><br><br>
+                    </label>
 
-        <input type="submit" name="botao" id="botao">
+                    <label>
+                        Profissão :
+                        <input type="text" name="profissao" id="profissao"><br><br>
+                    </label>
 
-    </form>
-
-
-</body>
+                    <input type="submit" name="botao" id="botao" onclick="recebeValores()" class="text-success">
+              
+             </form>
+        </div>
+    </body>
 </html>
