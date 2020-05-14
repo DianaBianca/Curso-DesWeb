@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>O.O. destructuring + rest</title>
+
+	<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script type="text/babel">
+    //array
+    let arr = [10,20,30,40]
+    let [x, ...resto]= arr
+    console.log(x)
+    console.log(resto)
+
+    let obj  = {
+        a: 10,b:2,c:3,d:43
+    }
+
+    let {a,...z} = obj
+
+
+    console.log(a,z)
+    
+    </script>
+      
+</head>
+<body>
+
+</body>
+</html>
