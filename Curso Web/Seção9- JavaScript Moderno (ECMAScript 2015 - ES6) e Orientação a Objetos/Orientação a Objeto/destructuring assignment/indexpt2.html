@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>O.O.</title>
+
+	<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script type="text/babel">
+        let produto = {
+            descricao : 'notebook',
+            preco : 1800,
+            detalhes : {
+                fabricante :'apple inc',
+                modelo : 'xyz'
+            }
+        }
+        //composicao
+
+        //criar obejtos a partir de um obj literal, funcoes construtoras ou classes = é um
+
+        //relacao de um de atribuição de um obj como sendo algum valor de um atributo ou outro objeto = tem um 
+
+        //o token do destructuring varia, 
+        //para array => []
+        //objeto => ()
+        //let { descricao,preco} = produto //isso nao é declaração de um objeto literal
+
+        //let { descricao: d,preco: p, desconto} = produto //desetruturando descricao e preco
+
+        //let { descricao: d,preco: p = 4000, desconto =5} = produto
+
+        //extracao de atubutos de obj pertencentes a outros obj
+        let{detalhes: {fabricante:f,modelo = 'nao informado'}} =produto
+        console.log(f,modelo)
+
+
+
+
+    
+    </script>
+      
+</head>
+<body>
+
+</body>
+</html>
