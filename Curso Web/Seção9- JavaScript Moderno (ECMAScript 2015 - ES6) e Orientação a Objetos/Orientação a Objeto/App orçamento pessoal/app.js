@@ -66,5 +66,6 @@ function cadastrardespesa(){
 	}else{
 		console.log('Dados Inválidos')
 	}
+	
 }
 
