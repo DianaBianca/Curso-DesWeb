@@ -19,7 +19,6 @@ class Despesa{
 }
 
 
-
 class Bd{
 	constructor(){
 		let proximoId = localStorage.getItem('id')
@@ -40,8 +39,9 @@ class Bd{
 	}
 }
 
+let bd = new Bd()
 
-function cadastrardespesa(){
+function cadastrarDespesa(){
 	let ano = document.getElementById('ano')
 	let mes = document.getElementById('mes')
 	let dia = document.getElementById('dia')
@@ -59,10 +59,10 @@ function cadastrardespesa(){
 		valor.value
 	)
 	if(despesa.validarDados()){
-		//bd.gravar(despesa)
-		console.log('Dados Válidos')
+		bd.gravar(despesa)
+		$('#sucessoGravacao').modal('show')
 	}else{
-		console.log('Dados Inválidos')
+		$('#erroGravacao').modal('show')
 	}
 
 }

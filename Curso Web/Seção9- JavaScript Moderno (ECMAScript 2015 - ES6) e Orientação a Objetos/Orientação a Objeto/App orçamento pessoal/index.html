@@ -110,23 +110,45 @@
       </div>
     </div>
 
-    <!-- Modal -->
-    <div class="modal fade" id="erroGravacao" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div id="modal_titulo_div">
-            <h5 class="modal-title" id="modal_titulo"></h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body" id="modal_conteudo">erro na gravação</div>
-          <div class="modal-footer">
-            <button type="button" data-dismiss="modal" id="modal_btn">voltar</button>
-          </div>
+  <!-- Modal -->
+  <div class="modal fade" id="erroGravacao" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header text-danger">
+          <h5 class="modal-title" id="exampleModalLabel">Erro na Gravação</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Existem campos obrigatórios que nao foram preenchidos !
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Voltar e corrigir</>
         </div>
       </div>
     </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="sucessoGravacao" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header text-success">
+          <h5 class="modal-title" id="exampleModalLabel">Registro incluído com sucesso!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          A dispesa foi cadastrada com sucesso !
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-dismiss="modal">Voltar</>
+        </div>
+      </div>
+    </div>
+  </div>
 
   </body>	
 
