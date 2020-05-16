@@ -40,8 +40,6 @@ class Bd{
 	}
 }
 
-let bd  = new Bd()
-
 
 function cadastrardespesa(){
 	let ano = document.getElementById('ano')
@@ -66,6 +64,6 @@ function cadastrardespesa(){
 	}else{
 		console.log('Dados Inválidos')
 	}
-	
+
 }
 
