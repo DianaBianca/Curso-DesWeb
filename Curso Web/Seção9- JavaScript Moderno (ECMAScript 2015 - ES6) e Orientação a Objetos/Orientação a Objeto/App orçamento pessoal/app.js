@@ -85,7 +85,7 @@ function cadastrarDespesa() {
 
 
 	if(despesa.validarDados()) {
-		//bd.gravar(despesa)
+		bd.gravar(despesa)
 
 		document.getElementById('modal_titulo').innerHTML = 'Registro inserido com sucesso'
 		document.getElementById('modal_titulo_div').className = 'modal-header text-success'
@@ -112,6 +112,38 @@ function carragaListaDespesa(){
 	let despesas = Array()
 
 	despesas = bd.recuperarTodosRegistros()
+	let listaDespesas = document.getElementById('listaDespesas')
+
+	//percorrer o array despesa listando cada despesa de maneira dinamica
+	despesas.forEach(function(d){
+		console.log(d)
+		//criando a linha<tr></tr>
+		let linha = listaDespesas.insertRow()
+
+		//crias as colunas <td></td>
+		linha.insertCell(0).innerHTML =`${d.dia} / ${d.mes} /${d.ano}`
+		
+		//ajustar o tipo
+		switch(d.tipo){
+			case '1': d.tipo = 'Alimentação'
+				break
+			case '2': d.tipo = 'Educação'
+				break
+			case '3': d.tipo = 'Lazer'
+				break
+			case '4': d.tipo = 'Saúde'
+				break
+			case '5': d.tipo = 'Transporte'
+				break
+			
+		}
+
+		linha.insertCell(1).innerHTML = d.tipo
+		linha.insertCell(2).innerHTML = d.descricao
+		linha.insertCell(3).innerHTML = d.valor
+		
+
+	})
 }
 
 
