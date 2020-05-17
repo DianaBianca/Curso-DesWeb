@@ -95,6 +95,14 @@ function cadastrarDespesa() {
 
 		//dialog de sucesso
 		$('#modalRegistraDespesa').modal('show') 
+
+			ano.value = ''
+			mes.value = '' 
+			dia.value = '' 
+			tipo.value = '' 
+			descricao.value = ''
+			valor.value  = '' 
+
 	} else {
 		
 		document.getElementById('modal_titulo').innerHTML = 'Erro na inclusão do registro'
@@ -142,7 +150,6 @@ function carragaListaDespesa(){
 		linha.insertCell(2).innerHTML = d.descricao
 		linha.insertCell(3).innerHTML = d.valor
 		
-
 	})
 }
 
