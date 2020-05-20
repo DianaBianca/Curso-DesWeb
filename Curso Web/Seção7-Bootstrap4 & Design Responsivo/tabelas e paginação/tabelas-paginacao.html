@@ -278,33 +278,97 @@
       </tbody>
 
     </table>
-    </div>
-    
-    <h2>Paginação: pagination, page-item, page-link - active, disabled</h2>
-    <nav>
-      <ul>
-        <li>
-          <a href="">Anterior</a>
+    <nav >
+      <ul class="pagination">
+        <li class="page-item">
+          <a href="" class="page-link">Anterior</a>
         </li>
-        <li>
-          <a href="">1</a>
+        <li class="page-item">
+          <a href="" class="page-link">1</a>
         </li>
         <li>
           <a href="">2</a>
+        </li class="page-item">
+        <li>
+          <a href="" class="page-link">Próximo</a>
+        </li>
+      </ul>
+    </nav>
+    </div>
+    
+    <h2>Paginação: pagination, page-item, page-link - active, disabled</h2>
+    <nav >
+      <ul class="pagination">
+        <li class="page-item-disabled">
+          <a href="" class="page-link">Anterior</a>
+        </li>
+        <li class="page-item-active">
+          <a href="" class="page-link">1</a>
         </li>
         <li>
-          <a href="">Próximo</a>
+          <a href="">2</a>
+        </li class="page-item">
+        <li>
+          <a href="" class="page-link">Próximo</a>
         </li>
       </ul>
     </nav>
 
     <h2>Alinhamento: justify-content-ALINHAMENTO(center, end) </h2>
-    
+    <nav >
+      <ul class="pagination justify-content-center">
+        <li class="page-item-disabled">
+          <a href="" class="page-link">Anterior</a>
+        </li>
+        <li class="page-item-active">
+          <a href="" class="page-link">1</a>
+        </li>
+        <li>
+          <a href="">2</a>
+        </li class="page-item">
+        <li>
+          <a href="" class="page-link">Próximo</a>
+        </li>
+      </ul>
+    </nav>
 
     <h2>Tamanho: pagination-TAMANHO(sm, lg) </h2>
-    
+    <nav >
+      <ul class="pagination pagination-lg">
+        <li class="page-item-disabled">
+          <a href="" class="page-link">Anterior</a>
+        </li>
+        <li class="page-item-active">
+          <a href="" class="page-link">1</a>
+        </li>
+        <li>
+          <a href="">2</a>
+        </li class="page-item">
+        <li>
+          <a href="" class="page-link">Próximo</a>
+        </li>
+      </ul>
+    </nav>
 
-    <h2>Setas </h2>
+    <h2>Setas(não ajuda na acessibilidade sem class="sr-only")</h2>
+    <nav >
+      <ul class="pagination pagination-lg">
+        <li class="page-item-disabled">
+          <span>&laquo;</span>
+          <span class="sr-only">Anterior</span><!-- essa linha ajuda leitores de tela -->
+        </li>
+        <li class="page-item-active">
+          <a href="" class="page-link">1</a>
+        </li>
+        <li>
+          <a href="">2</a>
+        </li class="page-item">
+        <li>
+           <span>&laquo;</span>
+           <span class="sr-only">Próximo</span><!-- essa linha ajuda leitores de tela -->
+        </li>
+      </ul>
+    </nav>
     
 
     <!-- Optional JavaScript -->
