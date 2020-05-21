@@ -11,27 +11,80 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
+    <style type="text/css">
+      .marcador{
+        background: #fe9d9d;
+        border: 1px solid #f94646;
+      }
+
+      .marcador-container{
+        background: #5bf946;
+        border: 1px solid #36ae26;
+      }
+    </style>
+
   </head>
 
   <body>
 
-    <div>
+    <div class="container marcador-container">
       
       <h2>Largura fixa</h2>
-
+      <div class="row">
+        <div class="marcador col">Area 1</div>
+        <div class="marcador col">Area 2</div>
+        <div class="marcador col">Area 3</div>
+        <div class="marcador col">Area 4</div>
+      </div>
+      
       <h2>Largura automática (auto-layout)</h2>
+      <div class="row">
+        <div class="marcador col">Area 1</div>
+        <div class="marcador col-4">Area 2</div>
+        <div class="marcador col-6">Area 3</div>
+      </div>
 
       <h2>Largura igual empilhada</h2>
+      <div class="row">
+        <div class="marcador col-md">Area 1</div>
+        <div class="marcador col-md">Area 2</div>
+        <div class="marcador col-md">Area 3</div>
+      </div>
+
 
       <h2>Ordenando</h2>
+      <div class="row">
+        <div class="marcador col-md-4 order-2">Area 1</div>
+        <div class="marcador col-md-4 order-0">Area 2</div>
+        <div class="marcador col-md-4 order3">Area 3</div>
+      </div>
 
-      <h2>offset</h2>
+      <h2>offset</h2> 
+      <div class="row">
+        <div class="marcador col-md-6 offset-md-3">Login...</div>
+      </div>
 
       <h2>offset múltiplos alinhamentos</h2>
-
+      <div class="row">
+        <div class="marcador col-md-3 offset-md-2">conteudo 1</div>
+        <div class="marcador col-md-3 offset-md-2">conteudo 2</div>
+      </div>
       <h2>Aninhamento</h2>
-
+      <div class="row">
+        <div class="clo-md-6" style="border: 1px solid red;">
+          col-md-6
+          <div class="row">
+            <div class="col-md-10 marcador">conteurdo 1</div>
+            <div class="col-md-2 marcador">conteurdo 1</div>
+          </div>
+        </div>
+      </div>
     </div>
+
+
+
+
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
