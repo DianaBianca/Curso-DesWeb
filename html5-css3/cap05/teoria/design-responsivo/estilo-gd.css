@@ -1,0 +1,14 @@
+@charset "utf-8";
+/* corpo do texto - estilo pq*/
+body {width: 90%; max-width: 1800px; margin: auto;}
+.soPequeno {display: none;}
+.soMedio {display: none;}
+.soGrande {display: block;}
+/* caixas */
+article, article:last-of-type {
+	width: 30%;
+	float: left;
+	margin: auto 1.5%;
+	padding-bottom: 30px;
+}
+article:last-of-type img {margin-bottom: 21.5%;}

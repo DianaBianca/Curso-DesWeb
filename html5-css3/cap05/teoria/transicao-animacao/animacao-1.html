@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Animação 1</title>
+<style>
+.caixa {background-color: #fff; width: 150px;
+padding: 30px; border: solid thin #ccc;
+}
+/* animação - webkit */
+@-webkit-keyframes anime {
+  from {
+    width: 150px;
+    background: #fff;
+  }
+  to {
+    width: 400px;
+    background: #8c232c;
+  }
+}
+.animeGo {
+  -webkit-animation-name: anime;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-timing-function: ease;
+  -webkit-animation-delay: .5s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-play-state: running;
+}
+/* animação - padrão */
+@keyframes anime {
+  from {
+    width: 150px;
+    background: #fff;
+  }
+  to {
+    width: 400px;
+    background: #8c232c;
+  }
+}
+.animeGo {
+  animation-name: anime;
+  animation-duration: 3s;
+  animation-timing-function: ease;
+  animation-delay: .5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-play-state: running;
+}
+
+</style>
+</head>
+<body>
+<h1>Transições e Animações</h1>
+<h2>Animação 1</h2>
+<div class="caixa">Estado inicial</div>
+<div class="caixa animeGo">Estado final</div>
+</body>
+</html>

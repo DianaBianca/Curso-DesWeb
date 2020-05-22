@@ -1,0 +1,9 @@
+body {
+	font-family: Tahoma, Arial, sans-serif;
+}
+p {
+	font-size: 1.15em;
+	color: #a70000; /*vermelho*/
+	width: 80%;
+	text-align: right;
+}

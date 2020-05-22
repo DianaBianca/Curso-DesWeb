@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Cascata 4</title>
+
+	<style>
+		p {
+			color: #32ba00 !important;
+			/*verde*/
+		}
+	</style>
+
+	<!--no estilo externo : p>vermelho-->
+	<link href="cascata.css" rel="stylesheet" type="text/css">
+	
+</head>
+
+<body>
+	<h1>título principal</h1>
+	<p>Neste exemplo, o estilo incorporado vem primeiro, seguido do estilo externo</p>
+	<p>CSS-incorporado > parágrafo verde .|. CSS-externo > parágrafo vermelho</p>
+	<p>Mas o estilo incorporado ganhou uma indicação <strong>!important</strong>.</p>
+	<p style="color:#F06;">E agora um estilo inline mandando o parágrafo ficar rosa... que mesmo tendo a especificidade mais alta, perde para a indicação <strong>!important</strong>.</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi rhoncus dapibus leo at tincidunt. Aliquam erat volutpat. Donec iaculis nisi id nisi rhoncus aliquam euismod erat commodo. Nunc a risus id nisl dapibus lobortis vitae in quam. Nam eros risus, bibendum varius sodales ut, suscipit at nibh. Sed nec ultrices purus. Sed mi leo, sagittis sit amet ultrices nec, venenatis a neque. Donec eget magna vitae ligula accumsan gravida. Sed elementum sapien at orci interdum non placerat nisl pellentesque. Aenean tincidunt odio et neque blandit ut porttitor nisi vehicula. Etiam vestibulum luctus tortor at convallis. Nam faucibus libero sed nunc fermentum pulvinar. Vivamus eu ante dolor. Morbi feugiat turpis laoreet quam pellentesque quis dictum enim interdum. In ullamcorper posuere sapien, sed lacinia lacus dictum et.</p>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+@charset "utf-8";
+/* corpo do texto - estilo pq*/
+.soPequeno {display: none;}
+.soMedio {display: block;}
+.soGrande {display: none;}
+/* caixas */
+article {
+	width: 44.9%;
+	float: left;
+	margin: auto 2.5%;
+	padding-bottom: 30px;
+}
+article:last-of-type {
+	width: 94.9%;
+	float: none;
+	margin: auto;
+}

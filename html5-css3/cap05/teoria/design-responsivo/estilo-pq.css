@@ -1,0 +1,19 @@
+@charset "utf-8";
+/* corpo do texto */
+body {font-family: sans-serif;}
+/* cabeçalho */
+.soPequeno {display: block;}
+.soMedio {display: none;}
+.soGrande {display: none;}
+/* caixas */
+article {
+	width: 90%;
+	float: none;
+	margin: auto;
+}
+/* imagens */
+article img {
+	max-width: 100%;
+}
+/* corpo do texto */
+p {font-size: 1.2em;}

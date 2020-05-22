@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Especificidade 1</title>
+	<style>
+		li {
+			color: #2561d1;
+			/*azul escuro*/
+		}
+		.acessorios li {
+			color: #13b2d8;
+			/*azul claro*/
+		}
+		.novo {
+			color: #c94cce;
+			/*rosa*/
+		}
+		li.novo {
+			color: #ff8900;
+			/*laranja*/
+		}
+		#obrigatorio li {
+			color: #1b8b00;
+			/*verde escuro*/
+		}
+	</style>
+</head>
+
+<body>
+	<p>Carros</p>
+	<ul>
+		<li>carro 1</li>
+		<li>carro 2</li>
+		<li>carro 3</li>
+		<li>carro 4</li>
+	</ul>
+	<p>Acessórios</p>
+	<ul class="acessorios">
+		<li class="novo">acessório 1</li>
+		<li>acessório 2</li>
+		<li>acessório 3</li>
+		<li>acessório 4</li>
+	</ul>
+	<p>Itens obrigatórios</p>
+	<ul id="obrigatorio">
+		<li>item 1</li>
+		<li>item 2</li>
+		<li style="color:#f00;/*vermelho*/">item 3 - superobrigatório</li>
+		<li>item 4</li>
+	</ul>
+	<hr>
+	<h2>Legenda de cores:</h2>
+	<dl>
+		<dt>azul escuro </dt>
+		<dd>- elemento: li</dd>
+		<dt>azul claro </dt>
+		<dd>- classe + elemento: .acessorios li</dd>
+		<dt>rosa </dt>
+		<dd>- classe: .novo (não é específico o suficiente para aparecer)</dd>
+		<dt>laranja </dt>
+		<dd>- elemento + classe: li.novo</dd>
+		<dt>verde </dt>
+		<dd>- ID + elemento: #obrigatorio li</dd>
+		<dt>vermelho </dt>
+		<dd>- estilo inline</dd>
+	</dl>
+</body>
+
+</html>

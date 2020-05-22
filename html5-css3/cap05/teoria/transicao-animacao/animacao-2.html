@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Animação 1</title>
+  <style>
+  .caixa {
+    background-color: #fff; width: 250px; height: 200px; 
+    display: table; text-align: center; padding: 0 25px; position: absolute;
+    border: solid thin #ccc;
+  }
+  .caixa p {display: table-cell; vertical-align: middle;}
+  /* animação - webkit */
+  @-webkit-keyframes anime {
+    0% { background: #fff; opacity: 0;}
+    40% { background: #fff; opacity: 0;}
+    50% { background-color: #d83061; opacity: 1; }
+    90% { background-color: #d83061; opacity: 1; }
+    100% { background: #fff; opacity: 0; }
+  }
+  .animeGo {
+    -webkit-animation: anime 10s ease 0 infinite normal running;
+  }
+  
+  /* animação - padrão */
+  @keyframes anime {
+    0% { background: #fff; opacity: 0;}
+    40% { background: #fff; opacity: 0;}
+    50% { background-color: #d83061; opacity: 1; }
+    90% { background-color: #d83061; opacity: 1; }
+    100% { background: #fff; opacity: 0; }
+    }
+  }
+  .animeGo {
+    /* animation: |name| |duration| |timing-function| |delay| |iteration-count| |direction| |play-state|*/
+    animation: anime 10s ease 0 infinite normal running;
+  }
+
+  </style>
+</head>
+<body>
+  <h1>Transições e Animações</h1>
+  <h2>Animação 2</h2>
+  <div class="caixa"><p>#1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, doloremque, obcaecati.</p></div>
+  <div class="caixa animeGo"><p>#2 Consectetur illo molestias iusto nobis nulla magni porro fuga commodi dolorem tempore similique.</p></div>
+</body>
+</html>
