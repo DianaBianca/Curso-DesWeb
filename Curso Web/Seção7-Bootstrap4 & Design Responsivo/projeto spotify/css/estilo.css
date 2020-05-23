@@ -5,3 +5,21 @@ body{
     background-attachment: fixed;
 }
 
+/*barra de navegação*/
+nav.navbar-transparente {
+    padding: 15px 0;
+    background: rgba(0, 0,0,0.6);
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: white ;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #9bf0e1 ;
+}
+
+.navbar-light .navbar-toggler{
+    color: rgba(255,255,255,.5);
+    border-color: rgba(255,255,255,0.5);
+}
