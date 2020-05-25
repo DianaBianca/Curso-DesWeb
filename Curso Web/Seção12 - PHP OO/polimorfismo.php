@@ -12,21 +12,19 @@
             echo 'freiando';
         }
 
+        function trocarMarcha(){
+            echo 'Desengatar embragem com o pe e engatar marcha com a mao';
+        }
+
     }
 
     class Carro extends Veiculo{
-        //public $placa = 'ABC123';
-        //public $cor  = 'preto';
         public $teto_solar = true;
 
         function __construct($placa,$cor){
             $this->placa = $placa;
             $this->cor   = $cor;
         }
-
-       /* function acelerar(){
-            echo 'acelerar';
-        }*/
 
         function abrirTetoSolar(){
             echo 'abrir teto solar';
@@ -40,8 +38,6 @@
     }
 
     class Moto extends Veiculo{
-       // public $placa = 'yedg323';
-       // public $cor = 'preta';
         public $contraPesoGuidao = true;
 
         function __construct($placa,$cor){
@@ -49,27 +45,35 @@
             $this->cor   = $cor;
         }
 
-       /* function acelerar(){
-            echo 'Acelerar';
-        }*/
-
         function empinar(){
             echo 'empinando';
         }
+
+        function trocarMarcha(){
+            echo 'desengatar a marcha com a mao e engatar a marcha com o pé';
+        }
+    }
+
+    class Caminhao extends Veiculo{
+
     }
 
 
     $carro = new Carro('erb13','rosa');
     $moto  = new Moto('hhh231','pink');
+    $caminhao  = new Caminhao();
 
     print_r($carro);
 
-    $carro->abrirTetoSolar();
+    $carro->trocarMarcha();
     echo'<br>';
     $carro->acelerar();
     echo'<br>';
-    $moto->acelerar();
+    $moto->trocarMarcha();
     echo'<br>';
     $moto->empinar();
+    echo'<br>';
+    $caminhao->trocarMarcha();
+    echo'<br>';
 
 ?>
