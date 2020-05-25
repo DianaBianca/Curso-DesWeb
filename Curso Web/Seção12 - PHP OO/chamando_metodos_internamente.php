@@ -16,11 +16,11 @@
 
         function __get($atributo){
             return $this->$atributo;
-        }
+        } 
 
         //metodos
         function resumirCadFunc(){
-            return "Nome : $this->nome <br> Filhos: $this->numFilhos <br> Telefone : $this->telefone <br> Cargo : $this->cargo <br> Salário : $this->salario";
+            return 'Nome : ' . $this->__get('nome') . '<br> Filhos: ' . $this->__get('numFilhos') . '<br> Telefone : ' . $this->__get('telefone') . ' <br> Cargo : ' . $this->__get('cargo') . '<br> Salário : '. $this->__get('salario');
         }
 
         function modificarNumFilhos($numFilhos){
