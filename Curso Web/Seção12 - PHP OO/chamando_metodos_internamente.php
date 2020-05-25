@@ -18,32 +18,6 @@
             return $this->$atributo;
         }
 
-        /*
-        function setNome($nome){
-            $this->nome = $nome;
-        }
-
-        function setTelefone($telefone){
-            $this->telefone = $telefone;
-        }
-
-        function setNumFilhos($numFilhos){
-            $this->numFilhos = $numFilhos;
-        }
-
-        function getNome(){
-            return $this->nome;
-        }
-
-        function getTelefone(){
-            return $this->telefone;
-        }
-
-        function getNumFilhos(){
-            return $this->numFilhos;
-        }
-        */
-
         //metodos
         function resumirCadFunc(){
             return "Nome : $this->nome <br> Filhos: $this->numFilhos <br> Telefone : $this->telefone <br> Cargo : $this->cargo <br> Salário : $this->salario";
