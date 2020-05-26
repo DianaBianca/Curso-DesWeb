@@ -14,13 +14,13 @@
     }
 
 
-    //$x = new Exemplo();
+    $x = new Exemplo();
 
     echo Exemplo::$atributo1;
     echo '<br>';
     Exemplo::$medoto1();
 
-    
+    //echo $x->atributo1; -> nao é necessária
 
 
 ?>
