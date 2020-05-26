@@ -38,18 +38,10 @@
     }
 
     class Filho extends Pai{
-        private $idade = null;
-        /*
-        public function getAtributo($attr){
-            return $this->$attr;
-        }
-
-        public function setAtributo($attr , $value){
-             $this->$attr = $value;
-        }    */    
-
-        private function executarMania(){
-            echo 'piscar';
+        public function __construct(){
+                echo '<pre>';
+                print_r(get_class_methods($this));
+                echo '</pre> <br>';
         }
 
     }
@@ -60,14 +52,8 @@
     print_r($filho);
     echo '</pre> <br>';
 
-    //exibir os metodos do obj
-    echo '<pre>';
-    print_r(get_class_methods($filho));
-    echo '</pre> <br>';
+    $filho->executarAcao();
 
-    echo $filho->__get('nome');
-    echo ' <br>';
-    echo $filho->__set('nome','DIDIDE');
 
     /*
     $pai = new Pai();
