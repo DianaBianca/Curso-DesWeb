@@ -44,6 +44,13 @@
                 echo '</pre> <br>';
         }
 
+        private function executarMania(){
+            echo 'cantar';
+        }
+
+        public function x(){
+            $this->executarMania();
+        }
     }
 
 
@@ -53,6 +60,7 @@
     echo '</pre> <br>';
 
     $filho->executarAcao();
+    $filho->x();
 
 
     /*
