@@ -80,6 +80,24 @@
     }
 
 
+    //---------------------------------
+    interface AnimalInterface{
+        public function comer();
+    }
+
+    interface AveInterface{
+        public function voar();
+    }
+
+    class Papagaio{
+        public function comer(){
+            echo 'comendo';
+        }
+
+        public function voar(){
+            echo 'voandoo';
+        }
+    }
 
 
 ?>
