@@ -85,11 +85,11 @@
         public function comer();
     }
 
-    interface AveInterface{
+    interface AveInterface extends AnimalInterface{
         public function voar();
     }
 
-    class Papagaio{
+    class Papagaio implements AveInterface{
         public function comer(){
             echo 'comendo';
         }
