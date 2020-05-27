@@ -51,7 +51,35 @@
         public function nadar();
     }
 
-    
+    class Humano implements MamiferoInterface, TerrestreInterface{
+        public function respirar(){
+            echo 'respiração automática : delisgada';
+        }
+
+        public function andar(){
+            echo 'andando com duas pernas';
+        }
+
+        public function conversar(){
+            echo 'Tem que ver essa cuestão da emorroida ai filho da puta(bolso,jair)';
+        }
+    }
+
+    class Baleia implements MamiferoInterface, AquaticoInterface{
+        public function respirar(){
+            echo 'respirando ';
+        }
+
+        public function nadar(){
+            echo 'nadando nadando';
+        }
+
+        public function esguichar(){
+            echo 'thaaaaaaaaaaaa';
+        }
+    }
+
+
 
 
 ?>
