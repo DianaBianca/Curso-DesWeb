@@ -1,0 +1,1 @@
+Este diretório deverá ser colocado dentro do diretório XAMPP, fora do htdocs
