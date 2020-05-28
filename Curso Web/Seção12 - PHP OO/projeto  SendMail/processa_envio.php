@@ -80,8 +80,8 @@
         $mail->send();
         echo 'Message has been sent';
     } catch (Exception $e) {
-        echo 'Message could not be sent.';
-        echo 'Mailer Error: ' . $mail->ErrorInfo;
+        echo 'Não foi possível enviar esse email, por favor tente mais tarde.';
+        echo 'Detalhe do Erro : ' . $mail->ErrorInfo;
     }
 
     
