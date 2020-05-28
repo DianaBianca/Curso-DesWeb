@@ -46,7 +46,7 @@
         echo 'Mensagem não é valida';
         die();
     }
-
+ 
     $mail = new PHPMailer(true);
     try {
         //Server settings
@@ -60,8 +60,8 @@
         $mail->Port = 587;                                    // TCP port to connect to
 
         //Recipients
-        $mail->setFrom('paraqualquercoisamesmo@gmail.com', 'web completo remetente');
-        $mail->addAddress('jooalberto1@gmail.com', 'Web Completo Destinatário');     // Add a recipient
+        $mail->setFrom('paraqualquercoisamesmo@gmail.com', 'Desenvolvedora Web Diana ROdrigues :3');
+        $mail->addAddress($mensagem->__get('para'));     // Add a recipient
         //$mail->addAddress('ellen@example.com');               // Name is optional
         //$mail->addReplyTo('info@example.com', 'Information');
         //$mail->addCC('cc@example.com');// destinatario de copia
@@ -73,12 +73,12 @@
 
         //Content
         $mail->isHTML(true);                                  // Set email format to HTML
-        $mail->Subject = 'OI NENE';
-        $mail->Body    = 'OI, eu sou o amor da sua <strong>vida</strong>';
-        $mail->AltBody = 'oioioi';
+        $mail->Subject = $mensagem->__get('assunto') ;
+        $mail->Body    = $mensagem->__get('mensagem') ;
+        $mail->AltBody = 'É necessa´rio utilizar um client que suporte HTML para ter acesso totalnao conteudo dessa mensagem';
 
         $mail->send();
-        echo 'Message has been sent';
+        echo 'E-mail enviado com sucesso !';
     } catch (Exception $e) {
         echo 'Não foi possível enviar esse email, por favor tente mais tarde.';
         echo 'Detalhe do Erro : ' . $mail->ErrorInfo;
