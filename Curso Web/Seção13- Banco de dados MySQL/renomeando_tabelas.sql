@@ -11,3 +11,5 @@ CREATE TABLE IF NOT EXISTS tb_cursos(
     investimento  FLOAT(5,2)
 );
 
+
+ALTER TABLE tb_cursos ADD COLUMN carga_horaria VARCHAR(5) NOT NULL ;
