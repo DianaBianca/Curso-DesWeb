@@ -34,3 +34,20 @@ create table imagens(
 insert into imagens(id_produto,url_imagem) values (1,'notebook1.jpg'),(1,'notebook2.jpg'),(1,'notebook3.jpg');
 insert into imagens(id_produto,url_imagem) values (2,'smarttv1.jpg'),(2,'smarttv2.jpg');
 insert into imagens(id_produto,url_imagem) values (3,'smatfone1.jpg');
+
+create table tb_clientes(
+	id_cliente int not null primary key auto_increment,
+    nome varchar(100) not null,
+    idade int(3) not null
+);
+
+create table tb_pedidos(
+	id_pedido int not null primary key auto_increment,
+    id_cliente int not null,
+    data_hora datetime not null default current_timestamp,
+    foreign key(id_cliente) references tb_clientes(id_clientes)
+);
+
+
+create table 
+
