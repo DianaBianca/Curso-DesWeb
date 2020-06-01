@@ -24,7 +24,7 @@ INSERT INTO descricoes_tecnicas(id_produto, descricao_tecnica) VALUES (1, 'O nov
 INSERT INTO descricoes_tecnicas(id_produto, descricao_tecnica) VALUES (2, ' A tv da Samsung Full com  Wi-Fi Integrado é perfeita para assistir Stranger Things com a família');
 INSERT INTO descricoes_tecnicas(id_produto, descricao_tecnica) VALUES (3, 'O novo Inspiron Smartphone LG K10 Dual Chip é capaz de registrar lindos momentos com sua super camera de 13mp');
 
-create table imagens(
+create table if not exists imagens(
 	id_imagem int not null auto_increment primary key,
     id_produto int not null,
     foreign key(id_produto) references tb_produtos(id_produto),
@@ -35,19 +35,23 @@ insert into imagens(id_produto,url_imagem) values (1,'notebook1.jpg'),(1,'notebo
 insert into imagens(id_produto,url_imagem) values (2,'smarttv1.jpg'),(2,'smarttv2.jpg');
 insert into imagens(id_produto,url_imagem) values (3,'smatfone1.jpg');
 
-create table tb_clientes(
+create table if not exists tb_clientes(
 	id_cliente int not null primary key auto_increment,
     nome varchar(100) not null,
     idade int(3) not null
 );
 
-create table tb_pedidos(
+create table if not exists tb_pedidos(
 	id_pedido int not null primary key auto_increment,
     id_cliente int not null,
     data_hora datetime not null default current_timestamp,
     foreign key(id_cliente) references tb_clientes(id_clientes)
 );
 
-
-create table 
+create table if not exists tb_pedidos_produtos(
+	id_pedido int not null,
+    id_produto integer not null,
+    foreign key(id_pedido)  references tb_pedidos (id_pedido),
+    foreign key(id_produto) references tb_produtos (id_produto)
+);
 
