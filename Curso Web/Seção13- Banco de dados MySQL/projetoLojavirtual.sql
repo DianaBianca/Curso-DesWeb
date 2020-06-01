@@ -23,3 +23,14 @@ INSERT INTO tb_produtos(produto, valor) VALUES ('Smartphone LG K10 Dual Chip And
 INSERT INTO descricoes_tecnicas(id_produto, descricao_tecnica) VALUES (1, 'O novo Inspiron Dell oferece um design elegante e tela infinita');
 INSERT INTO descricoes_tecnicas(id_produto, descricao_tecnica) VALUES (2, ' A tv da Samsung Full com  Wi-Fi Integrado é perfeita para assistir Stranger Things com a família');
 INSERT INTO descricoes_tecnicas(id_produto, descricao_tecnica) VALUES (3, 'O novo Inspiron Smartphone LG K10 Dual Chip é capaz de registrar lindos momentos com sua super camera de 13mp');
+
+create table imagens(
+	id_imagem int not null auto_increment primary key,
+    id_produto int not null,
+    foreign key(id_produto) references tb_produtos(id_produto),
+    url_imagem varchar(200) not null #endereço da imagem fica armazenada no banco
+);
+
+insert into imagens(id_produto,url_imagem) values (1,'notebook1.jpg'),(1,'notebook2.jpg'),(1,'notebook3.jpg');
+insert into imagens(id_produto,url_imagem) values (2,'smarttv1.jpg'),(2,'smarttv2.jpg');
+insert into imagens(id_produto,url_imagem) values (3,'smatfone1.jpg');
