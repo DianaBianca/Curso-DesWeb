@@ -58,14 +58,10 @@ create table if not exists tb_pedidos_produtos(
 
 insert into clientes(nome,idade) values('jorge', 29);
 insert into  pedidos(id_cliente) values(1);
-
 insert into tb_pedidos_produtos(id_pedido,id_produto) values(1,2);
 insert into tb_pedidos_produtos(id_pedido,id_produto) values(1,3);
-
 insert into pedidos(id_cliente) values(1);
-
-
 insert into tb_pedidos_produtos(id_pedido,id_produto) values(2,3);
-
+insert into clientes(nome,idade) values('Diane', 24);
 
 
