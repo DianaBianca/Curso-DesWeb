@@ -63,5 +63,5 @@ insert into tb_pedidos_produtos(id_pedido,id_produto) values(1,3);
 insert into pedidos(id_cliente) values(1);
 insert into tb_pedidos_produtos(id_pedido,id_produto) values(2,3);
 insert into clientes(nome,idade) values('Diane', 24);
-
-
+insert into pedidos(id_cliente) values(2);
+insert into tb_pedidos_produtos(id_pedido,id_produto) values(3,1);
