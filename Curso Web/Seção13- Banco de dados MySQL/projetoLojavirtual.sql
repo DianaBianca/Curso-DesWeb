@@ -43,17 +43,23 @@ create table if not exists clientes(
 
 create table if not exists pedidos(
 	id_pedido int not null primary key auto_increment,
-    id_cliente int not null,
-    data_hora datetime not null default current_timestamp,
-    FOREIGN KEY(id_cliente) REFERENCES clientes(id_clientes)
+    id_cliente int not null ,
+    FOREIGN KEY(id_cliente) REFERENCES clientes(id_cliente),
+    data_hora datetime not null default current_timestamp
 );
 
 create table if not exists tb_pedidos_produtos(
 	id_pedido int not null,
     id_produto int not null,
-    constraint foreign key(id_produto) references produtos(id_produto),
-    constraint foreign key(id_pedido) references pedidos(id_pedido)
+    foreign key(id_produto) references produtos(id_produto),
+    foreign key(id_pedido) references pedidos(id_pedido)
 );
+
+
+insert into clientes(nome,idade) values('jorge', 29);
+insert into  pedidos(id_cliente) values(1);
+insert into tb_pedidos_produtos(id_pedido,id_produto) values(1,2);
+insert into tb_pedidos_produtos(id_pedido,id_produto) values(1,3);
 
 
 
