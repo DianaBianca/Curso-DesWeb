@@ -70,3 +70,34 @@ on(clientes.id_cliente = pedidos.id_cliente);
 select * from clientes
 right join  pedidos 
 on(clientes.id_cliente = pedidos.id_cliente);
+
+insert into produtos(produto,valor) values('HD externo portatil',120),('carregador portatil',80),('Memória RAM',110),('Gabinete',130),('Monitor full HD ',1220);
+
+
+select * from pedidos 
+left join tb_pedidos_produtos
+on( pedidos.id_pedido = tb_pedidos_produtos.id_pedido);
+
+select * from pedidos 
+left join tb_pedidos_produtos
+on( pedidos.id_pedido = tb_pedidos_produtos.id_pedido)
+left join produtos on (tb_pedidos_produtos.id_produto = produtos.id_produto);
+
+select * from pedidos 
+right join tb_pedidos_produtos
+on( pedidos.id_pedido = tb_pedidos_produtos.id_pedido)
+left join produtos on (tb_pedidos_produtos.id_produto = produtos.id_produto);
+ 
+select * from pedidos 
+inner join tb_pedidos_produtos
+on( pedidos.id_pedido = tb_pedidos_produtos.id_pedido)
+left join produtos on (tb_pedidos_produtos.id_produto = produtos.id_produto);
+
+select * from pedidos 
+left join tb_pedidos_produtos
+on( pedidos.id_pedido = tb_pedidos_produtos.id_pedido);
+
+select * from pedidos 
+inner join tb_pedidos_produtos
+on( pedidos.id_pedido = tb_pedidos_produtos.id_pedido)
+inner join produtos on (tb_pedidos_produtos.id_produto = produtos.id_produto);
