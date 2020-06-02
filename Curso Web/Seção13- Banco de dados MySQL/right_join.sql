@@ -63,4 +63,10 @@ select * from produtos
 left join imagens
 on (produtos.id_produto = imagens.id_produto);
 
+select * from clientes
+left join  pedidos 
+on(clientes.id_cliente = pedidos.id_cliente);
 
+select * from clientes
+right join  pedidos 
+on(clientes.id_cliente = pedidos.id_cliente);
