@@ -55,13 +55,12 @@ create table if not exists tb_pedidos_produtos(
     foreign key(id_pedido) references pedidos(id_pedido)
 );
 
+select * from clientes 
+left join pedidos 
+on (clientes.id_cliente = pedidos.id_cliente);
 
-insert into clientes(nome,idade) values('jorge', 29);
-insert into  pedidos(id_cliente) values(1);
-insert into tb_pedidos_produtos(id_pedido,id_produto) values(1,2);
-insert into tb_pedidos_produtos(id_pedido,id_produto) values(1,3);
-insert into pedidos(id_cliente) values(1);
-insert into tb_pedidos_produtos(id_pedido,id_produto) values(2,3);
-insert into clientes(nome,idade) values('Diane', 24);
-insert into pedidos(id_cliente) values(2);
-insert into tb_pedidos_produtos(id_pedido,id_produto) values(3,1);
+select * from produtos
+left join imagens
+on (produtos.id_produto = imagens.id_produto);
+
+
