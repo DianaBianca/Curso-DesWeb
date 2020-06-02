@@ -88,10 +88,10 @@ right join tb_pedidos_produtos
 on( pedidos.id_pedido = tb_pedidos_produtos.id_pedido)
 left join produtos on (tb_pedidos_produtos.id_produto = produtos.id_produto);
  
-select * from pedidos 
-inner join tb_pedidos_produtos
-on( pedidos.id_pedido = tb_pedidos_produtos.id_pedido)
-left join produtos on (tb_pedidos_produtos.id_produto = produtos.id_produto);
+select * from pedidos as pe
+inner join tb_pedidos_produtos as pp
+on( pe.id_pedido = pp.id_pedido)
+left join produtos as pr on (pp.id_produto = pr.id_produto);
 
 select * from pedidos 
 left join tb_pedidos_produtos
