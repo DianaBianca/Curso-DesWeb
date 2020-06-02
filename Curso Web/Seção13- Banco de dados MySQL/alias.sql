@@ -67,9 +67,9 @@ select * from clientes
 left join  pedidos 
 on(clientes.id_cliente = pedidos.id_cliente);
 
-select * from clientes
-right join  pedidos 
-on(clientes.id_cliente = pedidos.id_cliente);
+select * from clientes as c
+right join  pedidos as p
+on(c.id_cliente = p.id_cliente);
 
 insert into produtos(produto,valor) values('HD externo portatil',120),('carregador portatil',80),('Memória RAM',110),('Gabinete',130),('Monitor full HD ',1220);
 
