@@ -11,8 +11,18 @@
         <script>
 
             function requisitarPagina(url){
-                let ajax = new XMLHttpRequest();
 
+                
+                //incluir o gif de loading na pagina
+                if(!document,getElementById('loading')){
+                    let imgloading = document.createElement('img')
+                    imgloading.id = 'loading'
+                    imgloading.src = 'loading.gif'
+                    imgloading.className = 'rounded mx-auto d-block'
+                    document.getElementById('conteudo').appendChild(imgloading)
+                }
+
+                let ajax = new XMLHttpRequest();
                 //requisição nao iniciada, state = 0
                 console.log(ajax.readyState)
 
@@ -24,7 +34,11 @@
 
                 //alguma logica que fique olhando para o progresso da requisição
                 ajax.onreadystatechange = () =>{
-                    console.log(ajax.readyState)
+                    if(ajax.readyState == 4){
+                        console.log('requisicao finalizada')
+                        document.getElementById('loading').remove()
+                    }
+                    
                 }
 
                 ajax.send()
@@ -51,7 +65,7 @@
 	    	<div class="row mb-2">
 	    		<div class="col-md-4 center"></div>
 	    		<div class="col-md-4 center">
-	    			<a href="#" class="btn btn-primary" onclick="requisitarPagina('pagina_1_conteudo.html')">Página 1</a>
+	    			<a href="#" class="btn btn-primary" onclick="requisitarPagina('pagina_1_conteudo.php')">Página 1</a>
 	    			<a href="#" class="btn btn-primary" onclick="requisitarPagina('pagina_2_conteudo.html')">Página 2</a>
 	    			<a href="#" class="btn btn-primary" onclick="requisitarPagina('pagina_3_conteudo.html')">Página 3</a>
 	    		</div>
@@ -61,9 +75,7 @@
 	    	<div class="row">
 		    	<div class="col-md-1"></div>
 
-		    	<div class="col-md-10">
-		    		
-		    	</div>
+		    	<div class="col-md-10" id="conteudo"></div>
 		    		
 				<div class="col-md-1"></div>
 			</div>
