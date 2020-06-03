@@ -1,51 +1,61 @@
-
 <!DOCTYPE HTML>
 <html lang="pt-br">
 	<head>
 		<meta charset="UTF-8">
 
-		<title>Requisições Assincronas</title>
+		<title>Requisições assíncronas</title>
 		
 		<!-- bootstrap - link cdn -->
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-        <script>
+	
+		<script>
 
-            function requisitarPagina(url){
+			function requisitarPagina(url) {
 
-                
-                //incluir o gif de loading na pagina
-                if(!document,getElementById('loading')){
-                    let imgloading = document.createElement('img')
-                    imgloading.id = 'loading'
-                    imgloading.src = 'loading.gif'
-                    imgloading.className = 'rounded mx-auto d-block'
-                    document.getElementById('conteudo').appendChild(imgloading)
-                }
+				document.getElementById('conteudo').innerHTML = ''
+				
+				//incluir o gif de loading na página
+				if(!document.getElementById('loading')) {
+					let imgLoading = document.createElement('img')
+					imgLoading.id = 'loading'
+					imgLoading.src = 'loading.gif'
+					imgLoading.className = 'rounded mx-auto d-block'
 
-                let ajax = new XMLHttpRequest();
-                //requisição nao iniciada, state = 0
-                console.log(ajax.readyState)
+					document.getElementById('conteudo').appendChild(imgLoading)
+				}
 
-                ajax.open('GET',url)
+				let ajax = new XMLHttpRequest();
 
-                //conexao estabelecida com o servidor, state = 1
-                console.log(ajax.readyState)
-                
+				//requisição não iniciada, state = 0
+				//console.log(ajax.readyState)
 
-                //alguma logica que fique olhando para o progresso da requisição
-                ajax.onreadystatechange = () =>{
-                    if(ajax.readyState == 4){
-                        console.log('requisicao finalizada')
-                        document.getElementById('loading').remove()
-                    }
-                    
-                }
+				ajax.open('GET', url)
 
-                ajax.send()
-                //console.log(ajax)
-            }
-            
-        </script>
+				//conexão estabelecida com o servidor, state = 1
+				//console.log(ajax.readyState)
+				
+
+				//de alguma lógica que fique olhando para o progresso da req
+				ajax.onreadystatechange = () => {
+					if(ajax.readyState == 4 && ajax.status == 200) {
+
+                        document.getElementById('conteudo').innerHTML = ajax.responseText
+                        //document.getElementById('loading').remove()
+					}
+
+					if(ajax.readyState == 4 && ajax.status == 404) {
+
+						document.getElementById('conteudo').innerHTML = 'requisição finalizada, porém o recurso solicitado não foi encontrado, o status é 404 .... tente novamente mais tarde'
+						//document.getElementById('loading').remove()
+					}
+				}
+
+				ajax.send()
+				//console.log(ajax)
+			}
+
+		</script>
+
 	</head>
 
 	<body>
@@ -62,14 +72,16 @@
 
 	    <div class="container">
 
-	    	<div class="row mb-2">
-	    		<div class="col-md-4 center"></div>
-	    		<div class="col-md-4 center">
+	    	<div class="row mb-2 d-flex justify-content-center">
+	    		<div class="col-sm-2 mb-2">
 	    			<a href="#" class="btn btn-primary" onclick="requisitarPagina('pagina_1_conteudo.php')">Página 1</a>
-	    			<a href="#" class="btn btn-primary" onclick="requisitarPagina('pagina_2_conteudo.html')">Página 2</a>
+	    		</div>
+	    		<div class="col-sm-2 mb-2">
+	    			<a href="#" class="btn btn-primary" onclick="requisitarPagina('pagina_5_conteudo.html')">Página 2</a>
+	    		</div>
+	    		<div class="col-sm-2 mb-2">
 	    			<a href="#" class="btn btn-primary" onclick="requisitarPagina('pagina_3_conteudo.html')">Página 3</a>
 	    		</div>
-	    		<div class="col-md-4 center"></div>
 	    	</div>
 	    	
 	    	<div class="row">
