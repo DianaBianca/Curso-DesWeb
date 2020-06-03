@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>catálogo de filmes</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script>
+        function getFilmes(){
+            let xmlHttp = new XMLHttpRequest();
+            xmlHttp.open('GET','http://localhost/ajax/filmes.xml')
+
+            xmlHttp.onreadystatechange = () => {
+                if(xmlHttp.readyState == 4 && xmlHttp.status == 200){
+                    let XMLFilmes = xmlHttp.responseText
+                    console.log(XMLFilmes)
+                }
+
+                if(xmlHttp.readyState == 4 && xmlHttp.status == 404){
+                    //...
+                }
+            }
+
+            xmlHttp.send()
+        }
+    </script>
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light mb-4">
+        <div class="container">
+            <nav class="navbar-brand  mb-0 h1">
+                <h3>Catálogo de filmes</h3>
+            </nav>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col"> 
+                <button type="button" class="btn btn-success" onclick="getFilmes()">Listar Filmes</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
