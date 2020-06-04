@@ -18,17 +18,7 @@
                         let objJSONFilmes = JSON.parse(JSONFilmes)
                         console.log(objJSONFilmes)
 
-                        /*
-						let parser = new DOMParser()
-
-						domFilmes = parser.parseFromString(XMLFilmes, 'text/xml')
-
-						//console.log(domFilmes)
-
-						jsonFilmes = xmlToJson(domFilmes)
-
-						//console.log(jsonFilmes)
-
+                        
 						for(let i in jsonFilmes['filmes']['filme']) {
 							let item = jsonFilmes['filmes']['filme'][i]
 
@@ -81,7 +71,7 @@
 
 						}
 
-					}*/
+					}
 
 					if(xmlHttp.readyState == 4 && xmlHttp.status == 404) {
 						//..
