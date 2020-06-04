@@ -19,8 +19,8 @@
                         console.log(objJSONFilmes)
 
                         
-						for(let i in jsonFilmes['filmes']['filme']) {
-							let item = jsonFilmes['filmes']['filme'][i]
+						for(let i in objJSONFilmes.filmes) {
+							let item = objJSONFilmes.filmes[i]
 
 							let divRow = document.createElement('div')
 							divRow.className = 'row'
@@ -29,33 +29,33 @@
 							divCol.className = 'col'
 
 							let p1 = document.createElement('p')
-							p1.innerHTML = '<strong>Título:</strong> ' + item['titulo']['#text']
+							p1.innerHTML = '<strong>Título:</strong> ' + item.titulo
 
 							let p2 = document.createElement('p')
-							p2.innerHTML = '<strong>Resumo:</strong> ' + item['resumo']['#text']
+							p2.innerHTML = '<strong>Resumo:</strong> ' + item.resumo
 
 							let genero = ''
-							for(let g in item.genero) {
+							for(let g in item.generos) {
 								if(genero) genero += ', '
 
-								genero += item.genero[g]['#text']
+								genero += item.generos[g].genero
 							}
 
 							let p3 = document.createElement('p')
 							p3.innerHTML = '<strong>Gênero:</strong> ' + genero
 
 							let elenco = ''
-							for(let e in item.elenco.ator) {
+							for(let e in item.elenco) {
 								if(elenco) elenco += ', '
 
-								elenco += item.elenco.ator[e]['#text']
+								elenco += item.elenco[e].ator
 							}
 
 							let p4 = document.createElement('p')
 							p4.innerHTML = '<strong>Elenco:</strong> ' + elenco
 
 							let p5 = document.createElement('p')
-							p5.innerHTML = '<strong>Data de lançamento:</strong> ' + item.dataLancamento['#text'] + ' (' + item.dataLancamento['@attributes']['pais'] + ')'
+							p5.innerHTML = '<strong>Data de lançamento:</strong> ' + item.dataLancamento.data + ' (' + item.dataLancamento.pais + ')'
 
 							let hr = document.createElement('hr')
 
