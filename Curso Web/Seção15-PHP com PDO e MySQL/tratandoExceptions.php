@@ -9,9 +9,10 @@
         $conexao = new PDO($dsn,$usuario,$senha );
 
     }catch(PDOException $e){
-        echo '<pre>';
-        print_r($e);
-        echo '</pre>';
+        echo 'Erro: '.$e->getCode().' Mensagem: '.getMessage();
+
+        //registrar erros
+        
     }
 
 
