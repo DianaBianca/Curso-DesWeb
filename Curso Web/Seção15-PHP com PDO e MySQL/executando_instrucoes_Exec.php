@@ -20,15 +20,20 @@
 
         $retorno = $conexao->exec($query);//executa qualquer tipobde query e retorna o num de linhas afetadas
         //0
-        echo $retorno;
-
+        //echo $retorno;
+        
         $query = '
             insert into tb_usuario(nome, email,senha)
             values ("Joao alberto R", "joaoa123@gmail.com", "123321");
         ';
         $retorno = $conexao->exec($query);
         echo $retorno;
-
+            
+        $query = '
+            delete from tb_usuario;
+        ';
+        $retorno = $conexao->exec($query);
+        echo $retorno;
 
     }catch(PDOException $e){
         echo 'Erro: '.$e->getCode().' Mensagem: '.getMessage();
