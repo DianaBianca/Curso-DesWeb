@@ -1,0 +1,1 @@
+CREATE DATABASE IF NOT EXISTS php_com_pdo;
