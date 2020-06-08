@@ -8,11 +8,15 @@
         try{
             $conexao = new PDO($dsn,$usuario,$senha );
 
-            $query  = "select * from tb_usuarios where";
+            $query  = "SELECT * from tb_usuario where";
             $query .= " email = '{$_POST['usuario']}' ";
-            $query .= " senha = '{$_POST['senha']}'";
-            echo $query;
-            
+            $query .= " AND senha = '{$_POST['senha']}' ";
+
+            $stmt = $conexao->query($query);
+            $usuario = $stmt->fetch();
+
+            print_r($usuario);
+
         }catch(PDOException $e){
             echo 'Erro: '.$e->getCode().' Mensagem: '.getMessage();
             
