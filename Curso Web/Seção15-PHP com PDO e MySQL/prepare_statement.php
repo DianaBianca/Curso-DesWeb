@@ -14,7 +14,7 @@
 
             $stmt = $conexao->prepare($query);
             $stmt->bindValue(':usuario',$_POST['usuario']);
-            $stmt->bindValue(':senha',$_POST['senha']);
+            $stmt->bindValue(':senha',$_POST['senha']);//,PDO::PARAM_INT);
             $stmt->execute();
 
             $usuario = $stmt->fetch();
@@ -36,7 +36,7 @@
     <title>Login</title>
 </head>
 <body>
-    <form method="post" action="sql_injection.php"> <!--- action é o destino dos dados -->
+    <form method="post" action="prepare_statement.php"> <!--- action é o destino dos dados -->
     
         <input type="text" placeholder="Usuario" name="usuario">
         <br>
