@@ -10,5 +10,6 @@
     $conexao = new Conexao();
 
     $tarefaService = new TarefaService($conexao,$tarefa);
+    $tarefaService->inserir();
 
 ?>
