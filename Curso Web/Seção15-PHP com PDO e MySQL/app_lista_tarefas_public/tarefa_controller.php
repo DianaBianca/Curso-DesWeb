@@ -1,5 +1,5 @@
 <?php
-    print_r($_POST);
+    require_once '../app_lista_tarefas/tarefa_controller.php';
 
 
 ?>
