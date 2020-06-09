@@ -2,8 +2,18 @@
 //crud
      class TarefaService{
 
-        public function inserir(){//crate
+         private $conexao;
+         private $tarefa;
 
+         public function __contruct(Conexao $conexao, Tarefa $tarefa){
+            $this->conexao = $conexao->conectar();
+            $this->tarefa  = $tarefa;
+         }
+
+        public function inserir(){//crate
+            $query = 'insert into tb_tarefas(tarefa)values(:tarefa)';
+            $stmt  = $this->conexao->prepare($query);
+            $stmt->bindValue(':tarefa',$this->tarefa->__get('tarefa')); 
         }
 
         public function recuperar(){//read
