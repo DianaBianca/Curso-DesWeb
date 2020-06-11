@@ -20,12 +20,12 @@
 		</nav>
 
 
-		<? if(isset($_GET['inclusao'] && $_GET['inclusao'] ==1 ) { ?>
+		<? if( isset($_GET['inclusao']) && $_GET['inclusao'] ==1 ) { ?>
 			
 			<div class="bg-success py-2 text-white d-flex justify-content-center">
 				<h5>Tarefa inserida com sucesso !</h5>
 			</div>
-			
+
 		<? } ?>
 
 		<div class="container app">
