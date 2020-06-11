@@ -28,6 +28,12 @@
 			inputTarefa.className = 'col-9 form-control'
 			inputTarefa.value = txt_tarefa
 
+			//criar um input hidden para guardar o id da tarefa
+			let inputId = document.createElement('input')
+			inputId.type = 'hidden'
+			inputId.name = 'id'
+			inputId.value = id
+
 			//criar um button para envio do form
 			let button = docment.createElement('button')
 			button.type      = 'submit'
@@ -36,6 +42,9 @@
 
 			//incluir inputTarefa no form
 			form.appendChild(inputTarefa)
+			
+			//incluir inputId no form
+			tarefa.innerHTML = ''
 
 			//incluir button no form
 			form.appendChild(button)
