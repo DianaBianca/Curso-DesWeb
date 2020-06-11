@@ -1,5 +1,5 @@
 <?php
-    print_r($_POST);
+    #print_r($_POST);
     require "tarefa.model.php";
     require "tarefa.service.php";
     require "conexao.php";
