@@ -3,9 +3,9 @@
     require "tarefa.model.php";
     require "tarefa.service.php";
     require "conexao.php";
-
+    #se houver o indice acao setado no GET, vamos trabalhar com ela, caso contrarioi vamos esperar essa variavel
     $acao = isset($_GET['acao']) ? $_GET['acao'] : $acao;
-
+    
     if($acao == 'inserir'){
 
         $tarefa = new Tarefa();
@@ -19,7 +19,15 @@
         header('Location: nova_tarefa.php?inclusao=1');
 
     }else if($acao == 'recuperar'){
-        echo 'aqui';
+
+        $tarefa = new Tarefa();
+        $conexao = new Conexao();
+
+        $tarefaService = new TarefaService($conexao,$tarefa);
+        $tarefaService->recuperar();
+
+        
+
     }
 
 
