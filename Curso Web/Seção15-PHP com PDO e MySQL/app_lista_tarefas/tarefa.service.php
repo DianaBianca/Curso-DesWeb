@@ -34,7 +34,10 @@
       }
 
       public function atualizar() { //update
-
+         $query = "update tb_tarefas set tarefa = :tarefa where id = :id";
+         $stmt  = $this->conexao->prepare($query);
+         $stmt->bindValue(':tarefa', $this->tarefa->__get('tarefa'));
+         $stmt->bindValue(':id', $this->tarefa->__get('id')));
       }
 
       public function remover() { //delete
