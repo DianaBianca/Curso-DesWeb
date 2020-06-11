@@ -24,9 +24,9 @@
         $conexao = new Conexao();
 
         $tarefaService = new TarefaService($conexao,$tarefa);
-        $tarefaService->recuperar();
+        $tarefas = $tarefaService->recuperar();
 
-        
+
 
     }
 
