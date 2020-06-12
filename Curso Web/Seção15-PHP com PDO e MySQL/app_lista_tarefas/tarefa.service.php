@@ -61,6 +61,24 @@
           $stmt->bindValue(':id', $this->tarefa->__get('id'));
           return $stmt->execute();
        }
+
+       public function recuperarTarefasPendentes() { //read
+         $query = '
+            select 
+               t.id, s.status, t.tarefa 
+            from 
+               tb_tarefas as t
+               left join tb_status as s on (t.id_status = s.id)
+            where
+               t.id_status = :id_status
+            ';
+         $stmt  = $this->conexao->prepare($query);
+         $stmt->bindValue(':id_status', $this->tarefa->__get('id_status'));
+         $stmt->execute();
+         return $stmt->fetchAll(PDO::FETCH_OBJ);
+
+      }
+
    }
 
 ?>
