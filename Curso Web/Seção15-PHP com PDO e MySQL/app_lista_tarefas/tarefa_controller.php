@@ -51,6 +51,18 @@
         if($tarefaService->atualizar()){
             header('location: todas_tarefas.php');
         }
+    }else if($acao == 'location.href = 'todas_tarefas.php?acao=remover&id='id;'){
+        $tarefa = new Tarefa();
+        $tarefa->__set('id', $_GET['id'])->__set('id_status', 2);
+
+        $conexao = new Conexao();
+
+        $tarefaService = new TarefaService($conexao, $tarefa);
+        $tarefaService->marcarRealizada();
+        
+        header('location: todas_tarefas.php');
+        
+
     }
 
 
