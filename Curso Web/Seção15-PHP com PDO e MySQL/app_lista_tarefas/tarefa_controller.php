@@ -48,7 +48,9 @@
 
         $tarefaService = new TarefaService($conexao, $tarefa);
         $tarefaService->remover();
-
+        if($tarefaService->atualizar()){
+            header('location: todas_tarefas.php');
+        }
     }
 
 
