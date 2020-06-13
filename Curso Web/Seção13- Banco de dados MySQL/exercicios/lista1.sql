@@ -36,3 +36,9 @@ update tb_alunos set sexo = 'M'
 where id_aluno in (1,2,3,6,7);
 
 select * from tb_alunos;
+
+#4) Efetue um update em tb_clientes dos registros de id_cliente igual a 4, 5, 8, 9 e 10, atualizando o sexo para “F”. 
+#Como desafio, faça este update utilizando dois between’s no filtro. 
+
+update tb_alunos set sexo = "F"
+where id_aluno between 4 and 5  or id_aluno between 8 and 10;
