@@ -11,13 +11,12 @@ order by idade asc;
 #• Adicine a coluna “sexo” do tipo string com tamanho fixo de 1 caractere. 
 #Coluna não pode ser vazia na inserção. 
 
-alter table tb_alunos add column sexo varchar(1) not null;
-
+alter table tb_alunos add column sexo char(1) not null;
 
 #• Adicione a coluna “endereço” do tipo string com tamanho variado de até 150 caracteres. 
-#Coluna pode ser vazia na inserção. 
+#Coluna pode ser vazia na inserção.
 
-alter table
+alter table tb_alunos add column endereco varchar(150);
 
 
  
