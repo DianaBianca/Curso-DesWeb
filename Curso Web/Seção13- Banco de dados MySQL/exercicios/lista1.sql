@@ -32,10 +32,7 @@ where id_aluno < 10;
 update tb_alunos set sexo = 'M'
 where id_aluno < 20 and id_aluno > 10;
 
-update tb_alunos set endereco = 'Rua dos bobos'
-where id_aluno < 20 and id_aluno > 10;
-
-update tb_alunos set endereco = 'Rua dos bobos'
-where id_aluno < 20 and id_aluno > 10;
+update tb_alunos set sexo = 'M'
+where id_aluno in (1,2,3,6,7);
 
 select * from tb_alunos;
