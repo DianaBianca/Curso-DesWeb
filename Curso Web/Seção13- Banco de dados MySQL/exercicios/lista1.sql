@@ -42,3 +42,13 @@ select * from tb_alunos;
 
 update tb_alunos set sexo = "F"
 where id_aluno between 4 and 5  or id_aluno between 8 and 10;
+
+
+#5) Selecione todos os registros de tb_clientes que possuam relação com tb_pedidos e com tb_pedidos produtos 
+#(apenas registros com relacionamentos entre si). 
+#Recupe também os detalhes dos produtos da tabela tb_produtos. 
+#A consulta deve retornar de tb_clientes as colunas “id_cliente”, “nome”, “idade” e 
+#de tb_produtos deve ser retornado as colunas “produto” e “valor”. 
+
+
+
