@@ -18,5 +18,11 @@ alter table tb_alunos add column sexo char(1) not null;
 
 alter table tb_alunos add column endereco varchar(150);
 
+#3) Efetue um update em tb_clientes dos registros de id_cliente igual a 1, 2, 3, 6 e 7, atualizando o sexo para “M”. 
+#Utilize a instrução IN para este fim.
+
+INSERT INTO `tb_alunos` (`id_aluno`,`nome`,`idade`,`interesse`,`email`,`estado`,`sexo`,`endereco`) VALUES (100,"Diana",47,"Esporte","didi.Integer@nec.net","DF","F","rua dos alfeneiros"),(121,"Jaoa",59,"Jogos","ligula.eu.enim@egetlaoreetposuere.com","SC","m","rua dos alfeneiros 99"),(102,"Lillith",48,"Saúde","Curabitur@atvelitCras.org","MA","F","rua dos alfeneiros90"),(104,"Zephania",63,"Saúde","erat.vitae@loremtristiquealiquet.net","RS","M","rua dos alfeneiros");
+
+update table tb_alunos
 
  
