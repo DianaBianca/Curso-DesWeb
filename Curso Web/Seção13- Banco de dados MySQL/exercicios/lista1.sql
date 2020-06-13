@@ -1,5 +1,5 @@
 use db_curso_web;
-
+SET SQL_SAFE_UPDATES = 0;
 #1) Selecione todos os clientes com idade igual ou superior a 29. Os registros devem ser ordenados
 # de forma ascendente pela idade.
 select * from tb_alunos 
@@ -23,6 +23,19 @@ alter table tb_alunos add column endereco varchar(150);
 
 INSERT INTO `tb_alunos` (`id_aluno`,`nome`,`idade`,`interesse`,`email`,`estado`,`sexo`,`endereco`) VALUES (100,"Diana",47,"Esporte","didi.Integer@nec.net","DF","F","rua dos alfeneiros"),(121,"Jaoa",59,"Jogos","ligula.eu.enim@egetlaoreetposuere.com","SC","m","rua dos alfeneiros 99"),(102,"Lillith",48,"Saúde","Curabitur@atvelitCras.org","MA","F","rua dos alfeneiros90"),(104,"Zephania",63,"Saúde","erat.vitae@loremtristiquealiquet.net","RS","M","rua dos alfeneiros");
 
-update table tb_alunos
+update tb_alunos set sexo = 'F'
+where id_aluno < 10;
 
- 
+update tb_alunos set endereco = 'Rua dos alfeneiros'
+where id_aluno < 10;
+
+update tb_alunos set sexo = 'M'
+where id_aluno < 20 and id_aluno > 10;
+
+update tb_alunos set endereco = 'Rua dos bobos'
+where id_aluno < 20 and id_aluno > 10;
+
+update tb_alunos set endereco = 'Rua dos bobos'
+where id_aluno < 20 and id_aluno > 10;
+
+select * from tb_alunos;
