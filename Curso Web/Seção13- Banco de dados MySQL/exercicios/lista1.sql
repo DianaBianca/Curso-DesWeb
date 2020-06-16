@@ -71,4 +71,5 @@ where id_curso between 25 and 50;
 update cursos set cidade = "MG"
 where id_curso > 50 and id_curso < 90;
 
-
+update cursos set cidade = "PA"
+where id_cursos > 90;
