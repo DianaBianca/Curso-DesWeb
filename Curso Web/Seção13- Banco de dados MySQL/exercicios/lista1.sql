@@ -50,5 +50,7 @@ where id_aluno between 4 and 5  or id_aluno between 8 and 10;
 #A consulta deve retornar de tb_clientes as colunas “id_cliente”, “nome”, “idade” e 
 #de tb_produtos deve ser retornado as colunas “produto” e “valor”. 
 
-SELECT      c.id_cliente,      c.nome,     c.idade,      prod.produto,     prod.valor FROM         tb_clientes AS c INNER JOIN tb_pedidos AS p ON (c.id_cliente = p.id_cliente)     INNER JOIN tb_pedidos_produtos AS pp ON(p.id_pedido = pp.id_pedido)     LEFT JOIN tb_produtos AS prod ON (pp.id_produto = prod.id_produto) 
+SELECT      c.id_cliente,      c.nome,     c.idade,      prod.produto,     prod.valor FROM         tb_clientes AS c INNER JOIN tb_pedidos AS p ON (c.id_cliente = p.id_cliente)     INNER JOIN tb_pedidos_produtos AS pp ON(p.id_pedido = pp.id_pedido)     LEFT JOIN tb_produtos AS prod ON (pp.id_produto = prod.id_produto);
 
+
+alter table cursos add column cidade varchar(50) not null;
