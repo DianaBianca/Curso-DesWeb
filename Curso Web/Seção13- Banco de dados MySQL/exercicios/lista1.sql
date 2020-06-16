@@ -73,3 +73,23 @@ where id_curso > 50 and id_curso < 90;
 
 update cursos set cidade = "PA"
 where id_cursos > 90;
+
+select * from cursos;
+
+create table alunos_cursos(
+
+	id_alunos_cursos int not null auto_increment primary key,
+    id_aluno int(11) not null,
+    id_curso int(11) not null,
+    
+    key fk_id_aluno(id_aluno),
+    key fk_id_curso(fk_id_curso),
+    
+    constraint fk_id_aluno foreign key (id_aluno) references tb_alunos(id_aluno),
+    constraint fk_id_curso foreign key (id_curso) references cursos(id_curso)
+    
+);
+
+
+
+   
