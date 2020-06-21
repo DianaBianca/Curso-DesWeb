@@ -83,10 +83,10 @@ create table alunos_cursos(
     id_curso int(11) not null,
     
     key fk_id_aluno(id_aluno),
-    key fk_id_curso(fk_id_curso),
     
-    constraint fk_id_aluno foreign key (id_aluno) references tb_alunos(id_aluno),
-    constraint fk_id_curso foreign key (id_curso) references cursos(id_curso)
+    
+    constraint fk_id_aluno foreign key (id_aluno) references tb_alunos(id_aluno)
+    
     
 );
 
