@@ -7,17 +7,22 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 </head>
 <body>
-    <input type="text" placeholder="input 1">
+    <input class="exemplo1" type="text" placeholder="input 1">
     <input type="text" placeholder="input 2">
     <input type="text" placeholder="input 2">
 
-    <div>div 1</div>
+    <div class="exemplo1">div 1</div>
     <div>div 2</div>
     <div>div 3</div>
 
-    <ul>
+    <ul class="lista1">
         <li>op1 </li>
-        <li>op2 </li>
+        <li class="exemplo2">op2 </li>
+        <li class="exemplo2">op3 </li>
+    </ul>
+    <ul class="lista2">
+        <li class="exemplo2">op1 </li>
+        <li class="exemplo2">op2 </li>
         <li>op3 </li>
     </ul>
 
@@ -27,7 +32,15 @@
 <script>
 
     //combinação de seletores
-
+        //selecionar elementos por classe de tag especifica 
+        console.log($('.exemplo1'))
+        console.log($('li.exemplo1'))
+        console.log($('div.exemplo1'))
+        //selcionar elementos por classe de classe especifica
+        console.log($('.exemplo2'))
+        console.log($('.lista1 .exemplo2'))
+        
+        console.log($('.lista2 .exemplo2'))
     //atuação sobre o array de retorno selecionado 
 </script>
 
