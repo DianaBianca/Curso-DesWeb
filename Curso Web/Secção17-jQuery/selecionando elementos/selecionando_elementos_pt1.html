@@ -8,13 +8,13 @@
 </head>
 <body>
     
-    <h1>Selecionando elementos pt1</h1>
+    <h1 class="diversos2">Selecionando elementos pt1</h1>
     <div>Div 1</div>
-    <div>Div 2</div>
+    <div class="diversos1">Div 2</div>
 
     <ul>
         <li>menu 1 - item 1</li>
-        <li>menu 1 - item 2</li>
+        <li class="diversos1">menu 1 - item 2</li>
         <li>menu 1 - item 3</li>
     </ul>
 
@@ -26,7 +26,7 @@
 
     <input type="text" placeholder="Campo 1 ">
 
-    <select >
+    <select class="diversos1">
         <option value="">-----SELECIONE UMA OPCAO------</option>
         <option value="">opcao 1</option>
         <option value="">opcao 2</option>
@@ -34,13 +34,15 @@
 
     <br>
 
-    <img src="carro.jpg" >
+    <img src="carro.jpg" class="diversos2" >
 
 </body>
 
 <script>
     console.log($('h1'))
     console.log($('div'))
+    console.log($('.diversos1'))
+    console.log($('.diversos2'))
 </script>
 
 </html>
