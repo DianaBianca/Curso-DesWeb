@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selecionando elementos</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            console.log($('img').attr('src'))
+            console.log($('img').attr('border'))
+            console.log($('img').attr('src','imagens/esfera_2.png'))
+            
+            console.log($('img').attr('border',12))
+            console.log($('div').attr('style', 'background-color: blue ; width: 150px; height: 100px'))
+            console.log($('input').attr('type','password'))
+        })
+    </script>
+</head>
+<body>
+    <img src="imagens/esfera_1.png" border="5">
+    <div style="background-color: red ; width: 100px; height: 100px"></div>
+    <input type="text" value="eu sou um input">
+</body>
+</html>
