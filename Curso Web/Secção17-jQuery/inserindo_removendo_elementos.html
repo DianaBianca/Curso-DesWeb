@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selecionando elementos</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(() => {
+            $('#lista1').append('<li>item 4</li>')//add item no final
+            $('#lista1').append('<li>item 0</li>')// add item no inicio
+
+            $('#lista2').append('<div>item Novo</div>')
+
+            //inserindo e apos doo elemento selecionado fora do elemento selecionaro 
+            $('#lista2').after('<p>inserido apos a div</p>')
+            $('#lista2').before('<p>inserido apos a div</p>')
+
+            $('#linha').after('<p>inserido apos o hr</p>')
+
+            $('#lista1').html('<p>eu substitui todo o conteudo que estava aqui </p>')
+        })
+    </script>
+</head>
+<body>
+
+    <ul id="lista1">
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+    </ul>
+
+    <div id="lista2">
+        <div>item 1</div>
+        <div>item 2</div>
+        <div>item 3</div>
+    </div>
+    <hr id="linha">
+
+</body>
+</html>
