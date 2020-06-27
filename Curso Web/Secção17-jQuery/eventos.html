@@ -15,6 +15,23 @@
 				$(window).scroll(()=>{
 					$('#scroll').html('scroll acionado')
 				})
+				$(window).resize(()=>{
+					$('#window').html('pagina redirecionada').css('background-color','red')
+				})
+
+				$('#div1').scroll(function(){
+					//this indica que queremos atuar no objeto selecionado ali em cima
+					$(this).css('background-color','pink')
+				})
+
+				/*OU
+					$('#div1').scroll(e =>{
+					//this indica que queremos atuar no objeto selecionado ali em cima
+					$(e.target).css('background-color','pink')
+				})
+				*/
+
+
 			})
 		</script>
 	</head>
@@ -29,7 +46,11 @@
 			<h3>Browser</h3>
 			<span>Onload: </span><span id="onload">?</span><br />
 			<span>Scroll: </span><span id="scroll">?</span><br />
-			<span>Window: </span><span id="window">?</span>
+			<span>Resize Window: </span><span id="window">?</span>
+			<div id="div1" style="heigth:100px; width:100px; border:solid 1px; overflow-y:scroll">
+				<br><br><br><br><br><br><br><br><br><br>
+			</div>
+
 			<hr />
 
 			<h3>Mouse</h3>
