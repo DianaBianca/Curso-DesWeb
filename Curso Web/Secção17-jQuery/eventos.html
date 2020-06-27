@@ -10,7 +10,12 @@
 
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 		<script>
-
+			$(document).ready(() =>{
+				$('#onload').html('Pagina carregada')
+				$(window).scroll(()=>{
+					$('#scroll').html('scroll acionado')
+				})
+			})
 		</script>
 	</head>
 
@@ -22,9 +27,9 @@
 
 		<div>
 			<h3>Browser</h3>
-			<span>Onload: </span><span>?</span><br />
-			<span>Scroll: </span><span>?</span><br />
-			<span>Window: </span><span>?</span>
+			<span>Onload: </span><span id="onload">?</span><br />
+			<span>Scroll: </span><span id="scroll">?</span><br />
+			<span>Window: </span><span id="window">?</span>
 			<hr />
 
 			<h3>Mouse</h3>
