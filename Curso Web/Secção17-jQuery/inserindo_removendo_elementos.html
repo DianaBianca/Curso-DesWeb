@@ -18,7 +18,12 @@
 
             $('#linha').after('<p>inserido apos o hr</p>')
 
+            //perde todo o conteudo
             $('#lista1').html('<p>eu substitui todo o conteudo que estava aqui </p>')
+
+            //removendo elementos
+            $('#lista1').remove()
+            $('.it3').remove()
         })
     </script>
 </head>
@@ -27,13 +32,13 @@
     <ul id="lista1">
         <li>item 1</li>
         <li>item 2</li>
-        <li>item 3</li>
+        <li class="it3">item 3</li>
     </ul>
 
     <div id="lista2">
         <div>item 1</div>
         <div>item 2</div>
-        <div>item 3</div>
+        <div class="it3">item 3</div>
     </div>
     <hr id="linha">
 
