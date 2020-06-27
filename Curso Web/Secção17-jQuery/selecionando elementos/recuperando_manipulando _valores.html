@@ -7,12 +7,29 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script>
         $(document).ready(() => {
-            
+            //no momento esse codigo só funciona no console do navegador,
+          //entao escreva esses codigos no console do navegador
+
+           /* 
           console.log(('#nome').val('Joao Santos'))//alterando o valor do input
           console.log(('#origem').val('3'))
 
           console.log(('#nome').val())//retorna o valor do input
           console.log(('#origem').val())
+
+          console.log($('.sexo'))
+          console.log($('.sexo:checked'))
+          console.log($('.sexo:checked').val())//recurpera o valor do radio selecionado
+          
+          console.log($('.interesse:checked'))
+          
+
+          //$.each(array,callback) para percorrer e mostrar todos os checkbox selecionados
+          
+          $.each($('.interesse:checked'),(indice,valor) => {
+              console.log(indice,valor)
+          })
+          */
         })
     </script>
 </head>
@@ -36,5 +53,7 @@
   <input type="checkbox" name="interesse" class="interesse" value="php"> PHP <br>
   <input type="checkbox" name="interesse" class="interesse" value="js"> JS <br>
   <input type="checkbox" name="interesse" class="interesse" value="css"> CSS <br>
+  <input type="checkbox" name="interesse" class="interesse" value="java"> JAVA <br>
+  
 </body>
 </html>
