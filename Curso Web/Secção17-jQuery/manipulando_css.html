@@ -5,14 +5,51 @@
 		<title>jQuery</title>
 
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<style>
+			.compo{
+				
+				border: none;
+				padding: 10px;
+			}
+			.padrao{
+				background-color: #ddd;
+			}
+			.erro{
+				background-color:red;
+			}
+		</style>
 		<script>
+			$(document).ready(() => {
+				//utilização do metodo css
+				$('topo').css('background-color','#155661')
+				$('topo').css('background-color','#155661').css('margin','0px').css('padding','18px 20px 10px 20px')
+			
+				$('topo').css({'background-color':'#155661','margin':'0px','padding':'18px 20px 10px 20px' })
+				$('body').css('margin','0px')
+				$('h1').css({'color':'#fff', 'margin':'0px'})
 
+				//adicionando uma ou varias classes aos elementos html
+				//$('input').adClass('campo')
+				//$('textarea').adClass('campo')
+				$('input').adClass('campo padrao')
+				$('text').adClass('campo erro')
+
+				//verifica a existencia de uma classe no elemento html
+				$('textarea').adClass('erro')
+				if($('textarea').adClass('erro')){
+					alert('temos um campo com erro !')
+				}
+
+				//$('textarea').removeClass('erro')
+				//$('textarea').adClass('padrao')
+
+			})
 		</script>
 	</head>
 
 	<body>
 		
-		<div>
+		<div id="topo">
 			<h1>Barra de navegação da aplicação</h1>
 		</div>
 
