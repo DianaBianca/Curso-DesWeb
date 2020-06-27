@@ -7,23 +7,21 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script>
         $(document).ready(function(){
-           console.log('conteudo div 1 ' , $('#div1').html())
-           console.log('conteudo div 2 ' , $('#div2').html())
-           console.log($('#div1').html('<strong>eu sou o valor novo</strong>'))
-           console.log($('#div1').html('eu sou o valor novo'))
+          
         })
     </script>
 </head>
 <body>
-   <div id="div1" style="border: 1px solid #000; width: 150px;height:150px;">
-       Div1
-       <a href="#">teste</a>
-       <p>esse é outro teste</p>
-       textoo
-       <div>outro teste</div>
-   </div>
-   <div id="div2" style="border: 1px solid #000; width: 150px;height:150px;">
-    Div2
-</div>
+  <p>Nome :</p>
+  <input type="text" id="nome">
+  <br>
+  <p>onde voce nos encontrou?</p>
+  <select  id="origem">
+      <option value="1">Google</option>
+      <option value="2">Facebook</option>
+      <option value="3">Instagram</option>
+      <option value="4">Outdoors</option>
+  </select>
+    
 </body>
 </html>
