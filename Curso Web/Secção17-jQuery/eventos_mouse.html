@@ -30,12 +30,22 @@
 					$(e.target).css('background-color','pink')
 				})
                 */
-                
+                // EVENTOS DO MOUSE
                 $('#btn1').mousedown(()=>{
                     $('#div2').css('background-color','pink')
                 })
+                $('#btn1').click(()=>{
+                    $('#div2').css('background-color','yellow')
+                })
 
-
+                $('#btn2').dblclick(()=>{
+                    $('#div2').css('background-color','black')
+                })
+                $('#div2').mousemove((e)=>{
+                    console.log(e.offsetX, e.offsetY)//coordenadqas do mouse dentro da div
+                    $('#resultadoDiv').html('X: ' + e.offsetX + ' / Y: ' + e.offsetY )
+                })
+                
 			})
 		</script>
 	</head>
@@ -59,9 +69,12 @@
 
 			<h3>Mouse</h3>
 			<button id="btn1" type="button">Clique aqui</button>
-			<button type="button">Clique aqui 2x</button>
+			<button id="btn2" type="button">Clique aqui 2x</button>
 			<div id="div2" style="background-color: red; width: 80px; height: 50px; margin-top: 10px; margin-bottom: 10px"></div>
-			<span>Resultado do evento sobre a div</span>
+            <span>Resultado do evento sobre a div</span>
+            <span id="resultadoDiv">
+
+            </span>
 			<hr />
 
 			<h3>Teclado</h3>
