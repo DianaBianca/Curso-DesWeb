@@ -5,121 +5,124 @@
 		<title>jQuery</title>
 
 		<style>
-			#divExterna{
-                background-color: #ccc;
-                height: 80px;
-                width: 80px;
-            }
+			#divExterna {
+				background-color: #ccc;
+				width: 80px;
+				height: 80px;
+				padding: 70px;
+			}
 
-            #divInterna{
-                background-color: blue;
-                height: 80px;
-                width: 80px;
-                padding: 70px;
-            }
+			#divInterna {
+				width: 80px;
+				height: 80px;
+				background-color: blue;
+			}
 		</style>
 
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 		<script>
-			$(document).ready(() =>{
-				$('#onload').html('Pagina carregada')
-				$(window).scroll(()=>{
-					$('#scroll').html('scroll acionado')
-				})
-				$(window).resize(()=>{
-					$('#window').html('pagina redirecionada').css('background-color','red')
+			$(document).ready(() => {
+				$('#onload').html('Página carregada')
+
+				$(window).scroll(() => {
+					$('#scroll').html('Scroll acionado')
 				})
 
-				$('#div1').scroll(function(){
-					//this indica que queremos atuar no objeto selecionado ali em cima
-					$(this).css('background-color','pink')
+				$(window).resize(() => {
+					$('#xyz').html('Página redimensionada').css('background-color', 'red')
 				})
 
-				/*OU
-					$('#div1').scroll(e =>{
-					//this indica que queremos atuar no objeto selecionado ali em cima
-					$(e.target).css('background-color','pink')
+				//function / arrow function
+				$('#div1').scroll(e => {
+					$(e.target).css('background-color', 'blue')
 				})
-                */
-                // EVENTOS DO MOUSE
-                $('#btn1').mousedown(()=>{
-                    $('#div2').css('background-color','pink')
-                })
-                $('#btn1').click(()=>{
-                    $('#div2').css('background-color','yellow')
-                })
 
-                $('#btn2').dblclick(()=>{
-                    $('#div2').css('background-color','black')
-                })
-                $('#div2').mousemove((e)=>{
-                    console.log(e.offsetX, e.offsetY)//coordenadqas do mouse dentro da div
-                    $('#resultadoDiv').html('X: ' + e.offsetX + ' / Y: ' + e.offsetY )
-                })
+				$('#btn1').mousedown(() => {
+					$('#div2').css('background-color', 'green')
+				})
 
-                //mouse enter e mouse over - quando um elemento html é sobreposto pelo cursor do mouse
-                
-                // mouseover/ mouseout (antigos)
+				$('#btn1').click(() => {
+					$('#div2').css('background-color', 'blue')
+				})
 
-                /*
-                $('#divExterna').mouseover(()=>{
-                    $('#resultadoDiv1').html('Entrou')
-                    console.log('div externa (entrou)')
-                })
-       
-                $('#divExterna').mouseout(()=>{
-                    $('#resultadoDiv1').html('Saiu')
-                    console.log('div externa (saiu)')
-                })
+				$('#btn2').dblclick(() => {
+					$('#div2').css('background-color', 'yellow')
+				})
 
-                $('#divInterna').mouseover(()=>{
-                    $('#resultadoDiv2').html('Entrou')
-                    console.log('div interna (entrou)')
-                })
-       
-                $('#divInsterna').mouseout(()=>{
-                    $('#resultadoDiv2').html('Saiu')
-                    console.log('div interna (saiu)')
-                })
+				$('#div2').mousemove((e) => {
+					$('#resultadoDiv').html('X: ' + e.offsetX + ' / Y: ' + e.offsetY)
+				})
 
-                 
+				/* mouseouver / mouseout (antigos) */
+				/*
+				$('#divExterna').mouseover(() => {
+					$('#resultadoDiv1').html('entrou')
+					console.log('Div Externa (entrou)')
+				})
 
-                //mouseenter / mouseleave (novos)
-                $('#divExterna').mouseenter(()=>{
-                    $('#resultadoDiv1').html('Entrou')
-                    console.log('div externa (entrou)')
-                    
-                })
+				$('#divExterna').mouseout(() => {
+					$('#resultadoDiv1').html('saiu')
+					console.log('Div Externa (saiu)')
+				})
 
-                $('#divExterna').mouseleave(()=>{
-                    $('#resultadoDiv1').html('Saiu')
-                    console.log('div externa (saiu)')
-                })
+				$('#divInterna').mouseover(() => {
+					$('#resultadoDiv2').html('entrou')
+					console.log('Div Interna (entrou)')
+				})
 
-                $('#divExterna').mouseenter(()=>{
-                    $('#resultadoDiv2').html('Entrou')
-                    console.log('div interna (entrou)')
-                    
-                })
+				$('#divInterna').mouseout(() => {
+					$('#resultadoDiv2').html('saiu')
+					console.log('Div Iterna (saiu)')
+				})
+				*/
 
-                $('#divExterna').mouseleave(()=>{
-                    $('#resultadoDiv2').html('Saiu')
-                    console.log('div interna (saiu)')
-                })
-               
-                */
-                //EVENTOS TECLADO
-                $('#teclado').keydown(()=>{
-                    $('#resultadoTecla').html('Tecla pressionada')
-                    console.log('Tecla pressionada')
-                })
-                 
-                /*
-                $('#teclado').keyup(()=>{
-                    $('#resultadoTecla').html('Tecla liberada')
-                    console.log('Tecla liberada')
-                })
-                */
+				/* mouseenter / mouseleave (novos) */
+				$('#divExterna').mouseenter(() => {
+					$('#resultadoDiv1').html('entrou')
+					console.log('Div Externa (entrou)')
+				})
+
+				$('#divExterna').mouseleave(() => {
+					$('#resultadoDiv1').html('saiu')
+					console.log('Div Externa (saiu)')
+				})
+
+				$('#divInterna').mouseenter(() => {
+					$('#resultadoDiv2').html('entrou')
+					console.log('Div Interna (entrou)')
+				})
+
+				$('#divInterna').mouseleave(() => {
+					$('#resultadoDiv2').html('saiu')
+					console.log('Div Interna (saiu)')
+				})
+
+				
+				$('#teclado').keyup((e) => {
+					if(e.keyCode < 97 || e.keyCode > 100) {
+						let txt = $(e.target).val()
+						txt = txt.slice(0, -1)
+
+						$(e.target).val(txt)
+					}
+				})
+				
+				
+
+				/*
+				$('#teclado').keyup((e) => {
+					$('#resultadoTecla').html('Tecla liberada')
+
+					if(e.keyCode == 13) {
+						let txt = $(e.target).val()
+						$('#resultadoTecla').html(txt)
+						$(e.target).val('')
+					}
+					
+				})
+				*/
+				
+				
 			})
 		</script>
 	</head>
@@ -134,34 +137,29 @@
 			<h3>Browser</h3>
 			<span>Onload: </span><span id="onload">?</span><br />
 			<span>Scroll: </span><span id="scroll">?</span><br />
-			<span>Resize Window: </span><span id="window">?</span>
-			<div id="div1" style="heigth:100px; width:100px; border:solid 1px; overflow-y:scroll">
-				<br><br><br><br><br><br><br><br><br><br>
+			<span>Resize window: </span><span id="xyz">?</span>
+			<div id="div1" style="height: 100px; width: 100px; border: solid 1px; overflow-y: scroll">
+				<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 			</div>
-
 			<hr />
 
 			<h3>Mouse</h3>
 			<button id="btn1" type="button">Clique aqui</button>
 			<button id="btn2" type="button">Clique aqui 2x</button>
 			<div id="div2" style="background-color: red; width: 80px; height: 50px; margin-top: 10px; margin-bottom: 10px"></div>
-            <span>Resultado do evento sobre a div</span>
-            <span id="resultadoDiv"></span>
+			<span>Resultado do evento sobre a div</span><span id="resultadoDiv"></span>
 
-            <div id="divExterna">
-                <div id="divInterna"></div>
-            </div>
-            <span>Div Externa : </span>
-            <span id="resultadoDiv1"></span>
-            <br>
-            <span> Div INterna : </span>
-            <span id="resultadoDiv2"></span>
-
+			<div id="divExterna">
+				<div id="divInterna"></div>
+			</div>
+			<span>Div Externa: </span><span id="resultadoDiv1"></span>
+			<br />
+			<span>Div Interna: </span><span id="resultadoDiv2"></span>
 			<hr />
 
 			<h3>Teclado</h3>
 			<span>Nome:</span>
-			<input type="text" id="teclado"/>
+			<input type="text" id="teclado" />
 			<span id="resultadoTecla">Resultado do evento sobre o input</span>
 			<hr />
 
