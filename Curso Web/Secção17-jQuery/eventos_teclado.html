@@ -82,7 +82,7 @@
                     console.log('div interna (saiu)')
                 })
 
-                */ 
+                 
 
                 //mouseenter / mouseleave (novos)
                 $('#divExterna').mouseenter(()=>{
@@ -106,9 +106,20 @@
                     $('#resultadoDiv2').html('Saiu')
                     console.log('div interna (saiu)')
                 })
-
+               
+                */
                 //EVENTOS TECLADO
+                $('#teclado').keydown(()=>{
+                    $('#resultadoTecla').html('Tecla pressionada')
+                    console.log('Tecla pressionada')
+                })
                  
+                /*
+                $('#teclado').keyup(()=>{
+                    $('#resultadoTecla').html('Tecla liberada')
+                    console.log('Tecla liberada')
+                })
+                */
 			})
 		</script>
 	</head>
@@ -150,8 +161,8 @@
 
 			<h3>Teclado</h3>
 			<span>Nome:</span>
-			<input type="text" />
-			<span>Resultado do evento sobre o input</span>
+			<input type="text" id="teclado"/>
+			<span id="resultadoTecla">Resultado do evento sobre o input</span>
 			<hr />
 
 			<h3>Formulário</h3>
