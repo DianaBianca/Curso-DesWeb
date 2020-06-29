@@ -5,7 +5,11 @@
 		<title>jQuery</title>
 
 		<style>
-			
+			#divExterna{
+                background-color: #ccc;
+                height: 80px;
+                width: 80px;
+            }
 		</style>
 
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -45,7 +49,30 @@
                     console.log(e.offsetX, e.offsetY)//coordenadqas do mouse dentro da div
                     $('#resultadoDiv').html('X: ' + e.offsetX + ' / Y: ' + e.offsetY )
                 })
+
+                //mouse enter e mouse over - quando um elemento html é sobreposto pelo cursor do mouse
                 
+                // mouseover/ mouseout (antigos)
+
+                /*
+                $('#divExterna').mouseover(()=>{
+                    $('#resultadoDiv1').html('Entrou')
+                })
+                */
+                /*
+                $('#divExterna').mouseout(()=>{
+                    $('#resultadoDiv1').html('Saiu')
+                })
+
+                //mouseenter / mouseleave (novos)
+                $('#divExterna').mouseenter(()=>{
+                    $('#resultadoDiv1').html('Entrou')
+                })
+
+                $('#divExterna').mouseleave(()=>{
+                    $('#resultadoDiv1').html('Saiu')
+                })
+                */  
 			})
 		</script>
 	</head>
@@ -74,9 +101,14 @@
             <span>Resultado do evento sobre a div</span>
             <span id="resultadoDiv"></span>
 
-            <div id="divExterna"></div>
+            <div id="divExterna">
+                <div id="divInterna"></div>
+            </div>
             <span>Div Externa : </span>
             <span id="resultadoDiv1"></span>
+            <br>
+            <span> Div INterna : </span>
+            <span id="resultadoDiv2"></span>
 
 			<hr />
 
