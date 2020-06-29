@@ -10,6 +10,13 @@
                 height: 80px;
                 width: 80px;
             }
+
+            #divInterna{
+                background-color: blue;
+                height: 80px;
+                width: 80px;
+                padding: 70px;
+            }
 		</style>
 
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -57,22 +64,49 @@
                 /*
                 $('#divExterna').mouseover(()=>{
                     $('#resultadoDiv1').html('Entrou')
+                    console.log('div externa (entrou)')
                 })
-                */
-                /*
+       
                 $('#divExterna').mouseout(()=>{
                     $('#resultadoDiv1').html('Saiu')
+                    console.log('div externa (saiu)')
                 })
+
+                $('#divInterna').mouseover(()=>{
+                    $('#resultadoDiv2').html('Entrou')
+                    console.log('div interna (entrou)')
+                })
+       
+                $('#divInsterna').mouseout(()=>{
+                    $('#resultadoDiv2').html('Saiu')
+                    console.log('div interna (saiu)')
+                })
+
+                */ 
 
                 //mouseenter / mouseleave (novos)
                 $('#divExterna').mouseenter(()=>{
                     $('#resultadoDiv1').html('Entrou')
+                    console.log('div externa (entrou)')
+                    
                 })
 
                 $('#divExterna').mouseleave(()=>{
                     $('#resultadoDiv1').html('Saiu')
+                    console.log('div externa (saiu)')
                 })
-                */  
+
+                $('#divExterna').mouseenter(()=>{
+                    $('#resultadoDiv2').html('Entrou')
+                    console.log('div interna (entrou)')
+                    
+                })
+
+                $('#divExterna').mouseleave(()=>{
+                    $('#resultadoDiv2').html('Saiu')
+                    console.log('div interna (saiu)')
+                })
+                 
 			})
 		</script>
 	</head>
