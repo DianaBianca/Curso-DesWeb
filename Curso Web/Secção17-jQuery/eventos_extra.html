@@ -5,50 +5,27 @@
 		<title>jQuery</title>
 
 		<style>
-			.desfocado{
-                background-color: greenyellow;
-            }
-
-            .focado{
-                background-color:palevioletred;
-            }
+		
 		</style>
 
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 		<script>
 			$(document).ready(() => {
-                //qualquer elemento do tipo input criado dentro do body
-                //passa a receber de forma automatica a acao para o evento
-                //que estamos definindo, mesmo que o elemento esteja sendo 
-                //criado apos a interpretacao dessa instrucao
+                //TRIGGER() - aciona evento de modo programarico
+                //HOVER()   - função auxiliar para captura de eventos mouseenter/mouseout/mouseleave/mouseover
+                //TOGGLECLASS() - função auxiliar para inclusao/remoção de classe
+
+                
 
 
-                // o metodo on permite atribuir eventos a elementos html associar
-                // diretamente ou associados ao elemento pai
-				$('body').on('focus','input', (e) => {
-                    $(e.target).removeClass('desfocado') //remove a classe 
-                    $(e.target).addClass('focado')//adiciona a classe 
-                })
-
-                $('body').on('blur','input', (e) => {
-                    $(e.target).removeClass('focado') //remove a classe 
-                    $(e.target).addClass('desfocado')//adiciona a classe
-                })
-
-                //remover o evento 
-                //$('body').off('blur','input')
-
-                $('body').append('<br><br> <input type="text" class="desfocado">')
             })
             
-            //TRIGGER() - aciona evento de modo programarico
-            //HOVER()   - função auxiliar para captura de eventos mouseenter/mouseout/mouseleave/mouseover
-            //TOGGLECLASS() - função auxiliar para inclusao/remoção de classe
+            
 		</script>
 	</head>
 
 	<body>
-		<input type="text" class="desfocado">
+		
 	</body>
 
 </html>
