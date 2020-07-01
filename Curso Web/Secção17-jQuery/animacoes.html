@@ -5,14 +5,40 @@
 		<title>jQuery</title>
 
 		<style>
-
+            .div{
+                width: 80px;
+                height: 90px;
+                border : solid 1px black;
+                background-color: pink;
+            }
 			
 		</style>
 
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 		<script>
 			$(document).ready(() => {
-				
+				$('button').on('click', ()=>{
+
+                    let visualFinal = {
+                        'width': '180px',
+                        'height': '190px',
+                        'margin-left': '200px', 
+                        'margin-top': '25px',
+                        'border-radius': '200px'
+                    }
+
+                    $('#div1').animate(
+                        visualFinal,
+                    {
+                        duration: 3500,
+                        start: () => {console.log('animacao iniciada')} ,  //executado quando a animação é executada
+                        complete: () => {
+                            $('#div2').animate(visualFinal, 'slow')
+                        } //executado quando a animação é terminada
+
+
+                    })//atributos visuais , opçoes da transição(pode ser milissegundos ou obj literal)
+                })
 			})
 		</script>
 	</head>
@@ -20,7 +46,8 @@
 	<body>
 		
         <button type="button">Inicar Animação</button>
-        <div class="div"></div>
+        <div id="div1" class="div"></div>
+        <div id="div2" class="div"></div>
 			
 	</body>
 
