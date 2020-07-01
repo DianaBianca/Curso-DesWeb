@@ -5,17 +5,52 @@
 		<title>jQuery</title>
 
 		<style>
-		
+            #div1 {
+                width: 90px;
+                height: 90px;
+                border: solid 1px red;
+            }
+
+            .emDestaque{
+                background-color: blueviolet;
+            }
 		</style>
 
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 		<script>
 			$(document).ready(() => {
                 //TRIGGER() - aciona evento de modo programarico
-                //HOVER()   - função auxiliar para captura de eventos mouseenter/mouseout/mouseleave/mouseover
-                //TOGGLECLASS() - função auxiliar para inclusao/remoção de classe
 
+                $('#btn2 ').on('click', () =>{
+                    alert('botao 2 clicado')
+                })
+
+                //disparando o evento de click no botao 2 apos clicarmos no botao 1
+                $('#btn1').on('click', () =>{
+                    $('#btn2').trigger('click')  
+                })
+
+                //HOVER()   - função auxiliar para captura de eventos mouseenter/mouseout/mouseleave/mouseover
+                $('#div1').hover(
+                    (e)=> {$(e.target).toggleClass('emDestaque')}
+                    //(e)=> {$(e.target).addClass('emDestaque')},
+                    //(e)=> {$(e.target).removeClass('emDestaque')}
+                )
+                /*  OU 
+                $('#div1').on('mouseenter', (e) =>{
+                    $(e.target).addClass('emDestaque')
+                })
+
+                $('#div1').on('mouseleave', (e) =>{
+                    $(e.target).removeClass('emDestaque')
+                })
+                */
                 
+                //TOGGLECLASS() - função auxiliar para inclusao/remoção de classe
+                //caso o elemento nao possua a classe
+
+                //$(e.target).toggleClass('emDestaque')
+
 
 
             })
@@ -25,7 +60,13 @@
 	</head>
 
 	<body>
-		
+        <button id="btn1" type="button">BOTAO 1</button>
+        <br>
+        <button id="btn2" type="button">BOTAO 2</button>
+
+        <hr>
+
+        <div id="div1"></div>
 	</body>
 
 </html>
