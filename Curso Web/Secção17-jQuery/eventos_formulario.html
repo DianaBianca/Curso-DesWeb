@@ -17,6 +17,10 @@
 				height: 80px;
 				background-color: blue;
 			}
+
+			.inputFocado{
+				background-color: red;
+			}
 		</style>
 
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -124,26 +128,38 @@
                 
                 //EVENTOS DE FORMULARIO
 
-                $('#nome').focus(() => {
+                $('#nome').focus((e) => {
 					//$('#resultadoDiv1').html('saiu')
 					console.log('esse elemento html recebeu o foco (nome)')//no momento em que clicamos no input
+					$(e.target).addClass('inputFocado')
                 })
                 
-                $('#email').focus(() => {
+                $('#email').focus((e) => {
 					//$('#resultadoDiv1').html('saiu')
 					console.log('esse elemento html recebeu o foco (email)')//no momento em que clicamos no input
+					$(e.target).addClass('inputFocado')
 				})
 
-				$('#nome').blur(() => {
+				$('#nome').blur((e) => {
 					//$('#resultadoDiv1').html('saiu')
 					console.log('esse elemento html perdeu o foco (nome)')//no momento em que clicamos no input
+					$(e.target).removeClass('inputFocado')
                 })
                 
-                $('#email').blur(() => {
+                $('#email').blur((e) => {
 					//$('#resultadoDiv1').html('saiu')
 					console.log('esse elemento html perdeu o foco (email)')//no momento em que clicamos no input
+					$(e.target).removeClass('inputFocado')
+				})
+
+				$('#opcao').change((e) => {
+					console.log($(e.target).val())// mostra o value
 				})
 				
+				$('#form').submit((e) => {
+					e.preventDefault()//impede/evita o comportamento default
+					console.log('formulario enviado')
+				})
 				
 			})
 		</script>
@@ -186,7 +202,7 @@
 			<hr />
 
 			<h3>Formulário</h3>
-			<form>
+			<form id="form">
 				<span>Nome:</span>
 				<input id="nome" type="text" />
 
@@ -194,13 +210,13 @@
 				<input id="email" type="text" />
 
 				<span>Motivo do contato:</span>
-				<select>
+				<select id="opcao">
 					<option value="">-- Selecione --</option>
 					<option value="duvida">Dúvida</option>
 					<option value="sugestao">Sugestão</option>
 				</select>
 				
-				<button type="button">Enviar</button>
+				<button type="submit">Enviar</button>
 			</form>
 		</div>
 	</body>
