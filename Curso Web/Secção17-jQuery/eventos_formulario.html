@@ -127,7 +127,7 @@
                 */
                 
                 //EVENTOS DE FORMULARIO
-
+				/*
                 $('#nome').focus((e) => {
 					//$('#resultadoDiv1').html('saiu')
 					console.log('esse elemento html recebeu o foco (nome)')//no momento em que clicamos no input
@@ -151,6 +151,20 @@
 					console.log('esse elemento html perdeu o foco (email)')//no momento em que clicamos no input
 					$(e.target).removeClass('inputFocado')
 				})
+							OU				
+				*/
+
+				$('#nome, #email').focus((e) => {
+					//$('#resultadoDiv1').html('saiu')
+					console.log('esse elemento html recebeu o foco ')//no momento em que clicamos no input
+					$(e.target).addClass('inputFocado')
+				})
+				
+				$('#nome,#email').blur((e) => {
+					//$('#resultadoDiv1').html('saiu')
+					console.log('esse elemento html perdeu o foco')//no momento em que clicamos no input
+					$(e.target).removeClass('inputFocado')
+                })
 
 				$('#opcao').change((e) => {
 					console.log($(e.target).val())// mostra o value
