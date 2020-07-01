@@ -36,9 +36,36 @@
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 		<script>
 			$(document).ready(() => {
-				
+				//$('#div1').hide('slow')- > medio slow ou fast ou milissegundos
+				//$('#div1').show('medio')
 
-				
+				//$('#div1').hide('slow')
+				//$('#div1').hide(2000)
+				//$('#div1').show(2000)
+				//$('#div1').toggle('slow')
+
+				$('#btn1').on('click', ()=>{
+					$('#div1').toggle('slow')
+				})
+				//-------------------------------------
+
+				//$('#div2').fadeOut('slow')
+				//$('#div2').fadeIn('slow')
+				//$('#div2').fadeTo(tempo, pnto de opacidade)
+				//$('#div2').fadeTo(slow,0.8)
+
+				$('#btn2').on('click', ()=>{
+					$('#div2').fadeToggle('slow')
+				})
+
+				//-------------------------------------
+				//$('#div3').slideUp('slow')
+				//$('#div3').slideDown('slow')
+				//$('#div3').slideToggle(2000)
+
+				$('#btn3').on('click', ()=>{
+					$('#div3').slideToggle('slow')
+				})
 			})
 		</script>
 	</head>
@@ -46,17 +73,17 @@
 	<body>
 		
 		<div class="grupo">
-			<button type="button">DIV 1</button>
+			<button id="btn1" type="button">DIV 1</button>
 			<div id="div1" class="div div1"></div>
 		</div>
 
 		<div class="grupo">
-			<button type="button">DIV 2</button>
+			<button id="btn2" type="button">DIV 2</button>
 			<div id="div2" class="div div2"></div>
 		</div>
 
 		<div class="grupo">
-			<button type="button">DIV 3</button>
+			<button id="btn3" type="button">DIV 3</button>
 			<div id="div3" class="div div3"></div>
 		</div>
 			
