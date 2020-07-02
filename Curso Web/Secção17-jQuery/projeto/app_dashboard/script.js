@@ -32,4 +32,22 @@ $(document).ready(() => {
 
         })
     })
+
+    //ajax
+    $('competencia').on('change',e =>{
+        //console.log($(e.target).val())
+        let competencia = $(e.target).val()
+        
+        $.ajax({
+            type:'GET',
+            url: 'app.php',
+            data:`competencia=${competencia}`,//x-www-form-urlencoded
+            success: (dados) =>{console.log(dados)},
+            error:(erro) => {console.log(erro)}
+        })
+
+        //metodo, url,dados, sucesso,erro
+    })
+
+
 })
