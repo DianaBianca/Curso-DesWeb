@@ -1,10 +1,10 @@
 $(document).ready(() => {
 	$('#documentacao').on('click', () =>{
-        console.log('link documentação clicado')
+        $('#pagina').load('documentacao.html')//carrega a pagina html 
 
     })
     $('#suporte').on('click', () =>{
-        console.log('link suporte clicado')
+        $('#pagina').load('suporte.html')//carrega a pagina html 
         
     })
 })
