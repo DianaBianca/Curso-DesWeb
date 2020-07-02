@@ -13,7 +13,7 @@
         }
 
         public function __set($atributo,$valor){
-            $this->$atributo = $valor
+            $this->$atributo = $valor;
             return $this;
         }
     }
@@ -32,13 +32,30 @@
                 "$this->pass"
             );
 
-
+            //instancia da conexao trabalhando com UTF8
+            $conexao->exec('set charset set utf8');
+            return $conexao;
 
         }catch(PDOException $e){
             echo '<p>'.$e->getMessage().'</p>';
         }
+    }
+    //class (model)
+    class Bd{
 
+        private $conexao;
+        private $dashboard;
 
+        public function __construct(Conexao $conexao, Dashboard $dashboard){
+            $this->conexao = $conexao->conectar();
+            $this->dashboard = $dashboard;
+
+        }
+
+        $dashboard = new Dashboard();
+        $conexao   = new Conexao();
+
+        $bd = new Bd($conexao,$dashboard);
 
 
     }
