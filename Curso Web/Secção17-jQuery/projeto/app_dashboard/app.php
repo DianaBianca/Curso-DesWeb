@@ -109,7 +109,7 @@ $bd = new Bd($conexao, $dashboard);
 
 $dashboard->__set('numeroVendas', $bd->getNumeroVendas());
 $dashboard->__set('totalVendas', $bd->getTotalVendas());
-print_r($dashboard);
+echo json_encode($dashboard);
 
 
 ?>
