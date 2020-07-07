@@ -25,7 +25,7 @@ class Route{
             'action' => 'index'
         );
         $routes['sobre_nos'] = array(
-            'route' => '/',
+            'route' => '/sobre_nos',
             'controller' => 'indexController',
             'action' => 'sobreNos'
         );
@@ -35,10 +35,19 @@ class Route{
 
     public function run($url){
 
-        echo "*********".$url."**********";
+        //echo "*********".$url."**********";
         foreach( $this->getRoutes() as $key => $route){
-            print_r($route);
-            echo '<br>';
+            
+            if($url == $route['route']){
+                $class = "app\\controllers\\".$route['controller'];//ucfirst($route['controller']);
+                
+                $controller = new $class;
+
+                //actions
+                $action = $route['action'];
+
+                $controller->$action();
+            }
         }
 
     }
