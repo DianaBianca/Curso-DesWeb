@@ -1,30 +1,30 @@
-<?
+<?php
     namespace MF\Init;
 
     abstract class Bootstrap{//nao pode ser instanciada, somente herdada
+        
         private $routes;
 
-        abstract protected function initRoutes();
+        abstract protected function initRoutes(); 
 
-        public function __construct(){
+        public function __construct() {
             $this->initRoutes();
             $this->run($this->getUrl());
         }
 
-        public function getRoutes(){
+        public function getRoutes() {
             return $this->routes;
         }
 
-        public function setRoutes(array $routes){
+        public function setRoutes(array $routes) {
             $this->routes = $routes;
         }
 
-        protected function run($url){
+        protected function run($url) {
+            foreach ($this->getRoutes() as $key => $route) {
 
-            //echo "*********".$url."**********";
-            foreach( $this->getRoutes() as $key => $route){
+                if($url == $route['route']) {
                     
-                if($url == $route['route']){
                     $class = "app\\controllers\\".$route['controller'];//ucfirst($route['controller']);
                         
                     $controller = new $class;
@@ -44,11 +44,5 @@
     
         }
 
-    
-
     }
-
-
-
-
 ?>
