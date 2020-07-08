@@ -2,11 +2,14 @@
 <hr> 
 
 <?php
-        
+       print_r ($this->view->dados);
     //echo 'Chegamos ao IndexController e disparamentos a action index';
-    foreach($this->view->dados as $i => $valor){
+    foreach($this->view->dados as $i => $produto){
         
-        echo $valor.'<br>';
+       // echo $valor.'<br>';
+       echo $produto['id'].'-'.$produto['descricao'].'-'.$produto['preco'];
+       echo '<br>';
+
     }
 
 ?>
