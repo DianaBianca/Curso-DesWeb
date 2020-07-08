@@ -6,6 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'app\\' => array($baseDir . '/app'),
     'MF\\' => array($vendorDir . '/MF'),
+    'App\\' => array($baseDir . '/App'),
 );
