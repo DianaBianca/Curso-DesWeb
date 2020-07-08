@@ -22,7 +22,7 @@ class IndexController extends Action{
 
 	public function sobreNos() {
 		//$this->view->dados = array('aaaa','bbbbbb','yyyyyyyyyy');
-		$this->render('sobreNos',"layout1");
+		$this->render('sobreNos','layout2');
 	}
 
 	
