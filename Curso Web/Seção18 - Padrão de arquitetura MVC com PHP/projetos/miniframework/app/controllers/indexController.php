@@ -5,6 +5,7 @@ namespace app\Controllers;
 use MF\Controller\Action;
 use app\Connection;
 use app\Models\Produto;
+use app\Models\Info;
 
 class IndexController extends Action {
 
@@ -24,8 +25,12 @@ class IndexController extends Action {
 	}
 
 	public function sobreNos() {
-		
-		//$this->view->dados = array('Notebook', 'Smartphone');
+		$conn = Connection::getDb();
+		$info = new Info($conn);
+
+		$informacoes = $info->getInfo();
+
+		@$this->view->dados = $informacoes ;
 		$this->render('sobreNos', 'layout1');
 	}
 
