@@ -4,17 +4,23 @@ namespace app\controllers;
 
 class IndexController {
 
+	private $view;
+
+	public function __construct(){
+		$this->view = new \stdClass();//criando objetos vazios
+	}
+
 	public function index() {
-		$dados = array('x','yyyy','z');
-		$this->render('index',$dados);
+		$this->view->dados = array('x','yyyy','z');
+		$this->render('index');
 	}
 
 	public function sobreNos() {
-		$dados = array('aaaa','bbbbbb','yyyyyyyyyy');
-		$this->render('sobreNos',$dados);
+		$this->view->dados = array('aaaa','bbbbbb','yyyyyyyyyy');
+		$this->render('sobreNos');
 	}
 
-	public function render($view,$dados){
+	public function render($view){
 		//echo get_class($this);//a gente passa uma classe e ele retorna o nome de uma classe
 		$classAtual = get_class($this);
 		$classAtual = str_replace('app\\controllers\\','',$classAtual);//str_replace(1*'app\\controllers\\',2*'',3*$classAtual)
