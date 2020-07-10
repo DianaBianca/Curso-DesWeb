@@ -22,7 +22,7 @@ class Usuario extends Model {
 	//salvar
 	public function salvar() {
 
-		$query = "insert into usuarios(nome, email, senha)values(:nome, :email, :senha);";
+		$query = "insert into usuarios(nome, email, senha)values(:nome, :email, :senha)";
 		$stmt = $this->db->prepare($query);
 		$stmt->bindValue(':nome', $this->__get('nome'));
 		$stmt->bindValue(':email', $this->__get('email'));
@@ -32,30 +32,31 @@ class Usuario extends Model {
 		return $this;
 	}
 
-    //validar se um cadastro pode ser feito
-	public function validarCadastro(){
+	//validar se um cadastro pode ser feito
+	public function validarCadastro() {
 		$valido = true;
 
-		if(strlen($this->__get('nome')) < 3){
+		if(strlen($this->__get('nome')) < 3) {
 			$valido = false;
 		}
 
-		if(strlen($this->__get('email')) < 3){
+		if(strlen($this->__get('email')) < 3) {
 			$valido = false;
 		}
 
-		if(strlen($this->__get('senha')) < 3){
+		if(strlen($this->__get('senha')) < 3) {
 			$valido = false;
 		}
+
 
 		return $valido;
 	}
 
-    //recuperar um usuario por email
-	public function getUsuarioPorEmail(){
-		$query = "select nome, email from usuarios where email = :email ;";
+	//recuperar um usuário por e-mail
+	public function getUsuarioPorEmail() {
+		$query = "select nome, email from usuarios where email = :email";
 		$stmt = $this->db->prepare($query);
-		$stmt->bindValue(':email',$this->__get('email'));
+		$stmt->bindValue(':email', $this->__get('email'));
 		$stmt->execute();
 
 		return $stmt->fetchAll(\PDO::FETCH_ASSOC);

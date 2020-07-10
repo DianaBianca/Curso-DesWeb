@@ -26,7 +26,6 @@ class Route extends Bootstrap {
 			'action' => 'registrar'
 		);
 
-
 		$this->setRoutes($routes);
 	}
 
