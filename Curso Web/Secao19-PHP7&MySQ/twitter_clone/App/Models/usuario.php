@@ -22,7 +22,7 @@ class Usuario extends Model {
 	//salvar
 	public function salvar() {
 
-		$query = "insert into usuarios(nome, email, senha)values(:nome, :email, :senha)";
+		$query = "INSERT INTO usuarios(nome, email, senha) VALUES(:nome, :email, :senha);";
 		$stmt = $this->db->prepare($query);
 		$stmt->bindValue(':nome', $this->__get('nome'));
 		$stmt->bindValue(':email', $this->__get('email'));
@@ -54,7 +54,8 @@ class Usuario extends Model {
 
 	//recuperar um usuário por e-mail
 	public function getUsuarioPorEmail() {
-		$query = "select nome, email from usuarios where email = :email";
+		$query = "SELECT nome, email FROM usuarios WHERE email = :email;";
+		
 		$stmt = $this->db->prepare($query);
 		$stmt->bindValue(':email', $this->__get('email'));
 		$stmt->execute();
