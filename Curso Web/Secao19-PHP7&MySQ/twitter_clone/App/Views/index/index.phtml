@@ -33,6 +33,14 @@
 					<button type="submit" class="btn btn-primary mb-2">Entrar</button>
 				</div>
 			</div>
+
+			<?php if($this->view->login == 'erro'){?>
+				<div class="row">
+					<div class="col">
+					<span class="text text-danger">Email ou senha inválido(s)</span>  
+					</div>
+				</div>
+			<?php } ?>
 		</form>
 
 		<div class="row pt-5 pl-5 pr-5">
