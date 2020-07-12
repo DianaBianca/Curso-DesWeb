@@ -22,7 +22,7 @@ class Usuario extends Model {
 	//salvar
 	public function salvar() {
 
-		$query = "INSERT INTO usuarios(nome, email, senha) VALUES(:nome, :email, :senha);";
+		$query = "insert into usuarios(nome, email, senha)values(:nome, :email, :senha)";
 		$stmt = $this->db->prepare($query);
 		$stmt->bindValue(':nome', $this->__get('nome'));
 		$stmt->bindValue(':email', $this->__get('email'));
@@ -54,8 +54,7 @@ class Usuario extends Model {
 
 	//recuperar um usuário por e-mail
 	public function getUsuarioPorEmail() {
-		$query = "SELECT nome, email FROM usuarios WHERE email = :email;";
-		
+		$query = "select nome, email from usuarios where email = :email";
 		$stmt = $this->db->prepare($query);
 		$stmt->bindValue(':email', $this->__get('email'));
 		$stmt->execute();
@@ -63,22 +62,21 @@ class Usuario extends Model {
 		return $stmt->fetchAll(\PDO::FETCH_ASSOC);
 	}
 
-	public function autenticar(){
-		$query =  "select id , nome, email from ususarios where email = :email and senha = :senha";
+	public function autenticar() {
 
+		$query = "select id, nome, email from usuarios where email = :email and senha = :senha";
 		$stmt = $this->db->prepare($query);
-
-		$stmt->bindValue(':email',$this->__get('email'));
-		
-		$stmt->bindValue(':senha',$this->__get('senha'));
+		$stmt->bindValue(':email', $this->__get('email'));
+		$stmt->bindValue(':senha', $this->__get('senha'));
 		$stmt->execute();
 
 		$usuario = $stmt->fetch(\PDO::FETCH_ASSOC);
 
-		if(($usuario['id'] != '') && ($usuario['nome'] != '')){
-			$this->__set('id',$usuario['id']);
-			$this->__set('nome',$usuario['nome']);
+		if($usuario['id'] != '' && $usuario['nome'] != '') {
+			$this->__set('id', $usuario['id']);
+			$this->__set('nome', $usuario['nome']);
 		}
+
 		return $this;
 	}
 }

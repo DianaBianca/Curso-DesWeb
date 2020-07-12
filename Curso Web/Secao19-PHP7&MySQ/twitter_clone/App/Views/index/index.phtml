@@ -21,7 +21,7 @@
     </div>
 
     <div class="col-md-6 pt-4 pl-5 pr-5">
-		<form class="post" action="/autenticar">
+		<form method="post" action="/autenticar">
 			<div class="row">
 				<div class="col">
 					<input type="text" name="email" class="form-control" placeholder="E-mail">
@@ -34,10 +34,10 @@
 				</div>
 			</div>
 
-			<?php if($this->view->login == 'erro'){?>
+			<?php if($this->view->login == 'erro') { ?>
 				<div class="row">
 					<div class="col">
-					<span class="text text-danger">Email ou senha inválido(s)</span>  
+						<span class="text text-danger">*E-mail e ou senha inválido(s)</span>
 					</div>
 				</div>
 			<?php } ?>
