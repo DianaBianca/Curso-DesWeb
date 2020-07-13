@@ -18,7 +18,7 @@ class AppController extends Action {
             $tweet = Container::getModel('Tweet');
             $tweet->__set('id_usuario', $_SESSION['id'] );
             $tweets = $tweet->getAll();
-
+            $this->view->tweets = $tweets;
             $this->render('timeline');
 		} else {
 			header('Location: /?login=erro');
@@ -41,9 +41,15 @@ class AppController extends Action {
 		} else {
 			header('Location: /?login=erro');
 		}
+    }
 
-        
+    public function validaAutenticacao(){
+        session_start();
+        if(!isset($_SESSION['id'])|| $_SESSION['id'] =='' || !isset($_SESSION['nome']) || $_SESSION['nome'] == '') {
+            return true;
+        }else {
+            header('Location: /?login=erro');
+        }
     }
 }
-
 ?>
