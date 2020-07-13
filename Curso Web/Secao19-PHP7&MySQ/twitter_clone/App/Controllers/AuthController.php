@@ -15,7 +15,7 @@ class AuthController extends Action {
 
 		$usuario->__set('email', $_POST['email']);
 		$usuario->__set('senha', md5($_POST['senha']));
- 
+
 		$usuario->autenticar();
 
 		if($usuario->__get('id') != '' && $usuario->__get('nome')) {

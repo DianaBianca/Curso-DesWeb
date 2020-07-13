@@ -59,7 +59,7 @@
 			<div class="row mb-2">
 				<div class="col tweetBox">
 					<form method="post" action="/tweet">
-						<textarea name="tweet" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+						<textarea class="form-control" name="tweet" id="exampleFormControlTextarea1" rows="3"></textarea>
 						
 						<div class="col mt-2 d-flex justify-content-end">
 							<button type="submit" class="btn btn-primary">Tweet</button>
@@ -69,22 +69,21 @@
 				</div>
 			</div>
 
-            <?php foreach($this->view->tweets as $id_tweet => $tweet){?>
-                <div class="row tweet">
-                    <div class="col">
-                        <p><strong><?=$tweet['nome']?> </strong> <small> <span class="text text-muted">-<?= $tweet['data']?></span></small></p>
-                        <p><?=$tweet['tweet'] ?></p>
+			<?php foreach($this->view->tweets as $id_tweet => $tweet) { ?>
+				<div class="row tweet">
+					<div class="col">
+						<p><strong><?=$tweet['nome']?></strong> <small><span class="text text-muted">- <?=$tweet['data']?></span></small></p>
+						<p><?=$tweet['tweet']?></p>
+						<br />
+						<form>
+							<div class="col d-flex justify-content-end">
+								<button type="submit" class="btn btn-danger"><small>Remover</small></button>
+							</div>
+						</form>
+					</div>
+				</div>
+		<?php } ?>
 
-                        <br />
-                        <form>
-                            <div class="col d-flex justify-content-end">
-                                <button type="submit" class="btn btn-danger"><small>Remover</small></button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-
-			<?php }  ?>
 
 		</div>
 
