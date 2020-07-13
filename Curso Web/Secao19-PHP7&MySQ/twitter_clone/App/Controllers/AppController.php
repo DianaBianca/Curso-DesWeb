@@ -13,15 +13,37 @@ class AppController extends Action {
 
 		session_start();
 
+		if($_SESSION['id'] != '' && $_SESSION['nome'] != '') {
+            //recuperação dos tweets
+            $tweet = Container::getModel('Tweet');
+            $tweet->__set('id_usuario', $_SESSION['id'] );
+            $tweets = $tweet->getAll();
+
+            $this->render('timeline');
+		} else {
+			header('Location: /?login=erro');
+		}
+    }
+    
+    public function tweet(){
+        session_start();
+
 
 		if($_SESSION['id'] != '' && $_SESSION['nome'] != '') {
-			$this->render('timeline');
+            $tweet= Container::getModel('Tweet');
+            $tweet->__set('tweet',$_POST['tweet']);
+            $tweet->__set('id_usuario',$_SESSION['id']);
+
+            $tweet->salvar();
+            header('Location: /timeline');
+
+
 		} else {
 			header('Location: /?login=erro');
 		}
 
-		
-	}
+        
+    }
 }
 
 ?>
