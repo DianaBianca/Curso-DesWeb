@@ -72,7 +72,15 @@ class AppController extends Action {
 		$this->view->usuarios = $usuarios;
 
 		$this->render('quemSeguir');
-	}	
+    }	
+    
+    public function acao(){
+        $this->validaAutenticacao();
+
+        $acao = isset($_GET['acao']) ? $_GET['acao'] : '';
+        $acao = isset($_GET['acao']) ? $_GET['id_usuario'] : ''; 
+
+    }
 }
 
 ?>
