@@ -82,11 +82,13 @@ class Usuario extends Model {
 
 	public function getAll() {
 		$query = "select 
-					  id, nome, email
+					  u.id, u.nome, u.email, 
+					  (select count(*) from usuarios_seguidores as us
+					  where us.id = :id_usuario and us.id_usuario_seguindo = u.id) as seguindo_sn
 				  from  
-					   usuarios 
+					   usuarios as u
 				  where 
-					  nome like :nome and id != : :id_usuario
+					  u.nome like :nome and u.id != : :id_usuario
 					  ";
 
 		$stmt = $this->db->prepare($query);
