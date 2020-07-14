@@ -78,7 +78,16 @@ class AppController extends Action {
         $this->validaAutenticacao();
 
         $acao = isset($_GET['acao']) ? $_GET['acao'] : '';
-        $acao = isset($_GET['acao']) ? $_GET['id_usuario'] : ''; 
+        $acao = isset($_GET['id_usuario']) ? $_GET['id_usuario'] : ''; 
+        
+        $usuario = Container::getModel('Usuario');
+        $usuario->__set('id', $_SESSION['id']);
+
+        if($acao == 'seguir'){
+            $usuario->seguirUsuario($id_usuario_seguindo);
+        }else if ($acao == 'deixar_de_seguir'){
+            $usuario->deixarSeguirUsuario();
+        }
 
     }
 }
