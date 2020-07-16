@@ -1,5 +1,6 @@
 .container{
     display: flex;
+    margin-top: 20px;
 }
 
 .flex-left{
@@ -12,3 +13,5 @@
     border: 1px solid red;
     width: auto
 }
+
+
