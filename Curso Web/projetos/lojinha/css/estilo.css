@@ -1,0 +1,14 @@
+.container{
+    display: flex;
+}
+
+.flex-left{
+    justify-content: flex-start;
+    width: auto;
+}
+
+.flex-center{
+    align-items: flex-center;
+    border: 1px solid red;
+    width: auto
+}
