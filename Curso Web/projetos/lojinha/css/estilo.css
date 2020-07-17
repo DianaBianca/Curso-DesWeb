@@ -39,7 +39,7 @@ nav{
 
 /*Sobre Nos
 -----------------------------*/
-#sobre-nos{
+#sobre-nos , .row{
     height: 400px;
     background-color: white;
     border: 1px solid red;
@@ -54,7 +54,7 @@ nav{
 p{
     font-family: 'Poppins', sans-serif;
     color:#434343;
-    font-size: xx-large;
+    font-size: x-large;
     padding-bottom: 40px;
     padding-left: 40px;
     padding-right: 40px;
