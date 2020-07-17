@@ -14,8 +14,10 @@
     width: auto
 }
 
-.carousel{
-    max-width:1520px;
-    max-height:450px;
+.carousel>img{
+    max-width:1000px;
+    max-height:300px;
+    width: 800px;
+    height: 250px;
 }
 
