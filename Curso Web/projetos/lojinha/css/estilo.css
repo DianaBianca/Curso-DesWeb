@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Coiny&family=Poppins:wght@300&display=swap');
+/*font-family: 'Coiny', cursive;
+font-family: 'Coiny', cursive;
+font-family: 'Poppins', sans-serif;
+
+*/
+
 .container{
     display: flex;
     margin-top: 20px;
@@ -18,7 +25,8 @@
 -----------------------------*/
 nav.navbar-transparente {
 	padding: 15px 0px;
-	background: rgba(0,0,0,0.6);
+    background: #fddada;
+    opacity: 90%;
 }
 
 .navbar-light .navbar-nav .nav-link {
