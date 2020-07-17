@@ -4,7 +4,7 @@ font-family: 'Coiny', cursive;
 font-family: 'Poppins', sans-serif;
 
 */
-.nav-link{
+body{
     
     color: #434343;
     font-family: 'Coiny cursive;;
@@ -29,8 +29,8 @@ font-family: 'Poppins', sans-serif;
 -----------------------------*/
 nav.navbar-transparente {
 	padding: 15px 0px;
-    background: #fddada;
-    opacity: 90%;
+    background: #434343;
+    opacity: 50%;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -53,9 +53,7 @@ nav.navbar-transparente {
 }
 
 #carouselExampleIndicators {
-    max-width:1430px;
-    border: 3px solid red;
-  
+    max-width:1430px;  
 }
 
 
