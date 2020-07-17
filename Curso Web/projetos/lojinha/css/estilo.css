@@ -6,32 +6,26 @@ font-family: 'Poppins', sans-serif;
 */
 body{
     
-    color: #434343;
-    font-family: 'Coiny cursive;;
-}
-.container{
-    display: flex;
-    margin-top: 20px;
-}
-
-.flex-left{
-    justify-content: flex-start;
-    width: auto;
-}
-
-.flex-center{
-    align-items: flex-center;
-    
-    width: auto
+    color: white;
+    font-family: 'Coiny', cursive;
 }
 
 /* Barra de navegação
 -----------------------------*/
 #nav-target{
     justify-content: center;
-    border: 1px solid red;
+    display: flex;
+    align-items: flex-center;
 }
 
+ul>li{
+    border: 1px solid red;
+    margin-right: 50px;
+}
+
+
+/* Banner
+-----------------------------*/
 #carouselExampleIndicators {
     max-width:1430px;  
 }
