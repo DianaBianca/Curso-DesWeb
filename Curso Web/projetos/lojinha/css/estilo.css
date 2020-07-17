@@ -27,29 +27,9 @@ body{
 
 /* Barra de navegação
 -----------------------------*/
-nav.navbar-transparente {
-	padding: 15px 0px;
-    background: #434343;
-    opacity: 50%;
-}
-
-.navbar-light .navbar-nav .nav-link {
-	color: white;
-}
-
-.navbar-light .navbar-nav .nav-link:hover {
-	color: #9bf0e1;
-}
-
-.navbar-light .navbar-toggler {
-    color: rgba(255,255,255,.5);
-    border-color: rgba(255,255,255,0.5);
-}
-
-.divisor {
-	width: 1px;
-	background: white;
-	margin: 12px 15px;
+#nav-target{
+    justify-content: center;
+    border: 1px solid red;
 }
 
 #carouselExampleIndicators {
