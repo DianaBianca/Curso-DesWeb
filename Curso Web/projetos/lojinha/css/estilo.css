@@ -10,8 +10,12 @@
 
 .flex-center{
     align-items: flex-center;
-    border: 1px solid red;
+    
     width: auto
 }
 
+.carousel{
+    max-width:1520px;
+    max-height:450px;
+}
 
