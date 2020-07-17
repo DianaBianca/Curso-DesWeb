@@ -42,9 +42,14 @@ nav.navbar-transparente {
 
 #carouselExampleIndicators {
     max-width:1430px;
-    max-height:400px;
+    height: 1000px;
     border: 3px solid red;
-    height: 50%;
+  
 }
 
+#fundo{
+    width:1430px ;
+    height: 400px;
+    border: 3px solid red;
+}
 
