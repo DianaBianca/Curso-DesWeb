@@ -19,15 +19,32 @@ body{
 }
 
 ul>li{
-    border: 1px solid red;
     margin-right: 50px;
+}
+
+nav{
+    background-color: #fddada;
+    color:#434343;
+    font-family: 'Coiny', cursive;
 }
 
 
 /* Banner
 -----------------------------*/
 #carouselExampleIndicators {
-    max-width:1430px;  
+    width: auto;  
 }
 
+/*Sobre Nos
+-----------------------------*/
+#sobre-nos{
+    border: 1px solid red;
+    height: 400px;
+}
+#sobre-nos-imagem{
 
+}
+
+#sobre-nos-texto{
+    
+}
