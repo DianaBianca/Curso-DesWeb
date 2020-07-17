@@ -14,10 +14,36 @@
     width: auto
 }
 
-.carousel>img{
-    max-width:1000px;
-    max-height:300px;
-    width: 800px;
-    height: 250px;
+/* Barra de navegação
+-----------------------------*/
+nav.navbar-transparente {
+	padding: 15px 0px;
+	background: rgba(0,0,0,0.6);
 }
+
+.navbar-light .navbar-nav .nav-link {
+	color: white;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+	color: #9bf0e1;
+}
+
+.navbar-light .navbar-toggler {
+    color: rgba(255,255,255,.5);
+    border-color: rgba(255,255,255,0.5);
+}
+
+.divisor {
+	width: 1px;
+	background: white;
+	margin: 12px 15px;
+}
+
+#carouselExampleIndicators {
+    max-width:1430px;
+    max-height:400px;
+    border: 3px solid red;
+}
+
 
