@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Coiny&family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
 /*font-family: 'Coiny', cursive;
 font-family: 'Coiny', cursive;
 font-family: 'Poppins', sans-serif;
 
 */
-body{
-    
-    color: white;
+h1{
     font-family: 'Coiny', cursive;
+    color:#249ab4;
+    font-size:50px;
 }
 
 /* Barra de navegação
@@ -25,7 +26,7 @@ ul>li{
 nav{
     background-color: #fddada;
     color:#434343;
-    font-family: 'Coiny', cursive;
+    font-family: 'Coiny';
 }
 
 
@@ -38,13 +39,27 @@ nav{
 /*Sobre Nos
 -----------------------------*/
 #sobre-nos{
-    border: 1px solid red;
     height: 400px;
+    background-color: white;
 }
 #sobre-nos-imagem{
-
+    background-image: url(../img/sobre-nos.png);
+    background-repeat: no-repeat;
+    width: auto;
+    
+}
+p{
+    font-family: 'Poppins', sans-serif;
+    color:#434343;
+    font-size: xx-large;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
-#sobre-nos-texto{
-    
+.titulo {
+    justify-content: left;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 40px;
 }
