@@ -72,10 +72,10 @@ p{
 #servicos{
     height: 400px;
     background-color: #fddada;
-    border: 1px solid red;
+    
 }
 
-#pet-sitting{
+#servicos > #pet-sitting{
     height: 200px;
     border: 1px solid red;
 }
@@ -94,5 +94,11 @@ p{
 }
 
 .redondo{
-    
+    width: 100px;
+    height: 100px;
+    background-color: #000;
+    color: #FFF;
+  
+    /* Agora a mágica */
+    border-radius: 50%;
 }
