@@ -125,10 +125,15 @@ p{
     border-radius: 50%;
 }
 
-
+.titulo-infos{
+    font-family: 'Poppins', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
+    color:#434343;
+    font-size:20px;
+    text-emphasis: center;
+}
 
 .infos{
     background-color: white;
-    border: 1px solid black;
-    margin-top: 30%;
+    margin-top: -50px;
 }
