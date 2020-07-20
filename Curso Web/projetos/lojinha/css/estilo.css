@@ -49,14 +49,13 @@ nav{
 #sobre-nos {
     width: 100%;
     height: 400px;
-    background-color: white;
+    background-color:  white;
 }
 #sobre-nos-imagem{
     background-image: url(../img/sobre-nos.png);
     background-repeat: no-repeat;
     width: 100%;
-    margin-right: -18px;
-    
+    margin-right: -18px;    
 }
 
 p{
@@ -80,9 +79,9 @@ p{
 #servicos{
     
     width: 100%;
-    height: 200px;
-    background-color:white;
-    padding: 10px 20px;
+    height: 400px;
+    background-color: white;
+   
 }
 
 #servicos>h1{
@@ -110,7 +109,7 @@ p{
     top:50%;
     left:50%;
     margin-top:-1px;
-    margin-left:-50px;
+    margin-left:-70px;
     width: 140px;
     height: 140px;
     background-color: #000;
@@ -135,7 +134,7 @@ p{
 }
 
 .infos{
-    background-color: white;
+    background-color:  white;
     opacity: 70;
     margin-top: -40px;
     height: 100px;
@@ -147,4 +146,18 @@ p{
     font-size:20px;
     text-emphasis: center;
     text-align: center;
+}
+
+  /*Depoimentos
+-----------------------------*/
+.depoimentos{
+    height: 300px;
+}
+
+#depoimento{
+    
+    width: 100%;
+    height: 400px;
+    background-color: white;
+   
 }
