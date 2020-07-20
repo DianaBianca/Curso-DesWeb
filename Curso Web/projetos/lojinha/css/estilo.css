@@ -66,3 +66,29 @@ p{
     padding-bottom: 40px;
     padding-left: 40px;
 }
+  /*Serviços
+-----------------------------*/
+
+#servicos{
+    height: 400px;
+    background-color: #fddada;
+    border: 1px solid red;
+}
+
+#pet-sitting{
+    height: 200px;
+    border: 1px solid red;
+}
+#pet-hotel{
+    height: 200px;
+    border: 1px solid red;
+}
+#peticure{
+    height: 200px;
+    width: 100px;
+    border: 1px solid red;
+}
+#acampamento{
+    height: 200px;
+    border: 1px solid red;
+}
