@@ -249,5 +249,24 @@ p{
 }
 
 #espaco-central{
-    
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    justify-content: center;
+    border: 1px solid red;
 }
+
+#fale-conosco{
+    width: 50%;
+    float: left;
+}
+
+#footer>h1{
+    margin-top: 5%;
+}
+
+#visite-nos{
+    width: 50%;
+    float: right;
+}
+
