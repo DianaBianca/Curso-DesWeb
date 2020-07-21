@@ -67,7 +67,6 @@ nav{
 #sobre-nos-texto{
     width: 50%;
     float: left;
-    border: 1px solid purple;
 }
 
 p{
@@ -89,55 +88,30 @@ p{
 -----------------------------*/
 
 #servicos{
-    
     width: 100%;
-    height: 400px;
-    background-color: white;
-   
-}
-#informacoes{
-    display: flex;
-    flex-direction: row;
-    flex-flow: row wrap;
-    justify-content: center;
+    height: auto;
     background-color: #fddada;
-    border: 1px solid red;
-    height: 500px;
 }
+
+#informacoes{   
+    justify-content: center;
+    border: 1px solid blue;
+    height: 350px;
+    padding-top: 40px;
+}
+
 #servicos>h1{
    text-align: center;
    padding-top: 20px;
 }
 
-#pet-sitting{
-    height: 400px;
-}
-#pet-hotel{
-    height: 400px;
-}
-#peticure{
-    height: 500px;
-   
-}
-#acampamento{
-    
-    border: 1px solid red;
-    height: 300px;
-}
 
 .redondo{
     position: relative;
-    
-    top:50%;
     left:50%;
-    margin-top:-1px;
-    margin-left:-70px;
+    margin-left:-60px;
     width: 140px;
     height: 140px;
-    background-color: #000;
-    color: #FFF;
-    
-  
     /* Agora a mágica */
     border-radius: 50%;
 }
@@ -156,21 +130,40 @@ p{
 }
 
 .altura{
-    height: 300px;
+    height: 350px;
+    margin-top: -30px;
+    border: 1px solid black;
 }
+
 .infos{
     background-color:  white;
-    opacity: 70;
-    margin-top: -40px;
-    height: 100px;
+    height: auto;
+    margin-top: -80px;
 }
+
+.infos>h3{
+    padding-top: 50px;
+}
+
 .infos>p{
     font-family: 'Poppins', sans-serif;
-    
     color:#434343;
     font-size:20px;
-    text-emphasis: center;
-    text-align: center;
+}
+
+#pet-sitting{
+    width: 25%;
+}
+
+#pet-hotel{
+    width: 25%;
+}
+#peticure{
+    width: 25%;
+}
+
+#acampamento{
+    width: 25%;
 }
 
   /*Depoimentos
