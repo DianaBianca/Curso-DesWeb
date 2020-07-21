@@ -17,6 +17,7 @@ h1{
     color:#249ab4;
     font-size:50px;
     text-emphasis: center;
+    text-align: center;
 }
 
 /* Barra de navegação
@@ -160,4 +161,29 @@ p{
     height: 400px;
     background-color: white;
    
+}
+
+#depoimento>h1{
+    padding-top: 20px;
+    padding-bottom: 20px;
+   
+}
+
+.subtitulo{
+    font-family: 'Coiny', cursive;
+    
+    color:#249ab4;
+    font-size:20px;
+    text-emphasis: center;
+}
+
+.depoimento{
+    background-color:  white;
+    border: 1px solid red;
+    opacity: 70;
+    margin-top: -1px;
+    height: 300px;
+}
+.depoimentos>img{
+    margin-bottom: 10px;
 }
