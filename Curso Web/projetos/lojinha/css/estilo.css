@@ -256,12 +256,17 @@ p{
     border: 1px solid red;
 }
 
+.divisor {
+	width: 1px;
+	background:#249ab4;
+	margin: 12px 15px;
+} 
 #fale-conosco{
     width: 50%;
     float: left;
 }
 
-#footer>h1{
+#fale-conosco>h1, #visite-nos>h1{
     margin-top: 5%;
 }
 
