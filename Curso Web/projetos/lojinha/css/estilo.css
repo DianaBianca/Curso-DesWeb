@@ -7,8 +7,8 @@ font-family: 'Poppins', sans-serif;
 */
 
 body{
-    width: 100%;
-    height:100%;
+    width: auto;
+    height:auto;
 }
 
 h1{
@@ -91,31 +91,38 @@ p{
     width: 100%;
     height: auto;
     background-color: #fddada;
-}
+    display: grid;
 
-#informacoes{   
-    justify-content: center;
-    border: 1px solid blue;
-    height: 350px;
-    padding-top: 40px;
-}
-
-#servicos>h1{
-   text-align: center;
-   padding-top: 20px;
+    
 }
 
 
-.redondo{
+.foto{
     position: relative;
+    
+    top:50%;
     left:50%;
-    margin-left:-60px;
+    margin-top:-1px;
+    margin-left:-70px;
     width: 140px;
     height: 140px;
+    background-color: #000;
+    color: #FFF;
+    
     /* Agora a mágica */
     border-radius: 50%;
 }
 
+.marcador{
+    background: #fe9d9d;
+    border: 1px solid #f94646;
+  }
+
+  .marcador-container{
+    background: #5bf946;
+    border: 1px solid #36ae26;
+  }
+  
 .titulo-infos{
 
     font-family: 'Poppins', sans-serif;
@@ -129,75 +136,18 @@ p{
     
 }
 
-.altura{
-    height: 350px;
-    margin-top: -30px;
-    border: 1px solid black;
-}
-
 .infos{
     background-color:  white;
+    margin-top: -40px;
     height: auto;
-    margin-top: -80px;
 }
 
-.infos>h3{
-    padding-top: 50px;
+
+.bloco{
+    border: 2px solid red;
 }
 
 .infos>p{
-    font-family: 'Poppins', sans-serif;
-    color:#434343;
-    font-size:20px;
-}
-
-#pet-sitting{
-    width: 25%;
-}
-
-#pet-hotel{
-    width: 25%;
-}
-#peticure{
-    width: 25%;
-}
-
-#acampamento{
-    width: 25%;
-}
-
-  /*Depoimentos
------------------------------*/
-.depoimentos{
-    height: 500px;
-    display: flex;
-    flex-direction: row;
-    flex-flow: row wrap;
-    border: 1px solid red;
-}
-
-#depoimento{
-    
-    width: 100%;
-    height: 700px;
-    background-color: white;
-   
-}
-
-.depoimento{
-    width: 100%;
-    height: 50%;
-    background-color: white;
-   
-}
-
-#depoimento>h1{
-    padding-top: 20px;
-    padding-bottom: 25px;
-   
-}
-
-p{
     font-family: 'Poppins', sans-serif;
     
     color:#434343;
@@ -207,26 +157,11 @@ p{
 }
 
 
-.subtitulo{
-    font-family: 'Coiny', cursive;
-    
-    color:#249ab4;
-    font-size:20px;
-    text-emphasis: center;
-}
 
-.depoimento{
-    background-color:  white;
-    border: 1px solid red;
-    opacity: 70;
-    margin-top: -1px;
-    height: 300px;
-}
 
-.depoimentos>img{
-    margin-bottom: 20px;
-    margin-top: 20px;
-}
+
+
+
  /*footer
 -----------------------------*/
 #marque-visita{
