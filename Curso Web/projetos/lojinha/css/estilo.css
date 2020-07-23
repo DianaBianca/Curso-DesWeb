@@ -130,8 +130,7 @@ p{
     font-size:20px;
     text-emphasis: center;
     text-align: center;
-
-    margin-top: 50px;
+    padding-top: 5%;
     
 }
 
@@ -139,8 +138,12 @@ p{
     background-color:  white;
     margin-top: -40px;
     height: auto;
+    padding-top: 40px;
 }
 
+h3{
+    padding-top: 100px;
+}
 
 .bloco{
     border: 2px solid red;
