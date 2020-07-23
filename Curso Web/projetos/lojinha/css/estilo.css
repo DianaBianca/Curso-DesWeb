@@ -87,15 +87,24 @@ p{
   /*Serviços
 -----------------------------*/
 
-#servicos{
+#container{
     width: 100%;
     height: auto;
     background-color: #fddada;
-    display: grid;
-
     
+    padding: 5%;
 }
 
+#container>h1{
+    align-self: center;
+    padding-bottom: 20px;
+}
+
+#container-row{
+    border: 1px solid #f94646;
+    width: 100%;
+    padding-left: 2%;
+}
 
 .foto{
     position: relative;
@@ -113,16 +122,6 @@ p{
     border-radius: 50%;
 }
 
-.marcador{
-    background: #fe9d9d;
-    border: 1px solid #f94646;
-  }
-
-  .marcador-container{
-    background: #5bf946;
-    border: 1px solid #36ae26;
-  }
-  
 .titulo-infos{
 
     font-family: 'Poppins', sans-serif;
