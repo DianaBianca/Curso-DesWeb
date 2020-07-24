@@ -25,7 +25,7 @@ h1{
 -----------------------------*/
 nav.navbar-transparente {
 	padding: 15px 0px;
-	background: rgba(0,0,0,0.6);
+	background:  #fddada;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -238,7 +238,6 @@ p{
     padding-top: 2%;
     background-color: #fddada;
     height: auto;
-    border: 1px solid red;
 }
 
 
