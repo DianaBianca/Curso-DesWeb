@@ -29,7 +29,8 @@ nav.navbar-transparente {
 }
 
 .navbar-light .navbar-nav .nav-link {
-	color:#434343;
+    color:#434343e5;
+	text-transform: uppercase;
 }
 
 .navbar-light .navbar-nav .nav-link:hover {
@@ -237,22 +238,24 @@ footer {
 footer h4 {
     font-family: 'Coiny', cursive;
 	color: #249ab4;
-	font-size: 0.8em;
+	font-size: 1em;
 	text-transform: uppercase;
 }
 
 footer .navbar-nav a {
-	color: white;
-	font-size: 0.8em;
+	color: #434343e5;
+	font-size: 0.9em;
 }
 
 footer .navbar-nav a:hover {
-	color: #9bf0e1;
+	color: #249ab4;
 	text-decoration: none;
 }
 
 footer ul {
-	list-style: none;
+    list-style: none;
+    color:#434343e5;
+	font-size: 0.9em;
 }
 
 footer ul li {
