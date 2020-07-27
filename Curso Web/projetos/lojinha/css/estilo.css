@@ -195,11 +195,11 @@ p{
     height: 500px;
 }
 
-.subtitulo{
+.subtitulos{
     font-family: 'Coiny', cursive;
     
     color:#249ab4;
-    font-size:50px;
+    font-size:30px;
     text-emphasis: center;
     text-align: center;
 }
