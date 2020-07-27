@@ -202,6 +202,11 @@ p{
     font-size:30px;
     text-emphasis: center;
     text-align: center;
+    padding-bottom: 15px;
+}
+
+.depoimento{
+    padding-top: 40px;
 }
 /* Rodapé-visita
 -----------------------------*/
