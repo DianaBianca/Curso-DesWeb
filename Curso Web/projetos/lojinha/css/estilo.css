@@ -29,8 +29,9 @@ nav.navbar-transparente {
 }
 
 .navbar-light .navbar-nav .nav-link {
+    font-family: 'Poppins', sans-serif;
     color:#434343d8;
-	text-transform: uppercase;
+    text-transform: uppercase;
 }
 
 .navbar-light .navbar-nav .nav-link:hover {
