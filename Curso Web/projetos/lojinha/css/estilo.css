@@ -23,10 +23,6 @@ h1{
 -----------------------------*/
 /* Barra de navegação
 -----------------------------*/
-nav.navbar-transparente {
-	padding: 15px 0px;
-	background:  #fddadac4;
-}
 
 .navbar-light .navbar-nav .nav-link {
     font-family: 'Poppins', sans-serif;
@@ -43,11 +39,6 @@ nav.navbar-transparente {
     border-color: rgba(255,255,255,0.5);
 }
 
-.divisor {
-	width: 1px;
-	background:#434343;
-	margin: 12px 15px;
-}
 
 /* Barra de navegação
 -----------------------------*/
