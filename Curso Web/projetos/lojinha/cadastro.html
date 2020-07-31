@@ -38,34 +38,56 @@
            <div id="login" class="row" >
             
             <form>
-            
-              <div>
-                  <label for="nome">Nome</label>
-                <input  type="nome" class="form-control form-control-lg" id="nome" placeholder="Nome" >
+              <div class="form-group row">
+                <div class="col">
+                  <label for="nome" >Nome</label>
+                  <input  type="nome" class="form-control  col-sm-10" id="nome" placeholder="Nome" >
+                </div>
+  
+                <div class="col">
+                  <label for="sobrenome">Sobrenome</label>
+                  <input  type="text" class="form-control col-sm-10" name="sobrenome" id="sobrenome" placeholder="sobrenome">
+                </div>
+              </div>
+              
+              <div class="form-group row">
+                <div class="col">
+                    <label for="CPF">CPF</label>
+                    <input  type="number" class="form-control col-sm-10" id="cpf" placeholder="CPF" >
+                </div>
+
+                <div class="col">
+                    <label for="telefone">Telefone</label>
+                    <input type="number" class="form-control col-sm-10" id="telefone" name="telefone" placeholder="Telefone">
+                </div>
               </div>
 
               <div>
-                <label for="sobrenome">Sobrenome</label>
-                <input  type="text" class="form-control form-control-lg" name="sobrenome" id="sobrenome" placeholder="sobrenome">
+                <label for="bairro">Bairro</label>
+                <input type="text" name="bairro" id="bairro" placeholder="Bairro">
               </div>
-
-
+              
               <div>
-                  <label for="CPF">CPF</label>
-                <input  type="number" class="form-control form-control-lg" id="cpf" placeholder="CPF" >
-              </div>
-
-              <div>
-
-              </div>
-              <div>
-                  <label for="email">Email</label>
-                <input  type="email" class="form-control form-control-lg" id="email" placeholder="Email" >
+                <label for="rua">Rua</label>
+                <input type="text" name="rua" id="rua" placeholder="Rua">
               </div>
 
               <div>
-                  <label for="Senha">Senha</label>
-                <input  type="password" class="form-control form-control-lg" id="senha" placeholder="Senha">
+                <label for="numero">Numero</label>
+                <input type="number" name="numero" id="numero" placeholder="Numero">
+              </div>
+
+              
+              <div class="row">
+                <div class="col">
+                    <label for="email">Email</label>
+                    <input  type="email" class="form-control form-control-lg" id="email" placeholder="Email" >
+                </div>
+
+                <div class="col">
+                    <label for="Senha">Senha</label>
+                    <input  type="password" class="form-control form-control-lg" id="senha" placeholder="Senha">
+                </div>
               </div>
 
               <div id="submit" >
