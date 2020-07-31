@@ -26,9 +26,10 @@
         align-items: center;
       }
       body{
-        background: url(img/dog1.jpg);
+        background: url(img/dog-blue.png);
         background-repeat: no-repeat;
-        background-size: 100%;
+        background-size: 101%;
+        /*backdrop-filter: blur(2px);*/
       }
       #login{
         margin: 10%;
@@ -57,7 +58,6 @@
       .icon{
         width: 25%;
         margin-left: 40%;
-        border: 1px solid red;
       }
 
       button{
@@ -67,7 +67,11 @@
       }
 
       button:hover{
-        background-color: #fddada;
+        background-color: #249ab4bd;
+      }
+
+      input{
+        
       }
 
     </style>
@@ -86,7 +90,7 @@
               <img class="icon" src="img/cao.png" width="40">
 
               <div class="container-row">
-<input class="fa fa-envelope textarea" type="email" class="form-control form-control-lg" id="email"  >
+                <input class="textarea" type="email" class="form-control form-control-lg" id="email" placeholder="Email" >
               </div>
 
               <div class="container-row ">
