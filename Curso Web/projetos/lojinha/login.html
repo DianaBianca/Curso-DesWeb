@@ -26,15 +26,19 @@
         align-items: center;
       }
       body{
-        background:  #fddadac4;
+        background: url(img/dog1.jpg);
+        background-repeat: no-repeat;
+        background-size: 100%;
       }
       #login{
         margin: 10%;
         background-color: white;
+        border: #d5d7d8;
+        border-style:unset groove;
         padding: 60px 60px 60px 60px;
         height: auto;
-        border-radius: 3px;
-
+        width: 35%;
+        border-radius: 4px;
       }
 
       form>div{
@@ -51,9 +55,19 @@
       }
 
       .icon{
-        width: 15%;
-        margin-left: 45%;
+        width: 25%;
+        margin-left: 40%;
         border: 1px solid red;
+      }
+
+      button{
+        width: 100%;
+        height: 50px;
+        background-color: #249ab4;
+      }
+
+      button:hover{
+        background-color: #fddada;
       }
 
     </style>
@@ -72,8 +86,7 @@
               <img class="icon" src="img/cao.png" width="40">
 
               <div class="container-row">
-                <i  class="fa fa-envelope" aria-hidden="false"></i>
-                <input class="textarea" type="email" class="form-control form-control-lg" id="email"  placeholder="Email">
+<input class="fa fa-envelope textarea" type="email" class="form-control form-control-lg" id="email"  >
               </div>
 
               <div class="container-row ">
