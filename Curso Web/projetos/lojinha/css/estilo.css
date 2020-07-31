@@ -24,22 +24,21 @@ h1{
 /* Barra de navegação
 -----------------------------*/
 
-.navbar-light .navbar-nav .nav-link {
+.navbar{
     font-family: 'Poppins', sans-serif;
     color:#434343d8;
     text-transform: uppercase;
+    display: flex;
+    
 }
 
 .navbar-light .navbar-nav .nav-link:hover {
 	color: #249ab4;
 }
 
-.navbar-light .navbar-toggler {
-    color: rgba(255,255,255,.5);
-    border-color: rgba(255,255,255,0.5);
+.icon{
+    margin-left: 5%;
 }
-
-
 /* Barra de navegação
 -----------------------------*/
 #nav-target{
