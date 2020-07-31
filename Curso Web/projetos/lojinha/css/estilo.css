@@ -8,6 +8,7 @@ font-family: 'Poppins', sans-serif;
 
 body{
     width: auto;
+    overflow-x: hidden;
 }
 
 h1{
