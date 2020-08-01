@@ -17,17 +17,65 @@
     
     <script src="js/script.js"></script>
 
-    <title>INSCREVA-SE</title>
+    <title>CADASTRO</title>
     <style>
-      
+        @import url('https://fonts.googleapis.com/css2?family=Coiny&family=Poppins:wght@300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+      body{
+          background-color: blueviolet;
+      }
 
       input {
         font-family: 'Poppins', sans-serif;
         color:#434343c2;
         font-size:20px;
         padding-left: 5%;
+        
       }
 
+      .cadastro{
+          background-color: white;
+          width: 800px;
+          height: auto;
+          padding: 70px 70px 70px 70px;
+          
+          border-radius: 5px;
+          border: 1px solid red;
+      }
+
+      .form-group{
+          display: flex;
+          align-items: center;
+          align-content: space-between;
+      }
+
+      label{
+          padding-right: 10px;
+      }
+      .form-group{
+        width: 400px;
+      }
+
+      .btn{
+        padding-top: 10px;
+        width: 100%;
+        height: 50px;
+        background-color: white;
+        border:2px solid #249ab4;
+      }
+
+
+      button:hover{
+          background-color: #249ab4c0 ;
+      }
+
+      h1{
+        font-family: 'Coiny', cursive;
+        color:#fddada;
+        font-size:50px;
+        text-emphasis: center;
+        text-align: center;
+    }
     </style>
 </head>
 <body>
@@ -37,77 +85,78 @@
          
            <div id="login" class="row" >
             
+            <h1>Cadastro</h1>
+
             <form>
-              <div class="form-group row">
-                <div class="col">
-                  <label for="nome" >Nome</label>
-                  <input  type="nome" class="form-control  col-sm-10" id="nome" placeholder="Nome" >
+              <div class="row">
+
+                <div class="form-group col-md-6">
+                  <label for="nome">Nome</label>
+                  <input  type="nome" class="form-control" id="nome" placeholder="Nome" >
                 </div>
   
-                <div class="col">
+                <div class="form-group col-md-6">
                   <label for="sobrenome">Sobrenome</label>
-                  <input  type="text" class="form-control col-sm-10" name="sobrenome" id="sobrenome" placeholder="sobrenome">
+                  <input type="text" class="form-control" name="sobrenome" id="sobrenome" placeholder="sobrenome">
                 </div>
               </div>
-              
-              <div class="form-group row">
-                <div class="col">
-                    <label for="CPF">CPF</label>
-                    <input  type="number" class="form-control col-sm-10" id="cpf" placeholder="CPF" >
-                </div>
-
-                <div class="col">
-                    <label for="telefone">Telefone</label>
-                    <input type="number" class="form-control col-sm-10" id="telefone" name="telefone" placeholder="Telefone">
-                </div>
-              </div>
-
-              <div>
-                <label for="bairro">Bairro</label>
-                <input type="text" name="bairro" id="bairro" placeholder="Bairro">
-              </div>
-              
-              <div>
-                <label for="rua">Rua</label>
-                <input type="text" name="rua" id="rua" placeholder="Rua">
-              </div>
-
-              <div>
-                <label for="numero">Numero</label>
-                <input type="number" name="numero" id="numero" placeholder="Numero">
-              </div>
-
               
               <div class="row">
-                <div class="col">
-                    <label for="email">Email</label>
-                    <input  type="email" class="form-control form-control-lg" id="email" placeholder="Email" >
+                <div class="form-group col-md-6">
+                    <label for="CPF">CPF</label>
+                    <input  type="number" class="form-control col-sm-14" id="cpf" placeholder="CPF" >
                 </div>
 
-                <div class="col">
-                    <label for="Senha">Senha</label>
-                    <input  type="password" class="form-control form-control-lg" id="senha" placeholder="Senha">
+                <div class="form-group col-md-6">
+                    <label for="telefone">Telefone</label>
+                    <input type="number" class="form-control col-sm-14" id="telefone" name="telefone" placeholder="Telefone">
                 </div>
               </div>
 
-              <div id="submit" >
-                <button  type="submit" aria-describedby="submitHelp" class="btn">
-                  cadastrar
-              </div>
-              <small id="submitHelp" class="form-text text-muted'">
-                ainda não faz parte da nossa familia? então clique aqui e <a href="cadastro.html"> cadastre-se !</a>
-              </small>
+              <div class="row">
+                <div class="form-group col-md-6">
+                    <label for="bairro">Bairro</label>
+                    <input type="text" class="form-control col-sm-14" name="bairro" id="bairro" placeholder="Bairro">
+                </div>
 
+                <div class="form-group col-md-6">
+                    <label for="rua">Rua</label>
+                    <input type="text" class="form-control col-sm-14" name="rua" id="rua" placeholder="Rua">
+                </div>
+             </div>
+
+             <div class="row">
+                <div class="form-group col-md-6">
+                    <label for="numero">Numero</label>
+                    <input type="number" class="form-control col-sm-14" name="numero" id="numero" placeholder="Numero">
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label for="complemento">Complemento</label>
+                    <input type="text" class="form-control col-sm-14" name="complemento" id="complemento" placeholder="Complemento">
+                </div>
+             </div>
               
+              <div class="row">
+                <div class="form-group col-md-6">
+                    <label for="email">Email</label>
+                    <input  type="email" class="form-control col-sm-14" id="email" placeholder="Email" >
+                </div>
 
-           </form>
-          
+                <div class="form-group col-md-6">
+                    <label for="Senha">Senha</label>
+                    <input  type="password" class="form-control col-sm-14" id="senha" placeholder="Senha">
+                </div>
+              </div>
+
+              <div id="submit">
+                <button  type="button" class="btn" >
+                  Cadastrar
+              </div>
+
+            </form>
+
         </div>  
-
-      
-      
-
-
 
 
 
