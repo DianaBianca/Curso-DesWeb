@@ -14,7 +14,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <script src="js/script.js"></script>
 
     <title>CADASTRO</title>
@@ -38,13 +38,15 @@
         font-size:20px;
         padding-left: 5%;
         padding-right: 5%;
+        box-shadow:0 0 8px #fdc1c1 ;
       }
 
       .cadastro{
           background-color: white;
-          padding: 70px 70px 70px 70px;
+          padding: 40px 70px 70px 70px;
           border-radius: 5px;
-          width: min-content;
+          width: auto;
+        
       }
 
       
@@ -71,17 +73,20 @@
         font-family: 'Poppins', sans-serif;
         color:#434343d8;
         font-size:1.5em;
+        
+        box-shadow:0 0 8px #fdc1c1 ;
       }
 
       button:hover{
           background-color:#fdc1c1 ;
+          
+        box-shadow:5px 5px 20px #fdbaba ;
       }
 
       #submit{
         width: 100%;  
         margin-top: 30px;
         position: relative;
-        margin-left: 25%;
           
       }
 
@@ -96,10 +101,13 @@
       }
 
       fieldset{
-        border: 1px solid gray;
+        border: 1px solid #43434386;
         padding: 15px 15px 15px 15px;
         width: 550px;
-        margin-top: auto;
+        display:table-cell; 
+        width: 100%;
+        border-radius: 5px;
+        
       }
 
       legend{
@@ -108,7 +116,12 @@
         text-align: center;
       }
 
-    
+      label{
+        width: 155px;
+        height: 50px;padding-top: 2.4%;
+      }
+
+      
     </style>
 </head>
 <body>
@@ -120,18 +133,18 @@
             
             <h1 class="titulo">Cadastro</h1>
 
-            <form>
+            <form class="col">
               
               <fieldset>
                 <legend > Informações Pessoais</legend>
                 <div class="form-group col-md">
                   <label for="nome">Nome</label>
-                  <input  type="nome" class="form-control form-control-lg" id="nome" placeholder="Nome" >
+                  <input  type="nome" class="form-control" id="nome" placeholder="Nome" >
                 </div>
   
                 <div class="form-group col-md">
                   <label for="sobrenome">Sobrenome</label>
-                  <input type="text" class="form-control form-control-lg" name="sobrenome" id="sobrenome" placeholder="sobrenome">
+                  <input type="text" class="form-control" name="sobrenome" id="sobrenome" placeholder="sobrenome">
                 </div>
               
                 <div class="form-group col-md">
@@ -141,7 +154,7 @@
 
                 <div class="form-group col-md">
                     <label for="telefone">Telefone</label>
-                    <input type="number" class="form-control col-sm-14" id="telefone" name="telefone" placeholder="Telefone">
+                    <input type="number" class="form-control " id="telefone" name="telefone" placeholder="Telefone">
                 </div>
               </fieldset>
               <br>
@@ -186,7 +199,7 @@
               
             </fieldset>
                 <div id="submit">
-                  <button  type="button" class="btn" >
+                  <button  type="button" class="btn">
                     Cadastrar
                 </div>
             </form>
