@@ -39,7 +39,7 @@
 
       .cadastro{
           background-color: white;
-          width: 800px;
+          width: 625px;
           height: auto;
           padding: 70px 70px 70px 70px;
           border-radius: 5px;
@@ -48,10 +48,11 @@
       .form-group{
           display: flex;
           align-items: center;
-          align-content: space-between;
+          border: 1px solid red;
+          width: 50%;
       }
 
-      label{
+      label, legend{
           padding-right: 10px;
           font-family: 'Poppins', sans-serif;
           color:#434343d8;
@@ -59,7 +60,7 @@
       }
 
       .form-group{
-        width: 400px;
+        width: 500px;
       }
 
       .btn{
@@ -94,6 +95,18 @@
         padding-bottom: 30px;
       }
 
+      fieldset{
+        border: 1px solid gray;
+        padding: 5px 10px 10px 10px;
+        width: auto;
+      }
+
+      legend{
+        width: auto;
+        margin-left:16%;
+      }
+
+    
     </style>
 </head>
 <body>
@@ -108,7 +121,7 @@
             <form>
               
               <fieldset>
-                <legend>Informações Pessoais</legend>
+                <legend class="row-md"> Informações Pessoais</legend>
                 <div class="form-group col-md">
                   <label for="nome">Nome</label>
                   <input  type="nome" class="form-control" id="nome" placeholder="Nome" >
