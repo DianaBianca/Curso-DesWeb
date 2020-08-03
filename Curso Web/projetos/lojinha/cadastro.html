@@ -39,7 +39,7 @@
 
       .cadastro{
           background-color: white;
-          width: 600px;
+          width: 800px;
           height: auto;
           padding: 70px 70px 70px 70px;
           border-radius: 5px;
@@ -58,7 +58,9 @@
           width: auto;
       }
 
-      
+      .form-group{
+        width: 400px;
+      }
 
       .btn{
         width: 100%;
@@ -92,11 +94,6 @@
         padding-bottom: 30px;
       }
 
-      form{
-        border: 1px solid red;
-        width: 100%;
-      }
-
     </style>
 </head>
 <body>
@@ -104,75 +101,74 @@
 
       <div class="cadastro container" >
          
-           <div id="login" class="col" >
+           <div id="login" class="row" >
             
             <h1 class="titulo">Cadastro</h1>
 
             <form>
               
-
-                <div class="row">
-                  <div class="col-20"><label for="nome">Nome</label></div>
-                  
-                  <div class="col"><input type="nome" class="form-control" id="nome" placeholder="Nome" ></div>
+              <fieldset>
+                <legend>Informações Pessoais</legend>
+                <div class="form-group col-md">
+                  <label for="nome">Nome</label>
+                  <input  type="nome" class="form-control" id="nome" placeholder="Nome" >
                 </div>
   
-                <div class="">
-                  <div class="col-20"><label for="sobrenome">Sobrenome</label></div>
-                  <div class="col"><input type="text" class="form-control" name="sobrenome" id="sobrenome" placeholder="sobrenome"></div>
+                <div class="form-group col-md">
+                  <label for="sobrenome">Sobrenome</label>
+                  <input type="text" class="form-control" name="sobrenome" id="sobrenome" placeholder="sobrenome">
                 </div>
               
-                <div class="">
-                  <div class="col-20"><label for="CPF">CPF</label></div>
-                  <div class="col"><input  type="number" class="form-control col-sm-14" id="cpf" placeholder="CPF" ></div>
-                <div/>
-
-                <div class="">
-                  <div class="col-20"><label for="telefone">Telefone</label></div>
-                  <div class="col"><input type="number" class="form-control col-sm-14" id="telefone" name="telefone" placeholder="Telefone"></div>
-                </div>
-              
-
-              
-                <div class="">
-                  <div class="col-20"><label for="bairro">Bairro</label></div>
-                  <div class="col"><input type="text" class="form-control col-sm-14" name="bairro" id="bairro" placeholder="Bairro"></div>
+                <div class="form-group col-md">
+                    <label for="CPF">CPF</label>
+                    <input  type="number" class="form-control " id="cpf" placeholder="CPF" >
                 </div>
 
-                <div class="">
-                  <div class="col-20"><label for="rua">Rua</label></div>
-                  <div class="col"></div><input type="text" class="form-control col-sm-14" name="rua" id="rua" placeholder="Rua"></div>
+                <div class="form-group col-md">
+                    <label for="telefone">Telefone</label>
+                    <input type="number" class="form-control col-sm-14" id="telefone" name="telefone" placeholder="Telefone">
+                </div>
+              </fieldset>
+
+              
+                <div class="form-group col-md">
+                    <label for="bairro">Bairro</label>
+                    <input type="text" class="form-control col-sm-14" name="bairro" id="bairro" placeholder="Bairro">
+                </div>
+
+                <div class="form-group col-md">
+                    <label for="rua">Rua</label>
+                    <input type="text" class="form-control col-sm-14" name="rua" id="rua" placeholder="Rua">
                 </div>
              
 
              
-                <div class="">
-                  <div class="col-20"><label for="numero">Numero</label></div>
-                  <div class="col"></div><input type="number" class="form-control col-sm-14" name="numero" id="numero" placeholder="Numero"></div>
+                <div class="form-group col-md">
+                    <label for="numero">Numero</label>
+                    <input type="number" class="form-control col-sm-14" name="numero" id="numero" placeholder="Numero">
                 </div>
 
-                <div class="">
-                  <div class="col-20"><label for="complemento">Complemento</label></div>
-                  <div class="col"><input type="text" class="form-control col-sm-14" name="complemento" id="complemento" placeholder="Complemento"></div>
+                <div class="form-group col-md">
+                    <label for="complemento">Complemento</label>
+                    <input type="text" class="form-control col-sm-14" name="complemento" id="complemento" placeholder="Complemento">
                 </div>
              
               
               
-                <div class="">
-                  <div class="col-20"><label for="email">Email</label></div>
-                  <div class="col"></div><input  type="email" class="form-control col-sm-14" id="email" placeholder="Email" ></div>
+                <div class="form-group col-md">
+                    <label for="email">Email</label>
+                    <input  type="email" class="form-control col-sm-14" id="email" placeholder="Email" >
                 </div>
 
-                <div class="">
-                  <div class="col-20"><label for="Senha">Senha</label></div>
-                  <div class="col"></div><input  type="password" class="form-control col-sm-14" id="senha" placeholder="Senha"></div>
+                <div class="form-group col-md">
+                    <label for="Senha">Senha</label>
+                    <input  type="password" class="form-control col-sm-14" id="senha" placeholder="Senha">
                 </div>
-              
 
-              <div id="submit">
-                <button  type="button" class="btn" >
-                  Cadastrar
-              </div>
+                <div id="submit">
+                  <button  type="button" class="btn" >
+                    Cadastrar
+                </div>
 
             </form>
 
