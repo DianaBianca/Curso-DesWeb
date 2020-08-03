@@ -35,22 +35,21 @@
         color:#434343c2;
         font-size:20px;
         padding-left: 5%;
+        padding-right: 5%;
       }
 
       .cadastro{
           background-color: white;
-          width: 625px;
-          height: auto;
+          width: auto;
           padding: 70px 70px 70px 70px;
           border-radius: 5px;
-      }
-
-      .form-group{
+          
           display: flex;
           align-items: center;
-          border: 1px solid red;
-          width: 50%;
+          align-content: center;
       }
+
+      
 
       label, legend{
           padding-right: 10px;
@@ -60,7 +59,10 @@
       }
 
       .form-group{
-        width: 500px;
+        width: auto;
+        display: flex;
+        align-items: center;
+        align-content: center;
       }
 
       .btn{
@@ -78,7 +80,7 @@
       }
 
       #submit{
-        width: 50%;  
+        width: 100%;  
         margin-top: 30px;
         position: relative;
         margin-left: 25%;
@@ -97,13 +99,15 @@
 
       fieldset{
         border: 1px solid gray;
-        padding: 5px 10px 10px 10px;
-        width: auto;
+        padding: 15px 15px 15px 15px;
+        width: 550px;
+        margin-top: auto;
       }
 
       legend{
         width: auto;
         margin-left:16%;
+        text-align: center;
       }
 
     
@@ -121,7 +125,7 @@
             <form>
               
               <fieldset>
-                <legend class="row-md"> Informações Pessoais</legend>
+                <legend > Informações Pessoais</legend>
                 <div class="form-group col-md">
                   <label for="nome">Nome</label>
                   <input  type="nome" class="form-control" id="nome" placeholder="Nome" >
@@ -142,7 +146,7 @@
                     <input type="number" class="form-control col-sm-14" id="telefone" name="telefone" placeholder="Telefone">
                 </div>
               </fieldset>
-
+              <br>
               <fieldset>
                 <legend class="row-md">Endereço</legend>
                 <div class="form-group col-md">
@@ -165,8 +169,9 @@
                     <input type="text" class="form-control col-sm-14" name="complemento" id="complemento" placeholder="Complemento">
                 </div>
               </fieldset>
-              
-              
+              <br>
+              <fieldset>
+                <legend>Informações Cadastrais</legend>
                 <div class="form-group col-md">
                     <label for="email">Email</label>
                     <input  type="email" class="form-control col-sm-14" id="email" placeholder="Email" >
@@ -176,12 +181,16 @@
                     <label for="Senha">Senha</label>
                     <input  type="password" class="form-control col-sm-14" id="senha" placeholder="Senha">
                 </div>
-
+                <div class="form-group col-md">
+                  <label for="Senha">Confirmar senha</label>
+                  <input  type="password" class="form-control col-sm-14" id="senha" placeholder="Senha">
+               </div>
+              
+            </fieldset>
                 <div id="submit">
                   <button  type="button" class="btn" >
                     Cadastrar
                 </div>
-
             </form>
 
         </div>  
