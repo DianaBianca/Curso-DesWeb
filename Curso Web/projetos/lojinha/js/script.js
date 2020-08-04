@@ -1,4 +1,5 @@
 function cadastrar(){
-    senha = document.getElementById('senha')
-    confirmacaoSenha = document.getElementById('senhaConfirmacao')
+    var senha = document.getElementById('senha')
+    var confirmacaoSenha = document.getElementById('senhaConfirmacao')
+    console.log(senha).senha
 }
