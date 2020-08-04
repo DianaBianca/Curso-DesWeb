@@ -283,6 +283,19 @@ body, html {
     background-color: white;
     text-align: justify;
     padding: 50px 80px;
+    height: auto;
+}
+
+.table-responsive{
+    width: auto;
+}
+
+.tb1{
+    float: left;
+}
+
+.tb2{
+    float: right;
 }
 
 h3 {
