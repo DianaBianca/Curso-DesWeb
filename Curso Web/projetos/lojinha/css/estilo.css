@@ -289,13 +289,8 @@ body, html {
 .table-responsive{
     width: auto;
 }
-
 .tb1{
-    float: left;
-}
-
-.tb2{
-    float: right;
+    width: auto;
 }
 
 h3 {
@@ -308,6 +303,10 @@ h3 {
 
 p{
     margin-bottom: 20px;
+}
+
+.rodape{
+    text-align: center;
 }
 
 .conteudo-titulo{
