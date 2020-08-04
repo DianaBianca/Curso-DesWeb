@@ -273,19 +273,21 @@ footer ul li {
 Efeito Parallax-------------------------------*/
 body, html {
     margin: 0;
-    font: 16px "Lato", sans-serif;
-    color: #777;
+    font-family: 'Poppins', sans-serif;
+    color: #434343d8;
     height: 100%;
 }
 
 .conteudo {
-    color: #777;
+    color: #434343d8;
     background-color: white;
     text-align: justify;
     padding: 50px 80px;
 }
 
 h3 {
+    
+    font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
     color: #111;
     text-align: center;
@@ -325,7 +327,7 @@ p{
 }
 
 #pet-sitting{
-    background-image: url(../img/pets2.jpg) ;
+    background-image: url(../img/pets2banner.jpg) ;
 }
 
 #pet-hotel{
