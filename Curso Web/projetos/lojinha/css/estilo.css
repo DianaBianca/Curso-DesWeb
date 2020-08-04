@@ -268,3 +268,24 @@ footer ul li {
 }
 
 
+
+/* serviços
+-----------------------------*/
+.sitting{
+    background-image: url(../img/pets2banner.jpg);
+    background-repeat: no-repeat;
+    background-position: 0%;
+    background-size: 100%;
+    border: 2px solid red;
+    width: auto;
+    height: auto;
+}
+
+.banner-servicos{
+    width: auto;
+    height: 400px;
+}
+
+
+
+
