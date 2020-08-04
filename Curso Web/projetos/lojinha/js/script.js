@@ -1,3 +1,4 @@
 function cadastrar(){
-     alert('CADASTRADO')
+    senha = document.getElementById('senha')
+    confirmacaoSenha = document.getElementById('senhaConfirmacao')
 }
