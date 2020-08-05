@@ -374,6 +374,7 @@ section{
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
           padding: 10px 0;
+    
 }
 .card{
   position: relative;
@@ -393,6 +394,16 @@ transition: .5s;
 }
 .col-sm-4:nth-child(1) .card ,
 .col-sm-4:nth-child(1) .card .title .fa{
+  background-color:#ec6d97e0;
+
+}
+.col-sm-6:nth-child(1) .card ,
+.col-sm-6:nth-child(1) .card .title .fa{
+  background-color:#ec6d97e0;
+
+}
+.col-sm-6:nth-child(2) .card ,
+.col-sm-6:nth-child(2) .card .title .fa{
   background-color:#ec6d97e0;
 
 }
