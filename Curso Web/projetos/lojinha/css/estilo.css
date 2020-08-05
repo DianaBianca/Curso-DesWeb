@@ -294,11 +294,12 @@ body, html {
 }
 
 h3 {
-    
+    padding-top: 0;
     font-family: 'Coiny', cursive;
     text-transform: uppercase;
     color: #249ab4;
     text-align: center;
+    padding-bottom: 2%;
 }
 
 p{
