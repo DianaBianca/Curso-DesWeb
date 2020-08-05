@@ -303,6 +303,11 @@ h3 {
 
 p{
     margin-bottom: 20px;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #434343d8;
+    font-size: 25px;
+    text-align: center;
 }
 
 .rodape{
