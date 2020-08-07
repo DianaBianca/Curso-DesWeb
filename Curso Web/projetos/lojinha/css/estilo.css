@@ -155,7 +155,8 @@ p{
 }
 
 .infos{
-    background-color:  #fddada;
+    
+    box-shadow:5px 5px 30px #fdbaba ;
     margin-top: -40px;
     height: auto;
     padding-top: 40px;
