@@ -111,7 +111,7 @@ p{
 #container{
     width: 100%;
     height: auto;
-    background-color: #fddada;
+    background-color: white;
     padding: 2%;
 }
 
@@ -155,7 +155,7 @@ p{
 }
 
 .infos{
-    background-color:  white;
+    background-color:  #fddada;
     margin-top: -40px;
     height: auto;
     padding-top: 40px;
