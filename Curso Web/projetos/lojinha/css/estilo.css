@@ -15,9 +15,10 @@ h1{
     font-family: 'Coiny', cursive;
     
     color:#249ab4;
-    font-size:50px;
+    font-size:40px;
     text-emphasis: center;
     text-align: center;
+    text-transform: uppercase;
 }
 
 /*menu
@@ -156,7 +157,7 @@ p{
 
 .infos{
     
-    box-shadow:5px 5px 30px #fdbabac4 ;
+    box-shadow:4px 4px 30px #fdbabac4 ;
     margin-top: -40px;
     height: auto;
     padding-top: 40px;
@@ -189,10 +190,10 @@ p{
 }
 
 .subtitulos{
-    font-family: 'Coiny', cursive;
-    
-    color:#249ab4;
-    font-size:30px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color:#434343d8;
+    font-size:20px;
     text-emphasis: center;
     text-align: center;
     padding-bottom: 15px;
@@ -235,7 +236,7 @@ p{
 /* Rodapé
 -----------------------------*/
 footer {
-	background: #fddada;
+	background: white;
 	padding: 50px 0px 20px 0px;
 	position: relative;
 }
