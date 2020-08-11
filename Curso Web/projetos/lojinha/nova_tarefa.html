@@ -16,7 +16,45 @@
 
     
     <link rel="stylesheet" href="css/estilo.css">
-    <script src="js/script.js"></script></head>
+	<script src="js/script.js"></script>
+
+	<style>
+		form{
+			border: 1px solid red;
+		}
+
+		.form-group{
+			width: auto;
+			display: flex;
+			align-items: center;
+			align-content: center;
+		  }
+
+		  label{
+			width: 155px;
+			height: 50px;padding-top: 2.4%;
+		  }
+
+		  fieldset{
+			border: 1px solid #43434386;
+			padding: 15px 15px 15px 15px;
+			width: 550px;
+			display:table-cell; 
+			width: 100%;
+			border-radius: 5px;
+			
+		  }
+
+		  .cadastro{
+			background-color: white;
+			padding: 40px 70px 70px 70px;
+			border-radius: 5px;
+			width: auto;
+		  
+		}
+	</style>
+
+</head>
 
 	<body>
         <header><!-- inicio Cabecalho -->
@@ -49,17 +87,36 @@
 				</div>
 
 				<div class="col-md-9">
-					<div class="container pagina">
+					<div class="container cadastro">
 						<div class="row">
 							<div class="col">
 								<h4>Agendar Serviço</h4>
 								<hr />
 
 								<form>
-									<div class="form-group">
-										<label>Descrição da tarefa:</label>
-										<input type="text" class="form-control" placeholder="Exemplo: Lavar o carro">
-									</div>
+									<fieldset>
+                
+										<legend > Informações Pessoais</legend>
+										<div class="form-group col-md">
+										  <label for="nome">Nome</label>
+										  <input  type="nome" class="form-control" id="nome" placeholder="Nome" >
+										</div>
+						  
+										<div class="form-group col-md">
+										  <label for="sobrenome">Sobrenome</label>
+										  <input type="text" class="form-control" name="sobrenome" id="sobrenome" placeholder="sobrenome">
+										</div>
+									  
+										<div class="form-group col-md">
+											<label for="CPF">CPF</label>
+											<input  type="number" class="form-control " id="cpf" placeholder="CPF" >
+										</div>
+						
+										<div class="form-group col-md">
+											<label for="telefone">Telefone</label>
+											<input type="number" class="form-control " id="telefone" name="telefone" placeholder="Telefone">
+										</div>
+									  </fieldset>
 
 									<button class="btn btn-success">Cadastrar</button>
 								</form>
