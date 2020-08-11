@@ -94,11 +94,10 @@
 			text-align: center;
 		  }
 
-		opcao{
+		.area-servicos{
 			border: 1px solid red;
-			padding-top: -100px;
+			margin-bottom: 4%s;
 		}
-
 		
 	</style>
 
@@ -178,17 +177,30 @@
 													<input type="checkbox" class="custom-control-input" id="customCheck1">
 													<label class="custom-control-label" for="customCheck1">Pet Sitting</label>
 												  </div>	
-											  <div class="col-auto opcao" style="border: 1px solid red;">
-												<select type="text" class="form-control" id="inlineFormCustomSelect">
+											  <div class="col-auto opcao">
+												<select type="text" class="form-control" id="opcao">
 												  <option selected>------</option>
 												  <option value="1">Plano Diário (R$20)</option>
 												  <option value="2">Plano Horário (R$50)</option>
 												</select>
 											  </div>
-											  
-											  
 											</div>
-										  </form>
+
+											<div class="form-row align-items-center area-servicos">
+
+												<div class="custom-control custom-checkbox">
+													<input type="checkbox" class="custom-control-input" id="customCheck1">
+													<label class="custom-control-label" for="customCheck1">Pet Sitting</label>
+												  </div>	
+											  <div class="col-auto opcao" >
+												<select type="text" class="form-control" id="opcao">
+												  <option selected>------</option>
+												  <option value="1">Plano Diário (R$20)</option>
+												  <option value="2">Plano Horário (R$50)</option>
+												</select>
+											  </div>
+											</div>
+										</form>
 									  </fieldset>
 
 									<button class="btn">Cadastrar</button>
