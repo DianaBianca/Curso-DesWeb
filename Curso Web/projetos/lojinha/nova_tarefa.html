@@ -31,7 +31,7 @@
 			font-family: 'Poppins', sans-serif;
 			color:#434343d8;
 			font-size:1.5em;
-			
+			margin-top: 2%;
 			box-shadow:0 0 8px #fdc1c1 ;
 		  }
 	
@@ -125,15 +125,19 @@
 								<form>
 									<fieldset>
                 
-										<legend > Informações Pessoais</legend>
+										<legend > Informações do animal </legend>
 										<div class="form-group col-md">
 										  <label for="nome">Nome</label>
 										  <input  type="nome" class="form-control" id="nome" placeholder="Nome" >
 										</div>
 						  
 										<div class="form-group col-md">
-										  <label for="sobrenome">Sobrenome</label>
-										  <input type="text" class="form-control" name="sobrenome" id="sobrenome" placeholder="sobrenome">
+										  <label for="tipo-animal">Meu pet é um(a)</label>
+										  <select type="text" class="form-control" name="tipo-animal" id="tipo-animal">
+											  <option value="">----</option>
+											  <option value="gato">um(a) gatinho(a)</option>
+											  <option value="cachorro">um(a) cachorrinho(a)</option>
+										  </select>
 										</div>
 									  
 										<div class="form-group col-md">
