@@ -63,7 +63,7 @@
 			
 		  }
 
-		  input {
+		  input,textarea,select,option {
 			font-family: 'Poppins', sans-serif;
 			padding-left: 5%;
 			padding-right: 5%;
@@ -81,6 +81,12 @@
 			width: auto;
 		  
 		}
+
+		legend{
+			width: auto;
+			margin-left:16%;
+			text-align: center;
+		  }
 	</style>
 
 </head>
@@ -125,9 +131,9 @@
 								<form>
 									<fieldset>
                 
-										<legend > Informações do animal </legend>
+										<legend > Informações do pet </legend>
 										<div class="form-group col-md">
-										  <label for="nome">Nome</label>
+										  <label for="nome">Nome do pet </label>
 										  <input  type="nome" class="form-control" id="nome" placeholder="Nome" >
 										</div>
 						  
@@ -141,14 +147,36 @@
 										</div>
 									  
 										<div class="form-group col-md">
-											<label for="CPF">CPF</label>
-											<input  type="number" class="form-control " id="cpf" placeholder="CPF" >
+											<label for="info"> Observações importantes? </label>
+											<textarea  class="form-control" name="info" id="info" rows="3"></textarea>
 										</div>
 						
+										
+									  </fieldset>
+
+									  <fieldset>
+                
+										<legend > Informações do Serviço </legend>
 										<div class="form-group col-md">
-											<label for="telefone">Telefone</label>
-											<input type="number" class="form-control " id="telefone" name="telefone" placeholder="Telefone">
+										  <label for="nome">Nome do pet </label>
+										  <input  type="nome" class="form-control" id="nome" placeholder="Nome" >
 										</div>
+						  
+										<div class="form-group col-md">
+										  <label for="tipo-animal">Meu pet é um(a)</label>
+										  <select type="text" class="form-control" name="tipo-animal" id="tipo-animal">
+											  <option value="">----</option>
+											  <option value="gato">um(a) gatinho(a)</option>
+											  <option value="cachorro">um(a) cachorrinho(a)</option>
+										  </select>
+										</div>
+									  
+										<div class="form-group col-md">
+											<label for="info"> Observações importantes? </label>
+											<textarea  class="form-control" name="info" id="info" rows="3"></textarea>
+										</div>
+						
+										
 									  </fieldset>
 
 									<button class="btn">Cadastrar</button>
