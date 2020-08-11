@@ -96,7 +96,7 @@
 
 		.area-servicos{
 			border: 1px solid red;
-			margin-bottom: 4%s;
+			margin-bottom: 4%;
 		}
 		
 	</style>
@@ -168,7 +168,7 @@
 
 									  <fieldset>
                 
-										<legend > Informações do Serviço </legend>
+										<legend> Escolha um Serviço </legend>
 
 										<form>
 											<div class="form-row align-items-center area-servicos">
@@ -201,6 +201,57 @@
 												</select>
 											  </div>
 											</div>
+
+											<div class="form-row align-items-center area-servicos">
+
+												<div class="custom-control custom-checkbox">
+													<input type="checkbox" class="custom-control-input" id="customCheck1">
+													<label class="custom-control-label" for="customCheck1">Petcure</label>
+												  </div>	
+											  <div class="col-auto opcao" >
+												<select type="text" class="form-control" id="opcao">
+												  <option selected>------</option>
+												  <option value="1">Plano Básico (R$40)</option>
+												  <option value="2">Plano Chique (R$65)</option>
+												  <option value="2">Plano Diva (R$80)</option>
+												</select>
+											  </div>
+											</div>
+
+											<div class="form-row align-items-center area-servicos">
+
+												<div class="custom-control custom-checkbox">
+													<input type="checkbox" class="custom-control-input" id="customCheck1" disabled>
+													<label class="custom-control-label" for="customCheck1">Acampamento</label>
+												  </div>	
+											  <div class="col-auto opcao" >
+												<select type="text" class="form-control" id="opcao" disabled>
+												  <option selected>------</option>
+												  <option value="1">Dia de Semana (R$20)</option>
+												  <option value="2">Fim de Semana (R$35)</option>
+												</select>
+												<small>*este plano não está disponível no momento</small>
+											  </div>
+											</div>
+										</form>
+									  </fieldset>
+
+									  <fieldset>
+                
+										<legend > Informações finais </legend>
+
+										<form>
+											<div class="form-group col-md">
+												<label for="data">Data do Agendamento </label>
+												<input type="date" class="form-control" id="data" >
+											</div>
+
+											<div class="form-group col-md">
+												<label for="hora">Horário </label>
+												<input type="time" class="form-control" id="hora" >
+												<small>*Funcionamos das 9:00 às 18:00</small>
+											</div>
+
 										</form>
 									  </fieldset>
 
