@@ -23,6 +23,17 @@
 			border: 1px solid red;
 		}
 
+		.servicos{
+			font-family: 'Coiny', cursive;
+    
+			color:#fda8a8e5 ;
+			font-size:30px;
+			text-emphasis: center;
+			text-align: center;
+			text-transform: uppercase;
+			margin-bottom: auto;
+		}
+
 		.btn{
 			width: 100%;
 			height: 50px;
@@ -87,6 +98,11 @@
 			margin-left:16%;
 			text-align: center;
 		  }
+
+		menu{
+			width: 100%;
+			border: 1px solid blue;
+		}
 	</style>
 
 </head>
@@ -113,9 +129,9 @@
             </header><!--/fim Cabecalho -->
             
 		<div class="container app">
-			<div class="row">
-				<div class="col-md-3 menu">
-					<ul class="list-group">
+			<div class="row" >
+				<div class="col-md-3 menu" style="border: 1px solid red;">
+					<ul class="list-group" style="border: 1px solid red;">
 						<li class="list-group-item"><a href="nova_tarefa.html">Marcar Horário</a></li>
 						<li class="list-group-item"><a href="todas_tarefas.php">Meus Agendamentos</a></li>
 					</ul>
@@ -125,7 +141,7 @@
 					<div class="container cadastro">
 						<div class="row">
 							<div class="col">
-								<h4>Agendar Serviço</h4>
+								<h3 class="servicos">Agendamento de Serviços</h3>
 								<hr />
 
 								<form>
@@ -157,7 +173,7 @@
 									  <fieldset>
                 
 										<legend > Informações do Serviço </legend>
-										
+
 										<div class="form-group col-md">
 										  <label for="nome">Nome do pet </label>
 										  <input  type="nome" class="form-control" id="nome" placeholder="Nome" >
