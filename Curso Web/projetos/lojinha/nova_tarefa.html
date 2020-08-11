@@ -31,6 +31,7 @@
 		}
 		.area-servicos{
 			border: 1px solid red;
+			width: 100%;
 		}
 
 		.btn{
@@ -170,25 +171,26 @@
                 
 										<legend > Informações do Serviço </legend>
 
-										<div class="form-group col-md">
+										<form>
+											<div class="form-row align-items-center">
 
-											<div class="form-check row-md area-servicos">
-												<input class="form-check-input " type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-												<label class="form-check-label" for="exampleRadios1">
-													Pet Sitting
-												</label>
-												<select class="form-control"  id="tipo-animal">
-													<option value="">----</option>
-													<option value="pet-sitting">Plano Diário(R$ 20)</option>
-													<option value="pet-hotel">Plano Horário(R$ 50)</option>
-												  </select>
+											  <div class="col-auto my-1">
+												<div class="custom-control custom-checkbox mr-sm-2">
+													<input type="checkbox" class="custom-control-input" id="customControlAutosizing">
+													<label class="custom-control-label" for="customControlAutosizing">Pet Sitting</label>
+												</div>
+											  </div>
+											  <div class="col-auto my-1">
+												<select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+												  <option selected>------</option>
+												  <option value="1">Plano Diário (R$20)</option>
+												  <option value="2">Plano Horário (R$50)</option>
+												</select>
+											  </div>
+											  
+											  
 											</div>
-
-										  
-										  
-									  
-										
-
+										  </form>
 									  </fieldset>
 
 									<button class="btn">Cadastrar</button>
