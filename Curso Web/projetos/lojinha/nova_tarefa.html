@@ -19,10 +19,6 @@
 	<script src="js/script.js"></script>
 
 	<style>
-		form{
-			border: 1px solid red;
-		}
-
 		.servicos{
 			font-family: 'Coiny', cursive;
     
@@ -127,8 +123,8 @@
             
 		<div class="container app">
 			<div class="row" >
-				<div class="col-md-3 menu" style="border: 1px solid red;">
-					<ul class="list-group" style="border: 1px solid red;">
+				<div class="col-md-3 menu">
+					<ul class="list-group">
 						<li class="list-group-item"><a href="nova_tarefa.html">Marcar Horário</a></li>
 						<li class="list-group-item"><a href="todas_tarefas.php">Meus Agendamentos</a></li>
 					</ul>
@@ -172,16 +168,13 @@
 										<legend > Informações do Serviço </legend>
 
 										<div class="form-group col-md">
-										  <label for="nome">Nome do pet </label>
-										  <input  type="nome" class="form-control" id="nome" placeholder="Nome" >
-										</div>
-						  
-										<div class="form-group col-md">
-										  <label for="tipo-animal">Meu pet é um(a)</label>
+										  <label for="tipo-animal">Serviço</label>
 										  <select type="text" class="form-control" name="tipo-animal" id="tipo-animal">
 											  <option value="">----</option>
-											  <option value="gato">um(a) gatinho(a)</option>
-											  <option value="cachorro">um(a) cachorrinho(a)</option>
+											  <option value="pet-sitting">Pet Sitting</option>
+											  <option value="pet-hotel">Pet Hotel</option>
+											  <option value="petcure">Petcure</option>
+											  <option value="acampamento">Acampamento</option>
 										  </select>
 										</div>
 									  
