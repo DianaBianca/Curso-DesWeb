@@ -168,13 +168,27 @@
 										<legend > Informações do Serviço </legend>
 
 										<div class="form-group col-md">
+
+										  <div class="form-check">
+											  <input type="text" class="form-check-input" type="checkbox" id="pet-sitting">
+											  <label class="form-check-label" for="pet-sitting">Pet Sitting</label>
+
+											  <select class="form-control" name="tipo-animal" id="tipo-animal">
+												<option value="">----</option>
+												<option value="pet-sitting">Pet Sitting</option>
+												<option value="pet-hotel">Pet Hotel</option>
+												<option value="petcure">Petcure</option>
+											  </select>
+
+										  </div>
+										  
 										  <label for="tipo-animal">Serviço</label>
+										  
 										  <select type="text" class="form-control" name="tipo-animal" id="tipo-animal">
 											  <option value="">----</option>
 											  <option value="pet-sitting">Pet Sitting</option>
 											  <option value="pet-hotel">Pet Hotel</option>
 											  <option value="petcure">Petcure</option>
-											  <option value="acampamento">Acampamento</option>
 										  </select>
 										</div>
 									  
