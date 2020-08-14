@@ -1,0 +1,506 @@
+@import url('https://fonts.googleapis.com/css2?family=Coiny&family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+/*font-family: 'Coiny', cursive;
+font-family: 'Coiny', cursive;
+font-family: 'Poppins', sans-serif;
+
+*/
+
+body{
+    width: auto;
+    overflow-x: hidden;
+}
+
+h1{
+    font-family: 'Coiny', cursive;
+    
+    color:#249ab4;
+    font-size:40px;
+    text-emphasis: center;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/*menu
+-----------------------------*/
+/* Barra de navegação
+-----------------------------*/
+
+.navbar{
+    font-family: 'Poppins', sans-serif;
+    color:#434343d8;
+    text-transform: uppercase;
+    display: flex;
+    
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+	color: #249ab4;
+}
+
+.icon{
+    margin-left: 5%;
+}
+/* Barra de navegação
+-----------------------------*/
+#nav-target{
+    justify-content: center;
+    display: flex;
+    align-items: flex-center;
+}
+
+ul>li{
+    margin-right: 50px;
+}
+
+nav{
+   
+    color:#434343;
+    font-family: 'Coiny';
+}
+
+
+/* Banner
+-----------------------------*/
+#carouselExampleIndicators {
+    width: auto;  
+}
+
+
+/*Sobre Nos
+-----------------------------*/
+#sobre-nos {
+    width: 100%;
+    height: 400px;
+    background-color:  white;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+#sobre-nos-imagem{
+    background-image: url(../img/sobre-nos.png);
+    background-repeat: no-repeat;
+    width: 50%;
+    float: right;
+    margin-right: -18px;    
+}
+
+#sobre-nos-texto{
+    width: 50%;
+    float: left;
+}
+
+p{
+    font-family: 'Poppins', sans-serif;
+    color:#434343;
+    font-size: x-large;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.titulo {
+    justify-content: left;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+}
+  /*Serviços
+-----------------------------*/
+
+#container{
+    width: 100%;
+    height: auto;
+    background-color: white;
+    padding: 2%;
+}
+
+#container>h1{
+    align-self: center;
+    padding-bottom: 20px;
+}
+
+#container-row{
+    /*border: 1px solid #f94646;*/
+    width: 100%;
+    padding-left: 2%;
+}
+
+.foto{
+    position: relative;
+    
+    top:50%;
+    left:50%;
+    margin-top:-1px;
+    margin-left:-70px;
+    width: 140px;
+    height: 140px;
+    background-color: #000;
+    color: #FFF;
+    
+    /* Agora a mágica */
+    border-radius: 50%;
+}
+
+.titulo-infos{
+
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color:#434343;
+    font-size:20px;
+    text-emphasis: center;
+    text-align: center;
+    padding-top: 5%;
+    
+}
+
+.infos{
+    
+    box-shadow:4px 4px 30px #fdbabac4 ;
+    margin-top: -40px;
+    height: auto;
+    padding-top: 40px;
+}
+
+#container>h3{
+    padding-top: 100px;
+}
+
+.bloco{
+    /*border: 2px solid red;*/
+}
+
+.infos>p{
+    font-family: 'Poppins', sans-serif;
+    
+    color:#434343;
+    font-size:20px;
+    text-emphasis: center;
+    text-align: center;
+}
+
+
+
+#marque-visita{
+    background-image: url(../img/footer.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 500px;
+}
+
+.subtitulos{
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color:#434343d8;
+    font-size:20px;
+    text-emphasis: center;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.depoimento{
+    padding-top: 40px;
+}
+/* Rodapé-visita
+-----------------------------*/
+#marque-visita>h1{
+    font-family: 'Coiny', cursive;
+    color: #fddada;
+    font-size:50px;
+    text-emphasis: center;
+    padding-top: 6%;
+}
+
+#marque-visita>p{
+    font-family: 'Poppins', sans-serif;
+    color:white;
+    font-size:20px;
+    text-emphasis: center;
+    text-align: center;
+}
+
+#marque-visita>h3{
+    font-family: 'Poppins', sans-serif;
+    color:#fddada;
+    font-size:30px;
+    text-emphasis: center;
+    text-align: center;
+    
+    height: 100px;
+}
+
+
+
+
+/* Rodapé
+-----------------------------*/
+footer {
+	background: white;
+	padding: 50px 0px 20px 0px;
+	position: relative;
+}
+
+footer h4 {
+    font-family: 'Coiny', cursive;
+	color: #249ab4;
+	font-size: 1em;
+	text-transform: uppercase;
+}
+
+footer .navbar-nav a {
+	color: #434343e5;
+	font-size: 0.9em;
+}
+
+footer .navbar-nav a:hover {
+	color: #249ab4;
+	text-decoration: none;
+}
+
+footer ul {
+    list-style: none;
+    color:#434343e5;
+	font-size: 0.9em;
+}
+
+footer ul li {
+	float: right;
+	margin: 0 5px;
+}
+
+
+
+/* serviços
+Efeito Parallax-------------------------------*/
+body, html {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #434343d8;
+    height: auto;
+}
+
+.conteudo {
+    color: #434343d8;
+    background-color: white;
+    text-align: justify;
+    padding: 50px 80px;
+    height: auto;
+}
+
+.table-responsive{
+    width: auto;
+}
+.tb1{
+    width: auto;
+}
+
+h3 {
+    font-family: 'Coiny', cursive;
+    text-transform: uppercase;
+    color: #ec6d97e0;
+    text-align: center;
+    padding-bottom: 2%;
+    
+}
+
+p{
+    margin-bottom: 20px;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #434343d8;
+    font-size: 23px;
+    text-align: center;
+}
+
+.rodape{
+    text-align: center;
+}
+
+.conteudo-titulo{
+    position: absolute;
+    left: 0;
+    top: 45%;
+    width: 100%;
+    height: 12%;
+    text-align: center;
+}
+
+.titulo-cadastro{
+    font-family: 'Coiny', cursive;
+    color: white;
+    padding: 18px;
+    font-size: 45px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+#pet-sitting, #pet-hotel, #petcuri, #acampamento {
+    position: relative;
+    width: 100%;
+    height: 550px;
+    opacity: 0.8;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#pet-sitting{
+    background-image: url(../img/pets2banner.jpg) ;
+}
+
+#pet-hotel{
+    background-image: url(../img/dog3.jpg) ;
+}
+
+#petcuri{
+    background-image: url(../img/perfil-oculos1.jpg) ;
+}
+
+#acampamento{
+    background-image: url(../img/pets5.jpg) ;
+    background-size: 100%
+}
+
+
+
+/*-------------- CONTEUDO SERVIÇOS*/
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+body{
+  margin: 0;
+  padding: 0;
+ font-family: 'Roboto', sans-serif !important;
+}
+section{
+  width: 100%;
+  height: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          padding: 10px 0;
+    
+}
+.card{
+  position: relative;
+  max-width: 300px;
+  height: auto;
+  /*background: linear-gradient(-45deg,#fe0847,#249ab4);*/
+  border-radius: 15px;
+  margin: 0 auto;
+  -webkit-box-shadow: 0 10px 15px rgba(0,0,0,.1) ;
+          box-shadow: 0 10px 15px rgba(0,0,0,.1) ;
+-webkit-transition: .5s;
+transition: .5s;
+}
+.card:hover{
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.col-sm-4:nth-child(1) .card ,
+.col-sm-4:nth-child(1) .card .title .fa{
+  background-color:#ec6d97e0;
+
+}
+.col-sm-6:nth-child(1) .card ,
+.col-sm-6:nth-child(1) .card .title .fa{
+  background-color:#ec6d97e0;
+
+}
+.col-sm-6:nth-child(2) .card ,
+.col-sm-6:nth-child(2) .card .title .fa{
+  background-color:#ec6d97e0;
+
+}
+.col-sm-4:nth-child(2) .card,
+.col-sm-4:nth-child(2) .card .title .fa{
+    background-color:#ec6d97e0;
+
+}
+.col-sm-4:nth-child(3) .card,
+.col-sm-4:nth-child(3) .card .title .fa{
+    background-color:#ec6d97e0;
+
+}
+.card::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: rgba(255, 255, 255, .1);
+z-index: 1;
+-webkit-transform: skewY(-5deg) scale(1.5);
+        transform: skewY(-5deg) scale(1.5);
+}
+.title .fa{
+  color:#fff;
+  font-size: 60px;
+  width: 100px;
+  height: 100px;
+  border-radius:  50%;
+  text-align: center;
+  line-height: 100px;
+  -webkit-box-shadow: 0 10px 10px rgba(0,0,0,.1) ;
+          box-shadow: 0 10px 10px rgba(0,0,0,.1) ;
+
+}
+.title h2 {
+  position: relative;
+  margin: 20px  0 0;
+  padding: 0;
+  color: #fff;
+  font-size: 28px;
+ z-index: 2;
+}
+.price,.option{
+  position: relative;
+  z-index: 2;
+}
+.price h4 {
+margin: 0;
+padding: 20px 0 ;
+color: #fff;
+font-size: 60px;
+}
+.option ul {
+  margin: 0;
+  padding: 0;
+
+}
+.option ul li {
+margin: 0 0 10px;
+padding: 0;
+list-style: none;
+color: #fff;
+font-size: 16px;
+}
+.card a {
+  position: relative;
+  z-index: 2;
+  background: #fff;
+  color : black;
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 40px;
+  display: block;
+  text-align: center;
+  margin: 20px auto 0 ;
+  font-size: 16px;
+  cursor: pointer;
+  
+}
+.card a:hover{
+    text-decoration: none;
+}
+
+.list-group-item{
+    margin-top: 4%;
+    width: 100%;
+    border-radius: 5%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
