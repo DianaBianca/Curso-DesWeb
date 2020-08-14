@@ -14,6 +14,12 @@ class Route extends Bootstrap {
 			'action' => 'index'
 		);
 
+		$routes['servicos'] = array(
+			'route' => '/servicos',
+			'controller' => 'indexController',
+			'action' => 'servicos'
+		);
+
 		$this->setRoutes($routes);
 	}
 
