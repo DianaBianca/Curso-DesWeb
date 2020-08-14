@@ -20,6 +20,18 @@ class Route extends Bootstrap {
 			'action' => 'servicos'
 		);
 
+		$routes['login']= array(
+			'route' => '/login',
+			'controller' => 'indexController',
+			'action' => 'login'
+		);
+
+		$routes['cadastro'] = array(
+			'route' => '/cadastro',
+			'controller' => 'indexController',
+			'action' => 'cadastro'
+		);
+
 		$this->setRoutes($routes);
 	}
 
