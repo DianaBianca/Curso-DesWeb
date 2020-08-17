@@ -21,6 +21,9 @@
 
         //salvar
 
+        public function salvar(){
+            $query = "insert into usuario(nome,sobrenome,email,senha) values(:nome, :sobrenome, :email, :senha)";
+        }
         //validar
 
         //recuperar
