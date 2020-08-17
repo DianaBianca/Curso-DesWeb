@@ -19,6 +19,14 @@ class IndexController extends Action {
 
 	public function cadastro(){
 		$this->render('cadastro');
+		echo '<pre>';
+		print_r($_POST);
+		echo'</pre>';
+
+		//receber os dados do formulario
+		//sucesso
+
+		//erro
 	}
 
 	public function login(){

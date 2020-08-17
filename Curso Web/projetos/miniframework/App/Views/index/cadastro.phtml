@@ -131,76 +131,35 @@
             
             <h1 class="titulo" id="titulo">Cadastro</h1>
             
-            <form class="col">
+            <form class="col" action="/cadastro" method="post">
               <small id="titulo" class="form-text text-muted" style="text-align: center;">Nunca compartilharemos suas Informações com ninguém !</small><br>
 
-              <fieldset>
-                
-                <legend > Informações Pessoais</legend>
                 <div class="form-group col-md">
                   <label for="nome">Nome</label>
-                  <input  type="nome" class="form-control" id="nome" placeholder="Nome" >
+                  <input  type="nome" class="form-control" name="nome" id="nome" placeholder="Nome" >
                 </div>
   
                 <div class="form-group col-md">
                   <label for="sobrenome">Sobrenome</label>
                   <input type="text" class="form-control" name="sobrenome" id="sobrenome" placeholder="sobrenome">
-                </div>
-              <!---
-                <div class="form-group col-md">
-                    <label for="CPF">CPF</label>
-                    <input  type="number" class="form-control " id="cpf" placeholder="CPF" >
-                </div>
-
-                <div class="form-group col-md">
-                    <label for="telefone">Telefone</label>
-                    <input type="number" class="form-control " id="telefone" name="telefone" placeholder="Telefone">
-                </div>
-              </fieldset>
-              <br>
-              <fieldset>
-                <legend class="row-md">Endereço</legend>
-                <div class="form-group col-md">
-                    <label for="rua">Rua</label>
-                    <input type="text" class="form-control col-sm-14" name="rua" id="rua" placeholder="Rua">
-                </div>
-             
-                <div class="form-group col-md">
-                    <label for="numero">Numero</label>
-                    <input type="number" class="form-control col-sm-14" name="numero" id="numero" placeholder="Numero">
-                </div>
-
-                <div class="form-group col-md">
-                  <label for="bairro">Bairro</label>
-                  <input type="text" class="form-control col-sm-14" name="bairro" id="bairro" placeholder="Bairro">
-                </div>
-
-                <div class="form-group col-md">
-                    <label for="complemento">Complemento</label>
-                    <input type="text" class="form-control col-sm-14" name="complemento" id="complemento" placeholder="Complemento">
-                </div>
-              </fieldset>
-              !></!---->
-              <br>
-              <fieldset>
-                <legend>Informações Cadastrais</legend>
+                </div> 
+               <br>
                 <div class="form-group col-md">
                     <label for="email">Email</label>
-                    <input  type="email" class="form-control col-sm-14" id="email" placeholder="Email" >
+                    <input  type="email" class="form-control col-sm-14" name="email" id="email" placeholder="Email" >
                 </div>
 
                 <div class="form-group col-md">
                     <label for="Senha">Senha</label>
-                    <input  type="password" class="form-control col-sm-14" id="senha" placeholder="Senha">
+                    <input  type="password" class="form-control col-sm-14" name="senha" id="senha" placeholder="Senha">
                 </div>
                 <div class="form-group col-md">
                   <label for="Senha">Confirmar senha</label>
-                  <input  type="password" class="form-control col-sm-14" id="senhaConfirmacao" placeholder="Repita sua senha">
+                  <input  type="password" class="form-control col-sm-14" name="senhaConfirmacao" id="senhaConfirmacao" placeholder="Repita sua senha">
                </div>
               
-            </fieldset>
                 <div>
-                  <button  type="button" class="btn" id="submit" onclick="cadastrar()">
+                  <button  type="submit" class="btn" id="submit" onclick="cadastrar()">
                     Cadastrar
                 </div>
             </form>
