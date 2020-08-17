@@ -23,6 +23,14 @@
 
         public function salvar(){
             $query = "insert into usuario(nome,sobrenome,email,senha) values(:nome, :sobrenome, :email, :senha)";
+            $stmt = $this->db->prepare($query);
+            $stmt->bindValue(':nome',$this->__get('nome'));
+            $stmt->bindValue(':sobrenome',$this->__get('sobrenome'));
+            $stmt->bindValue(':email',$this->__get('email'));
+            $stmt->bindValue(':senha',$this->__get('senha'));
+            $stmt->execute();
+
+            return $this;
         }
         //validar
 
