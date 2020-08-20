@@ -20,12 +20,9 @@ class IndexController extends Action {
 	public function cadastro(){
 		$this->render('cadastro');
 
-		echo '<pre>';
-		print_r($_POST);
-		echo'</pre>';
-
 		//receber os dados do formulario
 		$usuario = Container::getModel('Usuario');
+		
 		$usuario-> __set('nome',$_POST['nome']);
 		$usuario-> __set('sobrenome',$_POST['sobrenome']);
 		$usuario-> __set('email',$_POST['email']);
