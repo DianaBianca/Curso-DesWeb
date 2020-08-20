@@ -32,8 +32,15 @@ class IndexController extends Action {
 		$usuario-> __set('senha',$_POST['senha']);
 		$usuario-> __set('senhaConfirmacao',$_POST['senhaConfirmacao']);
 
-		if($_POST['senha'] == $_POST['senhaConfirmacao']){
-			$usuario->salvar(); 
+
+		if($usuario->validarCadastro()){
+			if ($_POST['senha'] == $_POST['senhaConfirmacao']){
+				if(count($usuario->getUsuarioPorEmail()) == 0){
+
+					$usuario->salvar();
+				}
+ 
+			}
 		}
 		else{
 			echo 'diferente';
