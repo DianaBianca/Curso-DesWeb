@@ -54,7 +54,11 @@
             return $valido;
         }
         //recuperar
-
+        public function getUsuarioPorEmail(){
+            $query = "select nome, email from usuario where email = :email";
+            $stmt = $this->db->prepare($query);
+            $stmt->bindValue(':email',$this->__get('email'));
+        }
 
 
 
