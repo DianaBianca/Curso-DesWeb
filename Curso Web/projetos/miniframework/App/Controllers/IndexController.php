@@ -20,6 +20,7 @@ class IndexController extends Action {
 	public function cadastro(){
 		$this->render('cadastro');
 		$this->view->erroCadastro = false;
+		
 		//receber os dados do formulario
 		$usuario = Container::getModel('Usuario');
 
