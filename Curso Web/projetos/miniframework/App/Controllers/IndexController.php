@@ -22,7 +22,7 @@ class IndexController extends Action {
 
 		//receber os dados do formulario
 		$usuario = Container::getModel('Usuario');
-		
+
 		$usuario-> __set('nome',$_POST['nome']);
 		$usuario-> __set('sobrenome',$_POST['sobrenome']);
 		$usuario-> __set('email',$_POST['email']);
@@ -30,21 +30,17 @@ class IndexController extends Action {
 		$usuario-> __set('senhaConfirmacao',$_POST['senhaConfirmacao']);
 
 
-		if($usuario->validarCadastro()){
+		if($usuario->validarCadastro() && count($usuario->getUsuarioPorEmail()) == 0){
 			if ($_POST['senha'] == $_POST['senhaConfirmacao']){
-				if(count($usuario->getUsuarioPorEmail()) == 0){
-
-					$usuario->salvar();
-				}
- 
+				
+				$usuario->salvar();
+				$this->render('cadastro_concluido');
 			}
 		}
 		else{
-			echo 'diferente';
+			$this->render('cadastro');
 		}
-		//sucesso
-
-		//erro
+		
 	}
 
 	public function login(){
