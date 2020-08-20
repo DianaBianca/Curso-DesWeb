@@ -34,7 +34,25 @@
             return $this;
         }
         //validar
+        public function validarCadastro(){
+            $valido = true;
 
+            if(strlen($this->__get('nome'))< 3 ){
+                $valido = false;
+            }
+
+            if(strlen($this->__get('sobrenome'))< 3 ){
+                $valido = false;
+            }
+            if(strlen($this->__get('email'))< 5 ){
+                $valido = false;
+            }
+            if(strlen($this->__get('senha'))< 5 ){
+                $valido = false;
+            }
+
+            return $valido;
+        }
         //recuperar
 
 
