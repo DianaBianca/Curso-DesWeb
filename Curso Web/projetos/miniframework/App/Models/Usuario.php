@@ -58,6 +58,8 @@
             $query = "select nome, email from usuario where email = :email";
             $stmt = $this->db->prepare($query);
             $stmt->bindValue(':email',$this->__get('email'));
+            $stmt->execute();
+            return $stmt->fetchAll(\PDO::FETCH_ASSOC);
         }
 
 
