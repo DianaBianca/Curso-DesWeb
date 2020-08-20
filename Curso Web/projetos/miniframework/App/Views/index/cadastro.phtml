@@ -152,7 +152,7 @@
 
                 <div class="form-group col-md">
                     <label for="Senha">Senha</label>
-                    <input  type="password" class="form-control col-sm-14" name="senha"  placeholder="Senha">
+                    <input  type="password" class="form-control col-sm-14" name="senha"  placeholder="Senha (minimo 5 caracteres)">
                 </div>
                 <div class="form-group col-md">
                   <label for="Senha">Confirmar senha</label>
@@ -163,6 +163,11 @@
                   <button  type="submit" class="btn" id="submit" onclick="cadastrar()">
                     Cadastrar
                 </div>
+                <?php if($this->view->erroCadastro){ ?>
+                  <small class="form-text text-danger"> *Erro ao tentar realizar o cadastro, verifique se os 
+                    campos foram preenchidos corretamente !                  
+                  </small>
+                <?php } ?>
             </form>
 
         </div>  
