@@ -24,7 +24,7 @@ class IndexController extends Action {
 			'sobrenome' => '',
 			'email' => '',
 			'senha' => '',
-			'senhaConfirmacao' => '',
+			'senhaconfirmacao' => '',
 		);
 
 		$this->view->erroCadastro = false;
@@ -39,11 +39,11 @@ class IndexController extends Action {
 		$usuario-> __set('sobrenome',$_POST['sobrenome']);
 		$usuario-> __set('email',$_POST['email']);
 		$usuario-> __set('senha',$_POST['senha']);
-		$usuario-> __set('senhaConfirmacao',$_POST['senhaConfirmacao']);
+		$usuario-> __set('senhaconfirmacao',$_POST['senhaconfirmacao']);
 
 
 		if($usuario->validarCadastro() && count($usuario->getUsuarioPorEmail()) == 0){
-			if ($_POST['senha'] == $_POST['senhaConfirmacao']){
+			if ($_POST['senha'] == $_POST['senhaconfirmacao']){
 				
 				$usuario->salvar();
 				$this->render('cadastro_concluido');
