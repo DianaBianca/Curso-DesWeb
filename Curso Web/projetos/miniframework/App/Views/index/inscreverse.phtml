@@ -137,27 +137,27 @@
 
                 <div class="form-group col-md">
                   <label for="nome">Nome</label>
-                  <input  type="nome" class="form-control" value="<?= $this->view->usuario['nome'] ?> name="nome"  placeholder="Nome" >
+                  <input  type="nome" class="form-control"  name="nome"  placeholder="Nome" >
                 </div>
   
                 <div class="form-group col-md">
                   <label for="sobrenome">Sobrenome</label>
-                  <input type="text" class="form-control" value="<?= $this->view->usuario['sobrenome'] ?> name="sobrenome"  placeholder="sobrenome">
+                  <input type="text" class="form-control"  name="sobrenome"  placeholder="sobrenome">
                 </div> 
                <br>
                 <div class="form-group col-md">
                     <label for="email">Email</label>
-                    <input  type="email" class="form-control col-sm-14" value="<?= $this->view->usuario['email'] ?> name="email"  placeholder="Email" >
+                    <input  type="email" class="form-control col-sm-14"  name="email"  placeholder="Email" >
                 </div>
 
                 <div class="form-group col-md">
                     <label for="Senha">Senha</label>
-                    <input  type="password" class="form-control col-sm-14" value="<?= $this->view->usuario['senha'] ?> name="senha"  placeholder="Senha (minimo 5 caracteres)">
+                    <input  type="password" class="form-control col-sm-14"  name="senha"  placeholder="Senha (minimo 5 caracteres)">
                 </div>
   
               
                 <div>
-                  <button  type="submit" class="btn" id="submit" >
+                  <button  type="submit" class="btn" id="submit">
                     Cadastrar
                 </div>
                 <?php if($this->view->erroCadastro) { ?>
