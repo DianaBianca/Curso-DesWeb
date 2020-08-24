@@ -33,12 +33,12 @@ class IndexController extends Action {
 	}
 	public function cadastrar(){
 		//receber os dados do formulario
-		$usuario = Container::getModel('Usuario');
+		$usuario = Container::getModel('usuario');
 
-		$usuario-> __set('nome',$_POST['nome']);
+		$usuario-> __set('nome',     $_POST['nome']);
 		$usuario-> __set('sobrenome',$_POST['sobrenome']);
-		$usuario-> __set('email',$_POST['email']);
-		$usuario-> __set('senha',$_POST['senha']);
+		$usuario-> __set('email',    $_POST['email']);
+		$usuario-> __set('senha',    $_POST['senha']);
 		$usuario-> __set('senhaconfirmacao',$_POST['senhaconfirmacao']);
 
 

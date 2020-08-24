@@ -131,7 +131,7 @@
             
             <h1 class="titulo" id="titulo">Cadastro</h1>
             
-            <form class="col" action="/cadastro" method="post">
+            <form class="col" action="/cadastrar" method="post">
 
               <small id="titulo" class="form-text text-muted" style="text-align: center;">Nunca compartilharemos suas Informações com ninguém !</small><br>
 
@@ -160,13 +160,16 @@
                </div>
               
                 <div>
-                  <button  type="submit" class="btn" id="submit" onclick="cadastrar()">
+                  <button  type="submit" class="btn" id="submit" >
                     Cadastrar
                 </div>
-                <?php if($this->view->erroCadastro){ ?>
-                  <small class="form-text text-danger"> *Erro ao tentar realizar o cadastro, verifique se os 
-                    campos foram preenchidos corretamente !                  
+                <?php if($this->view->erroCadastro) { ?>
+
+                  <small class="form-text text-danger">
+                      *Erro ao tentar realizar o cadastro, 
+                      verifique se os campos foram preenchidos corretamente.
                   </small>
+
                 <?php } ?>
             </form>
 
