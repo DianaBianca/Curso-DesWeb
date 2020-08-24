@@ -43,13 +43,15 @@ class IndexController extends Action {
 
 
 		if($usuario->validarCadastro() && count($usuario->getUsuarioPorEmail()) == 0){
+			echo "validação ok";
 			if ($_POST['senha'] == $_POST['senhaconfirmacao']){
-				
+				echo "senhas ok";
 				$usuario->salvar();
 				$this->render('cadastro_concluido');
 			}
 		}
 		else{
+			echo "nao deu hein";
 			$this->view->erroCadastro = true;
 
 			$this->render('cadastro');
