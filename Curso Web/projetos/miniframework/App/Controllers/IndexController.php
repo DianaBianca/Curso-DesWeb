@@ -13,14 +13,25 @@ class IndexController extends Action {
 		$this->render('index');
 	}
 
+
 	public function servicos(){
 		$this->render('servicos');
 	}
 
 	public function cadastro(){
-		$this->render('cadastro');
+		$this->view->usuario = array(
+			'nome' => '',
+			'sobrenome' => '',
+			'email' => '',
+			'senha' => '',
+			'senhaConfirmacao' => '',
+		);
+
 		$this->view->erroCadastro = false;
 		
+		$this->render('cadastro');
+	}
+	public function cadastrar(){
 		//receber os dados do formulario
 		$usuario = Container::getModel('Usuario');
 
