@@ -10,7 +10,6 @@
         private $sobrenome;
         private $email;
         private $senha;
-        private $senhaConfirmacao;
         
         public function __get($atributo){
             return $this->$atributo;

@@ -6,6 +6,7 @@ namespace App\Controllers;
 use MF\Controller\Action;
 use MF\Model\Container;
 
+
 class IndexController extends Action {
 
 	public function index() {
@@ -13,51 +14,57 @@ class IndexController extends Action {
 		$this->render('index');
 	}
 
-
 	public function servicos(){
 		$this->render('servicos');
 	}
+	  
+	
+	public function inscreverse() {
 
-	public function cadastro(){
 		$this->view->usuario = array(
 			'nome' => '',
 			'sobrenome' => '',
 			'email' => '',
 			'senha' => '',
-			'senhaconfirmacao' => '',
 		);
 
 		$this->view->erroCadastro = false;
-		
-		$this->render('cadastro');
+
+		$this->render('inscreverse');
 	}
-	public function cadastrar(){
-		//receber os dados do formulario
-		$usuario = Container::getModel('usuario');
 
-		$usuario-> __set('nome',     $_POST['nome']);
-		$usuario-> __set('sobrenome',$_POST['sobrenome']);
-		$usuario-> __set('email',    $_POST['email']);
-		$usuario-> __set('senha',    $_POST['senha']);
-		$usuario-> __set('senhaconfirmacao',$_POST['senhaconfirmacao']);
+	public function registrar() {
 
+		$usuario = Container::getModel('Usuario');
 
-		if($usuario->validarCadastro() && count($usuario->getUsuarioPorEmail()) == 0){
-			echo "validação ok";
-			if ($_POST['senha'] == $_POST['senhaconfirmacao']){
-				echo "senhas ok";
-				$usuario->salvar();
-				$this->render('cadastro_concluido');
-			}
-		}
-		else{
-			echo "nao deu hein";
-			$this->view->erroCadastro = true;
+		$usuario->__set('nome',      $_POST['nome']);
+		$usuario->__set('sobrenome', $_POST['sobrenome']);
+		$usuario->__set('email',     $_POST['email']);
+		$usuario->__set('senha',     $_POST['senha']);
+
+		
+		if($usuario->validarCadastro() && count($usuario->getUsuarioPorEmail()) == 0) {
+		
+			$usuario->salvar();
 
 			$this->render('cadastro');
+
+	} else {
+
+			$this->view->usuario = array(
+				'nome' => $_POST['nome'],
+				'sobrenome' => $_POST['sobrenome'],
+				'email' => $_POST['email'],
+				'senha' => $_POST['senha'],
+			);
+
+			$this->view->erroCadastro = true;
+
+			$this->render('inscreverse');
 		}
-		
 	}
+
+
 
 	public function login(){
 		$this->render('login');

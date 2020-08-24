@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="js/script.js"></script>
+
+    <title>CADASTRO</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Coiny&family=Poppins:wght@300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+     
+        body{
+          background-image:url(img/dog6.jpg);
+          background-repeat: no-repeat;
+          display: flex;
+          align-content: center;
+          align-items: center;
+      }
+
+      input {
+        font-family: 'Poppins', sans-serif;
+        padding-left: 5%;
+        padding-right: 5%;
+        color:#434343c2;
+        font-size:20px;
+        padding-left: 5%;
+        padding-right: 5%;
+        box-shadow:0 0 8px #fdc1c1 ;
+      }
+
+      .cadastro{
+          background-color: white;
+          padding: 40px 70px 70px 70px;
+          border-radius: 5px;
+          width: auto;
+        
+      }      
+
+      label, legend{
+          padding-right: 10px;
+          font-family: 'Poppins', sans-serif;
+          color:#434343d8;
+          width: auto;
+      }
+
+      .form-group{
+        width: auto;
+        display: flex;
+        align-items: center;
+        align-content: center;
+      }
+
+      .btn{
+        width: 100%;
+        height: 50px;
+        background-color: white;
+        border:2px solid #fdc1c1;
+        font-family: 'Poppins', sans-serif;
+        color:#434343d8;
+        font-size:1.5em;
+        
+        box-shadow:0 0 8px #fdc1c1 ;
+      }
+
+      button:hover{
+          background-color:#fdc1c1 ;
+          
+          box-shadow:5px 5px 20px #fdbaba ;
+      }
+
+      #submit{
+        width: 100%;  
+        margin-top: 30px;
+        position: relative;
+          
+      }
+
+      .titulo{
+        font-family: 'Coiny', cursive;
+        color:#fdc1c1 ;
+        font-size:50px;
+        text-emphasis: center;
+        text-align: center;
+        width: 100%;
+        padding-bottom: 30px;
+      }
+
+      fieldset{
+        border: 1px solid #43434386;
+        padding: 15px 15px 15px 15px;
+        width: 550px;
+        display:table-cell; 
+        width: 100%;
+        border-radius: 5px;
+        
+      }
+
+      legend{
+        width: auto;
+        margin-left:16%;
+        text-align: center;
+      }
+
+      label{
+        width: 155px;
+        height: 50px;padding-top: 2.4%;
+      }
+
+      
+    </style>
+</head>
+<body>
+
+      <div class="cadastro container" >
+         
+           <div id="login" class="row" >
+            
+            <h1 class="titulo" id="titulo">Cadastro</h1>
+            
+            <form class="col" action="/registrar" method="post">
+
+              <small id="titulo" class="form-text text-muted" style="text-align: center;">Nunca compartilharemos suas Informações com ninguém !</small><br>
+
+                <div class="form-group col-md">
+                  <label for="nome">Nome</label>
+                  <input  type="nome" class="form-control" value="<?= $this->view->usuario['nome'] ?> name="nome"  placeholder="Nome" >
+                </div>
+  
+                <div class="form-group col-md">
+                  <label for="sobrenome">Sobrenome</label>
+                  <input type="text" class="form-control" value="<?= $this->view->usuario['sobrenome'] ?> name="sobrenome"  placeholder="sobrenome">
+                </div> 
+               <br>
+                <div class="form-group col-md">
+                    <label for="email">Email</label>
+                    <input  type="email" class="form-control col-sm-14" value="<?= $this->view->usuario['email'] ?> name="email"  placeholder="Email" >
+                </div>
+
+                <div class="form-group col-md">
+                    <label for="Senha">Senha</label>
+                    <input  type="password" class="form-control col-sm-14" value="<?= $this->view->usuario['senha'] ?> name="senha"  placeholder="Senha (minimo 5 caracteres)">
+                </div>
+  
+              
+                <div>
+                  <button  type="submit" class="btn" id="submit" >
+                    Cadastrar
+                </div>
+                <?php if($this->view->erroCadastro) { ?>
+
+                <small class="form-text text-danger">*Erro ao tentar realizar o cadastro, verifique se os campos foram preenchidos corretamente.</small>
+
+                <?php } ?>
+            </form>
+
+        </div>  
+
+
+
+      <!-- JavaScript (Opcional) -->
+      <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+      
+</body>
+</html>
