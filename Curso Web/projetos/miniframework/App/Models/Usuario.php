@@ -69,7 +69,16 @@
             $stmt->execute();
     
             $usuario = $stmt->fetch(\PDO::FETCH_ASSOC);//pega o unico registro retornado da consulta
-            return $usuario;
+
+            if($usuario['id'] != '' && $usuario['nome']!= ''){
+                $this->__set('id',$usuario['id']);
+                $this->__set('nome', $usuario['nome']);
+
+            }
+
+            return $this;
+
+
         }
 
 
