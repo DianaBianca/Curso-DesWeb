@@ -62,15 +62,13 @@
         }
 
         public function autenticar(){
-            $query =  "select id, nome, email from uauario 
-                        where email = :email and senha = :senha";
-            
+            $query = "select id, nome, email from usuario where email = :email and senha = :senha";
             $stmt = $this->db->prepare($query);
             $stmt->bindValue(':email', $this->__get('email'));
             $stmt->bindValue(':senha', $this->__get('senha'));
             $stmt->execute();
-
-            $usuario =  $stmt->fetch(\PDO::FETCH_ASSOC);//pega o unico registro retornado da consulta
+    
+            $usuario = $stmt->fetch(\PDO::FETCH_ASSOC);//pega o unico registro retornado da consulta
             return $usuario;
         }
 

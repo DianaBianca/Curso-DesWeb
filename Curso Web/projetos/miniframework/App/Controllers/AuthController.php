@@ -17,8 +17,9 @@ class AuthController extends Action {
         $usuario->__set('senha', $_POST['senha']);
 
         $retorno = $usuario->autenticar();
-
+        echo '<pre>';
         print_r($retorno);
+        echo'</pre>';
     }
 
 }
