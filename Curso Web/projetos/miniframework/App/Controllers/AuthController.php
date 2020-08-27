@@ -21,7 +21,7 @@ class AuthController extends Action {
         if($usuario->__get('id') != '' && $usuario->__get('nome')){
             echo 'ooooooooooooo';
         }else{
-            echo 'erro na autenticação';
+            header('Location: /login');
         }
     }
 
