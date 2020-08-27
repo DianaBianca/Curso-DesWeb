@@ -61,6 +61,16 @@
             return $stmt->fetchAll(\PDO::FETCH_ASSOC);
         }
 
+        public function autenticar(){
+            $query =  "select id, nome, email from uauario 
+                        where email = :email and senha = :senha";
+            
+            $stmt = $this->db->prepare($query);
+            $stmt->bindValue(':email', $this->__get('email'));
+            $stmt->bindValue(':senha', $this->__get('senha'));
+            $stmt->execute();
+            return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+        }
 
 
     }
