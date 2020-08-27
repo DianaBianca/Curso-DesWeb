@@ -69,7 +69,9 @@
             $stmt->bindValue(':email', $this->__get('email'));
             $stmt->bindValue(':senha', $this->__get('senha'));
             $stmt->execute();
-            return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+
+            $usuario =  $stmt->fetch(\PDO::FETCH_ASSOC);//pega o unico registro retornado da consulta
+            return $usuario;
         }
 
 
