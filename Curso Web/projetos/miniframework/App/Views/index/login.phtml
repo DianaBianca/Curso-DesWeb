@@ -108,6 +108,15 @@
                 <button  type="submit" aria-describedby="submitHelp" class="btn">
                   ENTRAR
               </div>
+
+              <?php if($this->view->login == 'erro') { ?>
+                <div class="row">
+                  <div class="col">
+                    <span class="text text-danger">*E-mail e ou senha inválido(s)</span>
+                  </div>
+                </div>
+              <?php } ?>
+
               <small id="submitHelp" class="form-text text-muted'">
                 ainda não faz parte da nossa familia? então clique aqui e <a href="cadastro.html"> cadastre-se !</a>
               </small>
