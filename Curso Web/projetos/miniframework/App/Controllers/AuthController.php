@@ -23,7 +23,7 @@ class AuthController extends Action {
             $_SESSION['id'] = $usuario->__get('id');
             $_SESSION['nome'] = $usuario->__get('nome');
 
-            header('Location: /servicos.phtml');
+            header('Location: /servicos');
         }else{
             header('Location: /login?login=erro');
         }
