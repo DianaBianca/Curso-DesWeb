@@ -14,15 +14,9 @@ class Route extends Bootstrap {
 			'action' => 'index'
 		);
 
-		$routes['servicos'] = array(
-			'route' => '/servicos',
-			'controller' => 'indexController',
-			'action' => 'servicos'
-		);
-
 		$routes['login']= array(
 			'route' => '/login',
-			'controller' => 'indexController',
+			'controller' => 'indexController', 
 			'action' => 'login'
 		);
 
@@ -42,6 +36,12 @@ class Route extends Bootstrap {
 			'route' => '/autenticar',
 			'controller' => 'AuthController',
 			'action' => 'autenticar'
+		);
+
+		$routes['servicos'] = array(
+			'route' => '/servicos',
+			'controller' => 'AppController',
+			'action' => 'servicos'
 		);
 
 		
