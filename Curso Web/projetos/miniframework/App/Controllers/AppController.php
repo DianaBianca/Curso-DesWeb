@@ -13,6 +13,8 @@ class AppController extends Action{
         if($_SESSION['id'] != '' && $_SESSION['nome'] != '' ){
             echo 'CHEGUEEEEEEEEEEEI';
             print_r($_SESSION);
+        }else{
+            header('Location: /?login=erro');
         }
         
      }
