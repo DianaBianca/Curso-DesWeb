@@ -40,8 +40,14 @@ class Route extends Bootstrap {
 
 		$routes['servicos'] = array(
 			'route' => '/servicos',
-			'controller' => 'AppController',
+			'controller' => 'indexController',
 			'action' => 'servicos'
+		);
+
+		$routes['agendamentos'] = array(
+			'route' => '/agendamentos',
+			'controller' => 'AppController',
+			'action' => 'agendamentos'
 		);
 
 		
