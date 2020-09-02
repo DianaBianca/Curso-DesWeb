@@ -58,13 +58,13 @@ class Route extends Bootstrap {
 
 		$routes['todas_tarefas'] = array(
 			'route' => '/todas_tarefas',
-			'controller' => 'AuthController',
+			'controller' => 'AppController',
 			'action' => 'todas_tarefas'
 		);
 		
 		$routes['nova_tarefa'] = array(
 			'route' => '/nova_tarefa',
-			'controller' => 'AuthController',
+			'controller' => 'AppController',
 			'action' => 'nova_tarefa'
 		);
 		
