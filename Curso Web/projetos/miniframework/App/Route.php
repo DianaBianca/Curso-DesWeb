@@ -52,7 +52,7 @@ class Route extends Bootstrap {
 
 		$routes['sair'] = array(
 			'route' => '/sair',
-			'controller' => 'AppController',
+			'controller' => 'AuthController',
 			'action' => 'sair'
 		);
 

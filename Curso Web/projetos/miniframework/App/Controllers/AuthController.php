@@ -29,6 +29,10 @@ class AuthController extends Action {
         }
     }
 
+    public function sair(){
+        
+    }
+
 }
 
 ?>
