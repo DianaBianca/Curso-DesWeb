@@ -56,6 +56,17 @@ class Route extends Bootstrap {
 			'action' => 'sair'
 		);
 
+		$routes['todas_tarefas'] = array(
+			'route' => '/todas_tarefas',
+			'controller' => 'AuthController',
+			'action' => 'todas_tarefas'
+		);
+		
+		$routes['nova_tarefa'] = array(
+			'route' => '/nova_tarefa',
+			'controller' => 'AuthController',
+			'action' => 'nova_tarefa'
+		);
 		
 
 		$this->setRoutes($routes);
