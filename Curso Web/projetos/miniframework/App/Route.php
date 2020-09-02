@@ -50,6 +50,12 @@ class Route extends Bootstrap {
 			'action' => 'agendamentos'
 		);
 
+		$routes['sair'] = array(
+			'route' => '/sair',
+			'controller' => 'AppController',
+			'action' => 'sair'
+		);
+
 		
 
 		$this->setRoutes($routes);
