@@ -18,6 +18,14 @@ class AppController extends Action{
         
      }
 
+     public function nova_tarefa(){
+         $this->render('nova_tarefa');
+     }
+
+     public function todas_tarefas(){
+        $this->render('todas_tarefas');
+    }
+
 }
 
 
