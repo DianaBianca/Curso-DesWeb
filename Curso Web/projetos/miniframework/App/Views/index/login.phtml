@@ -79,7 +79,7 @@
         border: 1px solid red;
         padding-left: 5%;
         padding-right: 5%;
-        
+        margin: auto;
       }
 
     </style>
@@ -109,13 +109,13 @@
 
               <?php if($this->view->login == 'erro') { ?>
                 <div class="row">
-                  <div class="col">
+                  <div class="col" style="text-align: center;">
                     <span class="text text-danger">*E-mail e ou senha inválido(s)</span>
                   </div>
                 </div>
               <?php } ?>
 
-              <small id="submitHelp" class="form-text text-muted'">
+              <small id="submitHelp" class="form-text text-muted" style="text-align: center;" >
                 ainda não faz parte da nossa familia? então clique aqui e <a href="/inscreverse"> cadastre-se !</a>
               </small>
 
