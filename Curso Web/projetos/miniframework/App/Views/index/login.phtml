@@ -23,9 +23,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        border: 1px solid red;
       }
+
       body{
-        background: url(img/dog-blue.png);
+        /*background: url(img/dog-blue.png);*/
+        background-color:gray;
         background-repeat: no-repeat;
         background-size: 100%;
         /*backdrop-filter: blur(2px);*/
@@ -37,8 +40,15 @@
         border: #d5d7d8;
         border-style:unset groove;
         padding: 60px 60px 60px 60px; 
-        width: 400px;
-        border-radius: 4px;
+        width: 100px;
+        border-radius: 4px ;
+
+      }
+
+      form{
+        
+        background-color: white;
+        
       }
 
       form>div{
@@ -48,7 +58,7 @@
       .textarea{
         box-sizing: border-box;
         border: none;
-        width: 100%;
+        width: 50%;
         height: 50px;
         background-color: rgba(195, 195, 195, 0.685);
         color: white;
@@ -88,7 +98,7 @@
 
     <div class="container">
       <div class="d-flex justify-content-center mt-5">
-            
+            <fieldset>
             <form method="post" action="/autenticar">
               
               <img class="icon" src="img/cao.png" width="40">
@@ -102,7 +112,7 @@
               </div>
 
               <div id="submit" >
-                <button  type="submit" aria-describedby="submitHelp" class="btn">
+                <button  type="submit" aria-describedby="submitHelp" class="btn btn-block">
                   ENTRAR
               </div>
 
@@ -119,7 +129,10 @@
               </small>
 
            </form>
-          
+           </fieldset>
+
+
+           
         </div>
            </div>
 
