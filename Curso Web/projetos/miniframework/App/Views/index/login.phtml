@@ -28,11 +28,9 @@
         background: url(img/dog-blue.png);
         background-repeat: no-repeat;
         background-size: 100%;
-        opacity: 90%;
-        border: 1ps solid red;
         /*backdrop-filter: blur(2px);*/
       }
-
+      
       #login{
         margin: 10%;
         background-color: white;
@@ -88,20 +86,19 @@
 <body>
     
 
-      <div class="formulario container" >
-         
-           <div id="login" class="row" >
+    <div class="container">
+      <div class="d-flex justify-content-center mt-5">
             
             <form method="post" action="/autenticar">
               
               <img class="icon" src="img/cao.png" width="40">
 
-              <div class="container-row">
-                <input class="textarea" name="email" type="email" class="form-control form-control-lg" id="email" placeholder="Email" >
+              <div class="row">
+                <input name="email" type="email" class="form-control form-control-lg" id="email" placeholder="Email" >
               </div>
 
-              <div class="container-row ">
-                <input class="textarea" name="senha" type="password" class="form-control form-control-lg" id="senha" placeholder="Senha">
+              <div class="row ">
+                <input name="senha" type="password" class="form-control form-control-lg" id="senha" placeholder="Senha">
               </div>
 
               <div id="submit" >
@@ -120,8 +117,6 @@
               <small id="submitHelp" class="form-text text-muted'">
                 ainda não faz parte da nossa familia? então clique aqui e <a href="/inscreverse"> cadastre-se !</a>
               </small>
-
-              
 
            </form>
           
