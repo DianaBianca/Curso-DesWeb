@@ -27,8 +27,16 @@
 
              $stmt = $this->db->prepare($query);
 
-             
+             $stmt->bindValue(':id_usuario', $this->__get('id_usuario'));
+             $stmt->bindValue(':nome_pet', $this->__get('nome_pet'));
+             $stmt->bindValue(':tipo_pet', $this->__get('tipo_pet'));
+             $stmt->bindValue(':obs', $this->__get('obs'));
+             $stmt->bindValue(':servico', $this->__get('servico'));
+             $stmt->bindValue(':plano', $this->__get('plano'));
+             $stmt->bindValue(':data', $this->__get('data'));
+             $stmt->bindValue(':hora', $this->__get('hora'));
 
+             
         }
 
 
