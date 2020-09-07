@@ -36,7 +36,10 @@
              $stmt->bindValue(':data', $this->__get('data'));
              $stmt->bindValue(':hora', $this->__get('hora'));
 
-             
+             $stmt->execute();
+             return $this;
+
+
         }
 
 
