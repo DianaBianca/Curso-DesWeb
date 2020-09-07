@@ -26,6 +26,12 @@ class AppController extends Action{
         $this->render('todas_tarefas');
     }
 
+    public function agendar(){
+        $usuario = Container::getModel('Usuario');
+        $agendamento = Container::getModel('Agendamentos');
+
+    }
+
 }
 
 
