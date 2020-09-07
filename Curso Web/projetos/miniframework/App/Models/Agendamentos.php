@@ -5,7 +5,7 @@
 
     class Agendamentos extends Model{
         private $nome_pet;
-        private $id_user;
+        private $id_usuario;
         private $tipo_pet;
         private $obs;
         private $servico;
@@ -20,6 +20,17 @@
         public function __set($atributo, $valor){
             return $this->$atributo = $valor;
         }
+
+        public function salvar(){
+             $query = "insert into agendamentos(id_usuario,nome_pet, tipo_pet, obs, servico, plano,data, hora)
+             values (:id_usuario, :nome_pet, :tipo_pet, :obs, :servico, :plano, :data, :hora)";
+
+             $stmt = $this->db->prepare($query);
+
+             
+
+        }
+
 
 
 
