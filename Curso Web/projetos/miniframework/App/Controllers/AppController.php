@@ -27,11 +27,12 @@ class AppController extends Action{
     }
 
     public function agendar(){
+        
         echo "<pre>";
         echo "AAAAAAAAAAAAAAAAAA";
         print_r($_POST);
         echo"</pre>";
-        
+
         $usuario = Container::getModel('Usuario');
         $agendamento = Container::getModel('Agendamentos');
 
