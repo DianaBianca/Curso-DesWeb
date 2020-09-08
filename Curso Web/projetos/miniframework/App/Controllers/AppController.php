@@ -30,6 +30,9 @@ class AppController extends Action{
         $usuario = Container::getModel('Usuario');
         $agendamento = Container::getModel('Agendamentos');
 
+        echo "<pre>";
+        print_r()
+        echo"</pre>";
     }
 
 }
