@@ -30,6 +30,12 @@ class AppController extends Action{
         $usuario = Container::getModel('Usuario');
         $agendamento = Container::getModel('Agendamentos');
 
+        $agendamento->__set('',$_POST['']);
+        $agendamento->__set('',$_POST['']);
+        $agendamento->__set('',$_POST['']);
+        $agendamento->__set('',$_POST['']);
+        $agendamento->__set('',$_POST['']);
+
         echo "<pre>";
         print_r($_POST);
         echo"</pre>";
