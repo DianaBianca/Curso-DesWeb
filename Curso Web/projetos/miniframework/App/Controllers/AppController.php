@@ -31,7 +31,7 @@ class AppController extends Action{
         $agendamento = Container::getModel('Agendamentos');
 
         echo "<pre>";
-        print_r()
+        print_r($_POST);
         echo"</pre>";
     }
 
