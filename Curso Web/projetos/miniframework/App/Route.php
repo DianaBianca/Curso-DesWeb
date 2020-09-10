@@ -74,10 +74,7 @@ class Route extends Bootstrap {
 			'action' => 'agendar'
 		);
 		
-
 		$this->setRoutes($routes);
 	}
-
 }
-
 ?>
