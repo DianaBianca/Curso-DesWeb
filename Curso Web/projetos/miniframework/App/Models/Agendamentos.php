@@ -39,12 +39,7 @@
              $stmt->execute();
              return $this;
 
-
         }
-
-
-
-
     } 
 
 ?>
