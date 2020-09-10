@@ -86,48 +86,42 @@
     </style>
 </head>
 <body>
-    
+      <div class="container">
+        <div class="d-flex justify-content-center mt-5">
+              <fieldset>
+              <form method="post" action="/autenticar">
+                
+                <img class="icon" src="img/cao.png" width="40">
 
-    <div class="container">
-      <div class="d-flex justify-content-center mt-5">
-            <fieldset>
-            <form method="post" action="/autenticar">
-              
-              <img class="icon" src="img/cao.png" width="40">
-
-              <div class="row lacuna">
-                <input name="email" type="email" class="form-control form-control-lg" id="email" placeholder="Email" >
-              </div>
-
-              <div class="row lacuna">
-                <input name="senha" type="password" class="form-control form-control-lg" id="senha" placeholder="Senha">
-              </div>
-
-              <div id="submit " class="lacuna" >
-                <button  type="submit" aria-describedby="submitHelp" class="btn btn-block">
-                  ENTRAR
-              </div>
-
-              <?php if($this->view->login == 'erro') { ?>
-                <div class="row">
-                  <div class="col" style="text-align: center;">
-                    <span class="text text-danger">*E-mail e ou senha inválido(s)</span>
-                  </div>
+                <div class="row lacuna">
+                  <input name="email" type="email" class="form-control form-control-lg" id="email" placeholder="Email" >
                 </div>
-              <?php } ?>
 
-              <small id="submitHelp" class="form-text text-muted" style="text-align: center;" >
-                ainda não faz parte da nossa familia? então clique aqui e <a href="/inscreverse"> cadastre-se !</a>
-              </small>
+                <div class="row lacuna">
+                  <input name="senha" type="password" class="form-control form-control-lg" id="senha" placeholder="Senha">
+                </div>
 
-           </form>
-           </fieldset>
+                <div id="submit " class="lacuna" >
+                  <button  type="submit" aria-describedby="submitHelp" class="btn btn-block">
+                    ENTRAR
+                </div>
 
+                <?php if($this->view->login == 'erro') { ?>
+                  <div class="row">
+                    <div class="col" style="text-align: center;">
+                      <span class="text text-danger">*E-mail e ou senha inválido(s)</span>
+                    </div>
+                  </div>
+                <?php } ?>
 
-           
+                <small id="submitHelp" class="form-text text-muted" style="text-align: center;" >
+                  ainda não faz parte da nossa familia? então clique aqui e <a href="/inscreverse"> cadastre-se !</a>
+                </small>
+
+            </form>
+            </fieldset>
+          </div>
         </div>
-           </div>
-
       </div>
 
       
