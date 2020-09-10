@@ -35,9 +35,9 @@
              $stmt->bindValue(':plano', $this->__get('plano'));
              $stmt->bindValue(':data', $this->__get('data'));
              $stmt->bindValue(':hora', $this->__get('hora'));
-
+            
              $stmt->execute();
-             return $this;
+             return $stmt->fetchAll(\PDO::FETCH_ASSOC);
 
         }
     } 
