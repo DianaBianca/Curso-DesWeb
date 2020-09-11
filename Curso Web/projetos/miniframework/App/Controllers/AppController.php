@@ -23,7 +23,7 @@ class AppController extends Action{
      }
 
      public function todas_tarefas(){
-        $this->render('todas_tarefas');
+        $this->render('todas_tarefas');//VERIFFICAR ESSA LINHA QUE SERÀ RENDERIZADA
     }
 
     public function agendar(){
@@ -34,8 +34,9 @@ class AppController extends Action{
         echo"</pre>";
 
         $usuario = Container::getModel('Usuario');
-        $agendamento = Container::getModel('Agendamentos');
 
+        $agendamento = Container::getModel('Agendamentos');
+        
         $agendamento->__set('nome_pet',$_POST['nome_pet']);
         $agendamento->__set('tipo_pet',$_POST['tipo_pet']);
         $agendamento->__set('obs',$_POST['obs']);
@@ -48,6 +49,8 @@ class AppController extends Action{
         echo "AAAAAAAAAAAAAAAAAA";
         print_r($_POST);
         echo"</pre>";
+
+        $agendamento->salvar();
 
     }
 
