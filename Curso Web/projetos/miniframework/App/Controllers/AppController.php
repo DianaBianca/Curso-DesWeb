@@ -27,9 +27,8 @@ class AppController extends Action{
     }
 
     public function agendar(){
-        echo 'teste';
-       echo $_POST;
-       $this->render('nova_tarefa');
+       echo "teste";
+       #$this->render('nova_tarefa');
 
     }
 

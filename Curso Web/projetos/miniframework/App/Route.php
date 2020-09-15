@@ -68,7 +68,7 @@ class Route extends Bootstrap {
 			'action' => 'nova_tarefa'
 		);
 
-		$route['agendar'] = array(
+		$routes['agendar'] = array(
 			'route'=> '/agendar',
 			'controller' => 'AppController',
 			'action' => 'agendar'

@@ -24,7 +24,6 @@
         public function salvar(){
              $query = "insert into agendamentos(id_usuario,nome_pet, tipo_pet, obs, servico, plano,data, hora)
              values (:id_usuario, :nome_pet, :tipo_pet, :obs, :servico, :plano, :data, :hora)";
-
              $stmt = $this->db->prepare($query);
 
              $stmt->bindValue(':id_usuario', $this->__get('id_usuario'));
