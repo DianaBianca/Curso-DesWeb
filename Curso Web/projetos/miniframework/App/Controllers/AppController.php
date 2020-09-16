@@ -30,7 +30,9 @@ class AppController extends Action{
        echo '<pre>';
        print_r($_POST);
        echo'</pre>';
-       #$this->render('nova_tarefa');
+       
+       $agendamento = Container::getModel('Agendamentos');
+       $usuario = Container::getModel('Usuario');
 
     }
 
