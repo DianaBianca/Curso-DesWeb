@@ -33,6 +33,20 @@ class AppController extends Action{
        
        $agendamento = Container::getModel('Agendamentos');
        $usuario = Container::getModel('Usuario');
+    
+       $agendamento->__set('id_usuario',$_POST['id_usuario']);
+       $agendamento->__set('nome_pet',$_POST['nome_pet']);
+       $agendamento->__set('tipo_pet',$_POST['tipo_pet']);
+       $agendamento->__set('obs',$_POST['obs']);
+       $agendamento->__set('servico',$_POST['servico']);
+       $agendamento->__set('plano',$_POST['plano']);
+       $agendamento->__set('data',$_POST['data']);
+       $agendamento->__set('hora',$_POST['hora']);
+       
+
+       echo '<pre>';
+       print_r($agendamento);
+       echo'</pre>';
 
     }
 
