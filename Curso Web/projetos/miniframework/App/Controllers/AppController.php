@@ -45,11 +45,17 @@ class AppController extends Action{
        $agendamento->__set('plano',$_POST['plano']);
        $agendamento->__set('data',$_POST['data']);
        $agendamento->__set('hora',$_POST['hora']);
+
+       if($_POST['hora'] >= '9:00' && $_POST['hora'] <= '18:00'){
+            $agendamento->salvar();
+            echo '<pre>';
+            print_r($agendamento);
+            echo'</pre>';
+       }else{
+        $this->view->erroAgendamento = true;
+       }
        
-       $agendamento->salvar();
-       echo '<pre>';
-       print_r($agendamento);
-       echo'</pre>';
+      
 
     }
 

@@ -263,6 +263,11 @@
 												<input type="time" name="hora" class="form-control" id="hora" required>
 												
 											</div>
+											<?php if($this->view->erroAgendamento) { ?>
+
+											<small class="form-text text-danger" style="text-align: center;">*Erro ao tentar escolher um horário, verifique nosso horário de funcionamento.</small>
+
+											<?php } ?>
 											<small>*Funcionamos das 9:00 às 18:00</small>
 										
 									  </fieldset>
