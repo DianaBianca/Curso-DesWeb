@@ -32,7 +32,7 @@ class AppController extends Action{
        echo'</pre>';
 
        session_start();
-       
+
        $agendamento = Container::getModel('Agendamentos');
        
        $id_usuario = $_SESSION['id'];
@@ -52,10 +52,11 @@ class AppController extends Action{
             print_r($agendamento);
             echo'</pre>';
        }else{
-        $this->view->erroAgendamento = true;
+        $this->erroAgendamento = true;
        }
        
       
+
 
     }
 
