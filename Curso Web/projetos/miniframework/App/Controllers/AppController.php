@@ -53,11 +53,12 @@ class AppController extends Action{
             echo'</pre>';
        }else{
         $this->erroAgendamento = true;
-       }
-       
-      
+       } 
 
+    }
 
+    public function hora_marcada(){
+        
     }
 
 }
