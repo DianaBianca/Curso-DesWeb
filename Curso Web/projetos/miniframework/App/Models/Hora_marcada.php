@@ -19,5 +19,11 @@
             $this->$atributo = $valor;
         }
 
+        //salvar
+
+
+        //recuperar
+        
+
     }
 ?>
