@@ -74,10 +74,10 @@ class Route extends Bootstrap {
 			'action' => 'agendar'
 		);
 
-		$routes['hora_marcada'] = array(
-			'route' => '/hora_marcada',
+		$routes['horario_marcado'] = array(
+			'route' => '/horario_marcado',
 			'controller' => 'AppController',
-			'action' => 'hora_marcada'
+			'action' => 'horario_marcado'
 		);
 		
 		$this->setRoutes($routes);

@@ -32,7 +32,7 @@
                 where 
                     a.id_usuario = :id_usuario
                 order by
-                    t.data desc
+                    a.data asc
             ";
             
             $stmt = $this->db->prepare($query);
