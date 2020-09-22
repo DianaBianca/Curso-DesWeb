@@ -57,13 +57,12 @@ class AppController extends Action{
 
     }
 
-    public function horario_marcado(){
+    public function hora_marcada(){
+        echo 'ooooooooooooooooi';
 
 		$hora = Container::getModel('Hora_marcada');
 
-		$hora->__set('id_usuario', $_SESSION['id']);
-
-		$horario = $hora->hora_marcada();
+		$horario = hora_marcada();
 
         $this->view->horario = $horario;
         
