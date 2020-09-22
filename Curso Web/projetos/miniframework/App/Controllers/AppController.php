@@ -58,28 +58,20 @@ class AppController extends Action{
     }
 
     public function hora_marcada(){
-            session_start();
-            $query = "
-                select 
-                    a.nome_pet, 
-                    a.servico, 
-                    a.plano, 
-                    a.data
-                from 
-                    agendamentos as a
-                where 
-                    a.id_usuario = :id_usuario
-                order by
-                    t.data desc
-            ";
-            
-            $stmt = $this->db->prepare($query);
-            $stmt->bindValue(':id_usuario', $this->__get($_SESSION['id']));
-            $stmt->execute();
-    
-            return $stmt->fetchAll(\PDO::FETCH_ASSOC);
-    
+
+		$hora = Container::getModel('Hora_marcada');
+
+		$hora->__set('id_usuario', $_SESSION['id']);
+
+		$horario = $hora->getAll();
+
+		$this->view->horario = $horario;
+
+		$this->render('agendamentos');
+		
+
     }
+    
 
 }
 
