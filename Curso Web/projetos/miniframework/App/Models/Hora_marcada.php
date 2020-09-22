@@ -18,12 +18,30 @@
         public function __set($atributo, $valor){
             $this->$atributo = $valor;
         }
-
-        //salvar
-
-
         //recuperar
-        
+        public function hora_marcada(){
+            session_start();
+            $query = "
+                select 
+                    a.nome_pet, 
+                    a.servico, 
+                    a.plano, 
+                    a.data
+                from 
+                    agendamentos as a
+                where 
+                    a.id_usuario = :id_usuario
+                order by
+                    t.data desc
+            ";
+            
+            $stmt = $this->db->prepare($query);
+            $stmt->bindValue(':id_usuario', $this->__get($_SESSION['id']));
+            $stmt->execute();
+    
+            return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+    
+    }
 
     }
 ?>
