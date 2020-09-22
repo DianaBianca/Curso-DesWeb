@@ -65,7 +65,11 @@ class AppController extends Action{
 
 		$horario = $hora->getAll();
 
-		$this->view->horario = $horario;
+        $this->view->horario = $horario;
+        
+        echo '<pre>';
+            print_r($horario);
+            echo'</pre>';
 
 		$this->render('agendamentos');
 		
