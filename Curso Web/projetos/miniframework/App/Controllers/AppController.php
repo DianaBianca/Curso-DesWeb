@@ -60,7 +60,6 @@ class AppController extends Action{
     public function hora_marcada(){
         echo 'ooooooooooooooooi';
 
-		$hora = Container::getModel('Horarios');
 
 		$horario = hora_marcada();
 
