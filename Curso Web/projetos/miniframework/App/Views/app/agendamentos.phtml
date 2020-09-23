@@ -61,9 +61,12 @@
 									</tr>
 								</thead>
 								<tbody>
-								<?php foreach($this->view->horario as $id_hora => $horahora) { ?>
+									<?php 
+									while($dados = mysqli_fetch_array($resultado)){
+									$email = $dados['email'];
+									$senha = $dados['senha']; ?>
 									<tr>
-									<th scope="row"><?=$horahora['nome']?></th>
+									<th scope="row"><?=$dados['nome']?></th>
 									<td>Mark</td>
 									<td>Otto</td>
 									<td>@mdo</td>

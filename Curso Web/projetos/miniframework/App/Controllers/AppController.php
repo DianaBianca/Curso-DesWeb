@@ -61,12 +61,12 @@ class AppController extends Action{
         echo 'ooooooooooooooooi';
 
 
-		$horario = hora_marcada();
+		$dados = hora_marcada();
 
-        $this->view->horario = $horario;
+        $this->view->horario = $dados;
         
         echo '<pre>';
-        print_r($horario);
+        print_r($dados);
         echo'</pre>';
 
 		$this->render('agendamentos');
