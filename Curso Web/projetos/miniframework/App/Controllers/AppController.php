@@ -62,17 +62,16 @@ class AppController extends Action{
         
         $agendamento = Container::getModel('Horarios');
         
-        
-        /*$dados = hora_marcada();
+        $agendamento->hora_marcada();
 
-        $this->view->horario = $dados;
+        $this->view->horario = $agendamento;
         
         echo '<pre>';
-        print_r($dados);
+        print_r($agendamento);
         echo'</pre>';
 
 		$this->render('agendamentos');
-		*/
+		
 
     }
     

@@ -3,7 +3,7 @@
 
     use MF\Model\Model;
 
-    class Horamarcada extends Model{
+    class Horarios extends Model{
         private $id;
         private $id_usuario;
         private $nome_pet;
@@ -38,7 +38,6 @@
             $stmt = $this->db->prepare($query);
             $stmt->bindValue(':id_usuario', $this->__get($_SESSION['id']));
             $stmt->execute();
-            print_r($stmt);
             return $stmt->fetchAll(\PDO::FETCH_ASSOC);
            
     }
