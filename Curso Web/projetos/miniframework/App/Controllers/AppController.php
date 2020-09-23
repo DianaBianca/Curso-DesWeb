@@ -59,9 +59,11 @@ class AppController extends Action{
 
     public function hora_marcada(){
         echo 'ooooooooooooooooi';
-
-
-		$dados = hora_marcada();
+        
+        $agendamento = Container::getModel('Horarios');
+        
+        
+        /*$dados = hora_marcada();
 
         $this->view->horario = $dados;
         
@@ -70,7 +72,7 @@ class AppController extends Action{
         echo'</pre>';
 
 		$this->render('agendamentos');
-		
+		*/
 
     }
     

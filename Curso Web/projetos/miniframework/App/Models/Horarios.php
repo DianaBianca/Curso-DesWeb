@@ -39,11 +39,8 @@
             $stmt->bindValue(':id_usuario', $this->__get($_SESSION['id']));
             $stmt->execute();
             print_r($stmt);
-           // return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+            return $stmt->fetchAll(\PDO::FETCH_ASSOC);
            
-            $dados = mysql_fetch_assoc($stmt);
-            print_r($dados);
-            return ($dados);
     }
 
     }
