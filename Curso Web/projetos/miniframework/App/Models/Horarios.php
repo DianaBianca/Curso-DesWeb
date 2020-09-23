@@ -23,24 +23,27 @@
             session_start();
             $query = "
                 select 
-                    a.nome_pet, 
-                    a.servico, 
-                    a.plano, 
-                    a.data
+                    nome_pet, 
+                    servico, 
+                    plano, 
+                    data
                 from 
-                    agendamentos as a
-                where 
-                    a.id_usuario = :id_usuario
+                    agendamentos 
+                 where 
+                    id_usuario = :id_usuario
                 order by
-                    a.data asc
+                    data asc
             ";
             
             $stmt = $this->db->prepare($query);
             $stmt->bindValue(':id_usuario', $this->__get($_SESSION['id']));
             $stmt->execute();
-    
-            return $stmt->fetchAll(\PDO::FETCH_ASSOC);
-    
+            print_r($stmt);
+           // return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+           
+            $dados = mysql_fetch_assoc($stmt);
+            print_r($dados);
+            return $dados;
     }
 
     }
