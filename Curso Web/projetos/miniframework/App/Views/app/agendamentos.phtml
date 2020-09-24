@@ -61,27 +61,24 @@
 									</tr>
 								</thead>
 								<tbody>
-									<?php 
-									while($array = mysqli_fetch_array($dados)){
-									$email = $array['email'];
-									$senha = $array['senha']; ?>
+									<?php foreach($hora as $indice) {  ?>
 									<tr>
-									<th scope="row"><?=$array['nome']?></th>
-									<td>Mark</td>
-									<td>Otto</td>
-									<td>@mdo</td>
-									</tr>
-									<tr>
-									<th scope="row">2</th>
-									<td>Jacob</td>
-									<td>Thornton</td>
-									<td>@fat</td>
-									</tr>
-									<tr>
-									<th scope="row">3</th>
-									<td>Larry</td>
-									<td>the Bird</td>
-									<td>@twitter</td>
+										<th scope="row"><?=$indice['dia']?></th>
+										<td>Mark</td>
+										<td>Otto</td>
+										<td>@mdo</td>
+										</tr>
+										<tr>
+										<th scope="row">2</th>
+										<td>Jacob</td>
+										<td>Thornton</td>
+										<td>@fat</td>
+										</tr>
+										<tr>
+										<th scope="row">3</th>
+										<td>Larry</td>
+										<td>the Bird</td>
+										<td>@twitter</td>
 									</tr>
 								</tbody>
 								<?php } ?>

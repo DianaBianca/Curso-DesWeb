@@ -48,9 +48,7 @@ class AppController extends Action{
 
        if($_POST['hora'] >= '9:00' && $_POST['hora'] <= '18:00'){
             $agendamento->salvar();
-            echo '<pre>';
-            print_r($agendamento);
-            echo'</pre>';
+           
        }else{
         $this->erroAgendamento = true;
        } 
@@ -60,17 +58,12 @@ class AppController extends Action{
     public function hora_marcada(){
         echo 'ooooooooooooooooi';
         
-        $agendamento = Container::getModel('Horarios');
+        $hora = Container::getModel('Horarios');
         
-        $agendamento->hora_marcada();
+        $hora->hora_marcada();
 
-        $this->view->horario = $agendamento;
-        
-        echo '<pre>';
-        print_r($agendamento);
-        echo'</pre>';
 
-		$this->render('agendamentos');
+	//$this->render('agendamentos',$hora);
 		
 
     }
