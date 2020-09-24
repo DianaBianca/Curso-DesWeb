@@ -38,7 +38,13 @@
             $stmt = $this->db->prepare($query);
             $stmt->bindValue(':id_usuario', $this->__get($_SESSION['id']));
             $stmt->execute();
-            return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+            $valores = $stmt->fetchAll(\PDO::FETCH_OBJ);
+            echo '<pre>';
+        print_r($valores);
+        echo'</pre>';
+            return $valores;
+            
+
            
     }
 

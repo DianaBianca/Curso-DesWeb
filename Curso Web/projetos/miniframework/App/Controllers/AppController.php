@@ -61,7 +61,9 @@ class AppController extends Action{
         $hora = Container::getModel('Horarios');
         
         $hora->hora_marcada();
-
+        echo '<pre>';
+        print_r($hora);
+        echo'</pre>';
 
 	//$this->render('agendamentos',$hora);
 		
