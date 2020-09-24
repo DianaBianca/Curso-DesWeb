@@ -61,8 +61,17 @@
 									</tr>
 								</thead>
 								<tbody>
-									
-									
+									<?foreach ($agenda as $id => $agendados){?>
+            							<?php foreach ($agendados as $id2 => $itens){?>
+										<tr>
+											<th scope="row"><?php $id2[$itens] ?></th>
+											<td>Mark</td>
+											<td>Otto</td>
+											<td>@mdo</td>
+											</tr>
+										</tr>
+									<?php } ?>
+									<?php } ?>
 								</tbody>
 							</table>
 							</div>

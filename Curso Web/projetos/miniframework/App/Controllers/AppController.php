@@ -56,20 +56,21 @@ class AppController extends Action{
     }
 
     public function hora_marcada(){
-        echo 'ooooooooooooooooi';
         
         $hora = Container::getModel('Horarios');
         
         $agenda = $hora->hora_marcada();
-        print_r($agenda);
-        echo 'aqui';
+
         echo '<pre>';
-        foreach ($agenda as $key => $x){
-            print_r($x[$key][0]);
+        foreach ($agenda as $id => $agendados){
+            foreach ($agendados as $id2 => $itens){
+                print_r($id2[$itens]);
+                echo $id2[$itens];
+            }
         }
         echo'</pre>';
 
-	//$this->render('agendamentos',$hora);
+	   $this->render('agendamentos',$hora);
 		
         
     }
