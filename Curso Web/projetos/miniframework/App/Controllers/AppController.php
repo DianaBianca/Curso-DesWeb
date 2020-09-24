@@ -64,13 +64,12 @@ class AppController extends Action{
         echo '<pre>';
         foreach ($agenda as $id => $agendados){
             foreach ($agendados as $id2 => $itens){
-                print_r($id2[$itens]);
-                echo $id2[$itens];
+                print_r($itens);
             }
         }
         echo'</pre>';
 
-	   $this->render('agendamentos',$hora);
+	   $this->render('agendamentos',array('k'=>'burro'));
 		
         
     }
