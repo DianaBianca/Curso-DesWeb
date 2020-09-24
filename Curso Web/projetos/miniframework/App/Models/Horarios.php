@@ -4,12 +4,12 @@
     use MF\Model\Model;
 
     class Horarios extends Model{
-        private $id;
-        private $id_usuario;
-        private $nome_pet;
-        private $servico;
-        private $plano;
-        private $dia;
+        protected $id;
+        protected $id_usuario;
+        protected $nome_pet;
+        protected $servico;
+        protected  $plano;
+        protected $dia;
         
         public function __get($atributo){
             return $atributo;
@@ -40,8 +40,8 @@
             $stmt->execute();
             $valores = $stmt->fetchAll(\PDO::FETCH_OBJ);
             echo '<pre>';
-        print_r($valores);
-        echo'</pre>';
+            print_r($valores);
+            echo'</pre>';
             return $valores;
             
 
