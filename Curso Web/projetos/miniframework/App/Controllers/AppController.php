@@ -57,7 +57,7 @@ class AppController extends Action{
         $hora = Container::getModel('Horarios');
         
         $agenda = $hora->hora_marcada();
-
+        /* MOSTRA NA TELA OS DADOS QUE FORAM PARA O BD
         echo '<pre>';
         foreach ($agenda as $id => $agendados){
             foreach ($agendados as $id2 => $itens){
@@ -66,8 +66,8 @@ class AppController extends Action{
         }
         echo'</pre>';
 
-	  // $this->render('agendamentos',array('k'=>'burro'));
-		
+	   $this->render('agendamentos',array('k'=>'burro'));
+		*/
         
     }
     
