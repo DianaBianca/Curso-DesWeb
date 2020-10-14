@@ -26,6 +26,7 @@ class AppController extends Action{
         $this->render('agendamentos');
     }
 
+    
     public function agendar(){
        echo '<pre>';
        print_r($_POST);
@@ -48,7 +49,7 @@ class AppController extends Action{
 
        if($_POST['hora'] >= '9:00' && $_POST['hora'] <= '18:00'){
             $agendamento->salvar();
-           
+            $this->render('agendamento_concluido');
        }else{
         $this->erroAgendamento = true;
        } 
