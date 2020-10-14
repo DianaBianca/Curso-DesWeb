@@ -8,18 +8,14 @@ use MF\Model\Container;
 
 class AppController extends Action{
 
-    public function agendamentos(){
+     public function nova_tarefa(){
         session_start();
         if($_SESSION['id'] != '' && $_SESSION['nome'] != '' ){
-            $this->render('agendamentos');
+            $this->render('nova_tarefa');
         }else{
             header('Location: /?login=erro');
         }
-        
-     }
-
-     public function nova_tarefa(){
-         $this->render('nova_tarefa');
+         
      }
 
      public function todas_tarefas(){
