@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/estilo.css">
 
     <title>CADASTRO</title>
 
@@ -23,12 +23,9 @@
         @import url('https://fonts.googleapis.com/css2?family=Coiny&family=Poppins:wght@300&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
      
-        body{
-          background-image:url(img/dog2.jpg);
-          background-repeat: no-repeat;
-          display: flex;
-          align-content: center;
-          align-items: center;
+      body{
+        background-image:url(img/dog2.jpg);
+        background-repeat: no-repeat;
       }
 
       input {
@@ -44,10 +41,11 @@
 
       .cadastro{
           background-color: white;
-          padding: 40px 70px 70px 70px;
+          padding: 10px 70px 40px 70px;
           border-radius: 5px;
-          width: auto;
-        
+          width: 600px;  
+          margin-left:auto;
+          margin-right: auto;
       }      
 
       label, legend{
@@ -60,8 +58,8 @@
       .form-group{
         width: auto;
         display: flex;
-        align-items: center;
-        align-content: center;
+        flex-direction: row;
+        justify-content: center;
       }
 
       .btn{
@@ -124,8 +122,35 @@
     </style>
 </head>
 <body>
-
-      <div class="cadastro container" >
+      <header><!-- inicio Cabecalho -->
+          <nav id="itens" class="navbar navbar-expand-lg navbar-light bg-light">
+            <img class="icon" src="img/cao.png" width="40">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="fas fa-bars text-black"></i>
+            </button>
+            <div class="collapse navbar-collapse d-flex justify-content-around" id="navbarNavDropdown">
+              <ul class="navbar-nav ">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="servicos.html">Serviços</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Minha conta
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="login.html">Login</a>
+                    <a class="dropdown-item" href="cadastro.html">Cadastrar-se</a>
+                    <a class="dropdown-item" href="nova_tarefa.html">Agendamentos</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </nav>
+      </header><!--/fim Cabecalho -->
+      <div class="cadastro " >
          
            <div id="login" class="row" >
             
