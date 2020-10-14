@@ -66,7 +66,7 @@ class AppController extends Action{
         }
         echo'</pre>';
 
-	   $this->render('agendamentos',array('k'=>'burro'));
+	  // $this->render('agendamentos',array('k'=>'burro'));
 		
         
     }
