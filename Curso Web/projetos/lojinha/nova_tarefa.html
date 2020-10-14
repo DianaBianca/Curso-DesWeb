@@ -27,6 +27,7 @@
 			text-align: center;
 			text-transform: uppercase;
 			margin-bottom: auto;
+			
 		 }
 
 		 
@@ -96,8 +97,9 @@
 
 		 legend{
 			width: auto;
-			margin-left:16%;
+			margin:0 auto;
 			text-align: center;
+			
 		  }
 
 		.area-servicos{
@@ -107,6 +109,7 @@
 			display: flex;
 			align-items: center;
 			align-content: space-between;
+			
 		}
 		
 	</style>
@@ -117,18 +120,22 @@
         <header><!-- inicio Cabecalho -->
             <nav id="itens" class="navbar navbar-expand-lg navbar-light bg-light">
               <img class="icon" src="img/cao.png" width="40">
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fas fa-bars text-black"></i>
-              </button>
+              
+			  <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNavDropdown">
+				<i class="fas fa-bars text-black"></i>
+			  </button>
               <div class="collapse navbar-collapse d-flex justify-content-around" id="navbarNavDropdown">
                 <ul class="navbar-nav ">
                   <li class="nav-item ">
-                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item active">
-                    <a class="nav-link" href="servicos.html">Serviços</a>
+                    <a class="nav-link" href="/">Home </a>
                   </li>
                   
+				  <li class="nav-item">
+				  	<a class="nav-link" href="/nova_tarefa">Marcar Horário</a>
+				  </li>
+				  <li class="nav-item">
+				  	<a class="nav-link" href="/sair">sair</a>
+				  </li>
                 </ul>
               </div>
             </nav>
@@ -136,41 +143,35 @@
             
 		<div class="container app">
 			<div class="row" >
-				<div class="col-md-3 menu">
-					<ul class="list-group">
-						<li class="list-group-item"><a href="nova_tarefa.html">Marcar Horário</a></li>
-						<li class="list-group-item"><a href="todas_tarefas.php">Meus Agendamentos</a></li>
-					</ul>
-				</div>
-
-				<div class="col-md-9">
+		
+				<div class="col-md-12">
 					<div class="container cadastro">
 						<div class="row">
 							<div class="col">
 								<h3 class="servicos">Agendamento de Serviços</h3>
-								<hr />
+								<hr >
 
-								<form>
+								<form action="/agendar" method="post">
 									<fieldset>
                 
 										<legend > Informações do pet </legend>
 										<div class="form-group col-md">
 										  <label for="nome">Nome do pet </label>
-										  <input  type="nome" class="form-control" id="nome" placeholder="Nome" >
+										  <input  type="nome" class="form-control"name="nome_pet" id="nome" placeholder="Nome" required>
 										</div>
 						  
 										<div class="form-group col-md">
 										  <label for="tipo-animal">Meu pet é um(a)</label>
-										  <select type="text" class="form-control" name="tipo-animal" id="tipo-animal">
+										  <select type="text" class="form-control" name="tipo_pet" id="tipo-animal" required>
 											  <option value="">----</option>
-											  <option value="gato">um(a) gatinho(a)</option>
-											  <option value="cachorro">um(a) cachorrinho(a)</option>
+											  <option value="1">um(a) gatinho(a)</option>
+											  <option value="2">um(a) cachorrinho(a)</option>
 										  </select>
 										</div>
 									  
 										<div class="form-group col-md">
 											<label for="info"> Observações importantes? </label>
-											<textarea  class="form-control" name="info" id="info" rows="3"></textarea>
+											<textarea  class="form-control" name="obs" id="info" rows="3"></textarea>
 										</div>
 						
 										
@@ -180,18 +181,18 @@
                 
 										<legend> Escolha um Serviço </legend>
 
-										<form>
+										
 											<div class="form-row  area-servicos">
 
-												<div class="container custom-control custom-checkbox">Pet Sitting
-													<input type="checkbox" id="op-pet-sitting">
+												<div  class="container custom-control custom-checkbox">Pet Sitting
+													<input type="radio" name="servico" value="pet-sitting"  id="op-pet-sitting" checked required>
 													<span class="checkmark"></span>
 												</div>	
 											  <div class="container col-auto opcao">
-												<select type="text" class="form-control" id="opcao">
-												  <option selected>------</option>
-												  <option value="1">Plano Diário  (R$20)</option>
-												  <option value="2">Plano Horário (R$50)</option>
+												<select type="text" name="plano"  class="form-control" id="opcao">
+												  
+												  <option value="20">Plano Diário  (R$20)</option>
+												  <option value="50">Plano Horário (R$50)</option>
 												</select>
 											  </div>
 											</div>
@@ -199,15 +200,15 @@
 											<div class="form-row  area-servicos">
 
 												<div class="container custom-control custom-checkbox">Pet Hotel
-													<input type="checkbox" id="op-pet-hotel">
+													<input value="pet-hotel" type="radio" name="servico" id="op-pet-hotel">
 													<span class="checkmark"></span>
 												</div>	
 											  <div class="container col-auto opcao">
-												<select type="text" class="form-control" id="opcao">
-												  <option selected>------</option>
-												  <option value="1">Plano Diário  (R$40)</option>
-												  <option value="2">Plano Semanal (R$65)</option>
-												  <option value="2">Plano Mensal  (R$110)</option>
+												<select type="text" name="plano"  class="form-control" id="opcao">
+												
+												  <option value="40">Plano Diário  (R$40)</option>
+												  <option value="65">Plano Semanal (R$65)</option>
+												  <option value="110">Plano Mensal  (R$110)</option>
 												</select>
 											  </div>
 											</div>
@@ -215,15 +216,15 @@
 											<div class="form-row align-items-center area-servicos">
 
 												<div class="container custom-control custom-checkbox">Petcure
-													<input type="checkbox" id="op-petcure">
+													<input value="petcure" type="radio" name="servico" id="op-petcure">
 													<span class="checkmark"></span>
 												</div>	
 											  <div class="container col-auto opcao" >
-												<select type="text" class="form-control" id="opcao">
-												  <option selected>------</option>
-												  <option value="1">Plano Básico (R$40)</option>
-												  <option value="2">Plano Chique (R$65)</option>
-												  <option value="2">Plano Diva   (R$80)</option>
+												<select type="text" name="plano"  class="form-control" id="opcao">
+												  
+												  <option value="40">Plano Básico (R$40)</option>
+												  <option value="65">Plano Chique (R$65)</option>
+												  <option value="80">Plano Diva   (R$80)</option>
 												</select>
 											  </div>
 											</div>
@@ -232,43 +233,40 @@
 
 													
 												<div class="container custom-control custom-checkbox">Acampamento
-													<input type="checkbox" id="op-acampamento" disabled>
+													<input value="acampamento" type="radio" name="servico" id="op-acampamento" disabled>
 													<span class="checkmark"></span>
 												</div>
 											  <div class="container col-auto opcao" >
-												<select type="text" class="form-control" id="opcao" disabled>
-												  <option selected>------</option>
-												  <option value="1">Dia de Semana (R$20)</option>
-												  <option value="2">Fim de Semana (R$35)</option>
+												<select type="text" name="plano" class="form-control" id="opcao" disabled>
+												  
+												  <option value="20">Dia de Semana (R$20)</option>
+												  <option value="35">Fim de Semana (R$35)</option>
 												</select>
 												
 											  </div>
 
 											</div>
 											
-										</form>
 									  </fieldset>
 
 									  <fieldset>
                 
 										<legend > Informações finais </legend>
 
-										<form>
 											<div class="form-group col-md">
 												<label for="data">Data do Agendamento </label>
-												<input type="date" class="form-control" id="data" >
+												<input type="date" name="data" class="form-control" id="data" required>
 											</div>
 
 											<div class="form-group col-md">
 												<label for="hora">Horário </label>
-												<input type="time" class="form-control" id="hora" >
+												<input type="time" name="hora" class="form-control" id="hora" required>
 												
 											</div>
-											<small>*Funcionamos das 9:00 às 18:00</small>
-										</form>
+											
 									  </fieldset>
 
-									<button class="btn">Cadastrar</button>
+									<button class="btn" type="submit">Agendar</button>
 								</form>
 							</div>
 						</div>
@@ -276,5 +274,12 @@
 				</div>
 			</div>
 		</div>
+
+		<!-- JavaScript (Opcional) -->
+      <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+      
 	</body>
 </html>

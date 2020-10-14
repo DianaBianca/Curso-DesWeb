@@ -129,7 +129,6 @@ p{
 
 .foto{
     position: relative;
-    
     top:50%;
     left:50%;
     margin-top:-1px;
@@ -138,7 +137,6 @@ p{
     height: 140px;
     background-color: #000;
     color: #FFF;
-    
     /* Agora a mágica */
     border-radius: 50%;
 }
@@ -167,8 +165,8 @@ p{
     padding-top: 100px;
 }
 
-.bloco{
-    /*border: 2px solid red;*/
+.bloco > img{
+    top: 3%;
 }
 
 .infos>p{

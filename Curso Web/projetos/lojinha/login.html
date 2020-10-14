@@ -24,109 +24,101 @@
         justify-content: center;
         align-items: center;
       }
+
       body{
-        background: url(img/dog-blue.png);
+        background: url(img/dog3.jpg);
+        background-color:pink;
         background-repeat: no-repeat;
         background-size: 100%;
-        opacity: 90%;
-        border: 1ps solid red;
         /*backdrop-filter: blur(2px);*/
       }
 
-      #login{
-        margin: 10%;
+      form{
         background-color: white;
-        border: #d5d7d8;
-        border-style:unset groove;
-        padding: 60px 60px 60px 60px; 
-        width: 400px;
-        border-radius: 4px;
+        padding:25px 25px 25px 25px;
+        border-radius: 15px;
+        border: 1.2px solid rgba(158, 156, 156, 0.863);
+        align-content: center;
+
       }
 
       form>div{
         padding-top: 10px ;
         padding-bottom: 10px ;
       }
-      .textarea{
-        box-sizing: border-box;
-        border: none;
-        width: 100%;
-        height: 50px;
-        background-color: rgba(195, 195, 195, 0.685);
-        color: white;
-        border-radius: 3px;
-      }
 
       .icon{
         width: 25%;
         margin-left: 40%;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
       }
 
       button{
-        width: 100%;
         height: 50px;
-        background-color: #249ab4;
+        background-color: white;
+        border:2px solid #fdc1c1;
         font-family: 'Poppins', sans-serif;
-        color:white;
-        font-size:20px;
+        color:#434343d8;
+        font-size:1.5em;
+        margin-top: 2%;
+        box-shadow:0 0 8px #fdc1c1 ;
+        
       }
 
       button:hover{
-        background-color: #249ab4bd;
+        background-color:#fdc1c1 ;
+			  box-shadow:5px 5px 20px #fdbaba ;
       }
 
       input {
         font-family: 'Poppins', sans-serif;
         color:#434343c2;
         font-size:20px;
+      }
+
+      .lacuna{
+        width:100%;
         padding-left: 5%;
+        padding-right: 5%;
+        margin: auto;
       }
 
     </style>
 </head>
 <body>
-    
+      <div class="container">
+        <div class="d-flex justify-content-center mt-5">
+              <fieldset>
+              <form method="post" action="/autenticar">
+                
+                <img class="icon" src="img/cao.png" width="40">
 
-      <div class="formulario container" >
-         
-           <div id="login" class="row" >
-            
-            <form>
-              
-              <img class="icon" src="img/cao.png" width="40">
+                <div class="row lacuna">
+                  <input name="email" type="email" class="form-control form-control-lg" id="email" placeholder="Email" >
+                </div>
 
-              <div class="container-row">
-                <input class="textarea" type="email" class="form-control form-control-lg" id="email" placeholder="Email" >
-              </div>
+                <div class="row lacuna">
+                  <input name="senha" type="password" class="form-control form-control-lg" id="senha" placeholder="Senha">
+                </div>
 
-              <div class="container-row ">
-                <input class="textarea" type="password" class="form-control form-control-lg" id="senha" placeholder="Senha">
-              </div>
+                <div id="submit " class="lacuna" >
+                  <button  type="submit" aria-describedby="submitHelp" class="btn btn-block">
+                    ENTRAR
+                </div>
 
-              <div id="submit" >
-                <button  type="submit" aria-describedby="submitHelp" class="btn">
-                  ENTRAR
-              </div>
-              <small id="submitHelp" class="form-text text-muted'">
-                ainda não faz parte da nossa familia? então clique aqui e <a href="cadastro.html"> cadastre-se !</a>
-              </small>
+                
+                <small id="submitHelp" class="form-text text-muted" style="text-align: center;" >
+                  ainda não faz parte da nossa familia? então clique aqui e <a href="/inscreverse"> cadastre-se !</a>
+                </small>
 
-              
-
-           </form>
-          
+            </form>
+            </fieldset>
+          </div>
         </div>
-           </div>
-
       </div>
 
       
       
-
-
-
-
 
       <!-- JavaScript (Opcional) -->
       <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
