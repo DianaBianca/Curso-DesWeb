@@ -24,8 +24,13 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
      
       body{
-        background-image:url(img/dog2.jpg);
-        background-repeat: no-repeat;
+        background-image:url(img/pets1.jpg);
+        background-repeat: no-repeat; background-repeat: no-repeat;
+        background-size: 100%;
+        /*backdrop-filter: blur(2px);*/
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: cover;
       }
 
       input {
@@ -46,6 +51,8 @@
           width: 600px;  
           margin-left:auto;
           margin-right: auto;
+          
+          opacity: 0.95 ;
       }      
 
       label, legend{
@@ -60,6 +67,7 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
+        
       }
 
       .btn{
