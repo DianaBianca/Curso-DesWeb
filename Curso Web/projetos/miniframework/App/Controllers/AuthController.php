@@ -23,7 +23,7 @@ class AuthController extends Action {
             $_SESSION['id'] = $usuario->__get('id');
             $_SESSION['nome'] = $usuario->__get('nome');
 
-            header('Location: /agendamentos');
+            header('Location: /nova_tarefa');
         }else{
             header('Location: /login?login=erro');
         }
